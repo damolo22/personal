@@ -1,0 +1,46 @@
+<!-- EJERCICIO 1 -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola</title>
+</head>
+<body>
+    <input id="texto">
+    <button id="boton" onclick="nuevaVentana()">ENVIAR</button>
+    <p>Has cerrado la pestaña : <p id="confirmacion"></p> </p>
+
+
+<script>
+    function nuevaVentana(){
+        //Al pulsar el boton se abrira una nueva ventana
+        let ventana = window.open();
+
+        document.getElementById("confirmacion").textContent = false;
+
+        //Dentro de esa ventana se escribira lo que se ponga aquí
+        ventana.document.write(
+            document.getElementById("texto").value, 
+            " la ventana tiene : ", ventana.innerHeight, "px y ", ventana.innerWidth, "px"
+        );
+
+        //Esta funcion estara comprobando continuamente si la ventana se ha cerrado
+        setInterval(function() {
+            
+        if (ventana.closed) {
+                document.getElementById("confirmacion").textContent = true;
+                clearInterval(comprobar);
+            }
+        }, 500);
+        
+    }
+   
+    
+
+
+
+</script>
+</body>
+</html>

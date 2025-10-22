@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<input type="number" id="Nota1" placeholder="Pon aquí tu nota"> 
+<input type="number" id="Nota2" placeholder="Pon aquí tu nota">
+<input type="number" id="Nota3" placeholder="Pon aquí tu nota">
+
+La Media es : <p id="Media"></p>
+
+<button onclick="mates()">CALCULAR</button>
+
+
+<script>
+
+function mates(){
+let nota1 = Number(document.getElementById("Nota1").value);
+let nota2 = Number(document.getElementById("Nota2").value);
+let nota3 = Number(document.getElementById("Nota3").value);
+let media = (nota1 + nota2 + nota3 )/3;
+document.getElementById("Media").innerHTML=media;
+}
+
+</script>
+    
+</body>
+</html>

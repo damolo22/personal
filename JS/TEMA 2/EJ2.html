@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" id="fecha1">
+    <input type="date" id="fecha2">
+    <button onclick="calcular()">CALCULAR</button>
+
+    <script>
+        function calcular() {
+            //Creamos los objetos fecha y le ponemos el valor de los inputs
+            let fecha1 = new Date(document.getElementById("fecha1").value);
+            let fecha2 = new Date(document.getElementById("fecha2").value);
+
+
+
+            const ms = 1000 * 60 * 60 * 24;
+            
+            let diferencia = (fecha1.getTime()-fecha2.getTime());
+
+            //Funcion Math.ceil redondea hacia arriba y Math.abs devuelve el valor absoluto
+            diferencia =Math.ceil(Math.abs(diferencia/ms));
+
+            alert("La diferencia de días es : " + diferencia);
+        }
+    </script>
+</body>
+</html>

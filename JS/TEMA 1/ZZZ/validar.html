@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="n" placeholder="Pon aquí tu número">
+    
+    <button onclick="aumentar()">AUMENTAR</button>
+
+
+    <script>
+    function aumentar(){
+        let numero = Number(document.getElementById("n").value);
+
+        alert("Tu número es : "+ numero +" vamos a sumarle 1 : "+ (numero+1));
+    }
+    </script>
+</body>
+</html>

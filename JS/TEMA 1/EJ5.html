@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<!--Los elementos del html con los que vamos a trabajar, el input donde ponemos la nota y el boton para que arranque la funcion-->
+    <input type="number" id="nota"> 
+    <button  onclick="calcular()">CALCULARRRRRR</button>
+
+
+<script>
+
+
+function calcular(){
+    //sacamos el valor del input
+let nota = document.getElementById("nota").value;
+//filtramos según la nota
+    if (nota > 10 || nota < 0 ) {
+        document.write("ERRORRRRR");
+    }
+    else if(nota >= 5 ){
+        document.write("Suspenso");
+    }
+    else if(nota == 6 ){
+        document.write("Bien");
+    }
+    else if(nota == 7 || nota == 8 ){
+        document.write("Notable");
+    }
+    else if(nota <= 9 ){
+        document.write("Sobresaliente");
+    }
+}
+
+
+
+</script>
+
+
+</body>
+</html>

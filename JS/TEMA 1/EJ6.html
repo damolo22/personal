@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+<!--Los elementos del html con los que vamos a trabajar, el input donde ponemos la frase y el boton para que arranque la funcion-->
+<input type="text" id="frase"> 
+<button  onclick="comprobrar()">CALCULARRRRRR</button>
+
+
+
+<script>
+function comprobrar(){
+let fraseLimpia = document.getElementById("frase").value;
+
+fraseLimpia = fraseLimpia.replace(/ /g, ''); //Eliminamos los espacios en blanco
+
+let fraseCopia = fraseLimpia;
+
+//Comprobamos si la frase es un palindromo
+fraseCopia = fraseCopia.split('').reverse().join(''); //Esta funcion invierte la frase
+
+// y ahora comparamos las dos frases
+if(fraseLimpia.toLowerCase() === fraseCopia.toLowerCase()){
+    alert("Es un palindromo");
+}else{
+    alert("No es un palindromo");
+}
+
+
+}
+
+</script>
+</body>
+</html>
