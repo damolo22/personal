@@ -34,13 +34,26 @@ for (let i = 0; i < num; i++) {
 }
 
 function media(){
+contenedor_media.innerHTML= "";
 let num = document.getElementById("num").value;
-let media;
+let media = 0;
     for (let i = 0; i < num; i++) {
-        media = media + document.getElementById("campo_" + i).value;
+        media = media + +document.getElementById("campo_" + i).value;
     }
 media = media / num;
-document.getElementById("contenedor_media").value=media;
+document.getElementById("contenedor_media").innerHTML=media;
+}
+
+function media_rnd(){
+contenedor_media.innerHTML= "";
+let num = document.getElementById("num").value;
+let media = 0;
+    for (let i = 0; i < num; i++) {
+        media = media + +document.getElementById("campo_" + i).value;
+    }
+media = Math.round(media/num) ;
+
+document.getElementById("contenedor_media").innerHTML=media;
 }
 
 
