@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        #texto {
+            width: 300px; 
+            height: 200px; 
+            font-size: 16px;      
+        }
+        div,p{
+            display: inline-block;
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea id="texto"></textarea>
+    <button onclick="calcular()">CALCULAR</button>
+
+    <button onclick="mayuscula()">TODO MAYÚSCULAS</button>
+
+    <button onclick="cambiar()">CAMBIAR</button>
+
+    <br>
+
+    <div> Número de Líneas : <p id="N_lineas"></p></div>
+
+    <br>
+
+    <div> Número de frases : <p id="N_puntos"></p></div>
+
+    <br>
+
+    <div> Primeros diez : <p id="diez_caracteres"></p></div>
+
+    <br>
+
+    <div> Nª alumno/alumna : <p id="alumno"></p></div>
+
+    <br>
+</body>
+
+
+
+
+<script>
+
+
+    function calcular(){
+        let texto = document.getElementById("texto").value;
+
+        let array_lineas = texto.split('\n'); //Cada vez que se encuentre un salto de linea lo separa en un array
+        let num_lineas = array_lineas.length;
+        document.getElementById("N_lineas").innerHTML=num_lineas;
+
+
+        let array_puntos = texto.split('.'); //Cada vez que se encuentre un punto de linea lo separa en un array
+        let num_puntos = array_puntos.length;
+        document.getElementById("N_puntos").innerHTML=num_puntos;
+
+        let primeros_diez = texto.slice(0,10);
+        document.getElementById("diez_caracteres").innerHTML=primeros_diez;
+
+
+        //Solo detecta alumno si es en minuscula
+        let array_alumno = texto.split('alumno'); 
+        let num_alumno = array_alumno.length-1;
+
+        let array_alumna = texto.split('alumna'); 
+        let num_alumna = array_alumna.length-1;
+
+        let num_alumnos = num_alumno + num_alumna;
+
+        document.getElementById("alumno").innerHTML=num_alumnos;
+
+    }
+
+    function mayuscula(){
+        let texto = document.getElementById("texto").value;
+
+        let texto_mayusuclas = texto.toUpperCase(); //Metodo que pasa todo a mayusculas
+
+        document.getElementById("texto").value= texto_mayusuclas;
+    }
+
+    
+    function cambiar(){
+        let texto = document.getElementById("texto").value;
+
+        let texto_cambiado = texto.replaceAll('alumno', 'DAVID'); //Metodo que reemplaza todas las coincidencias
+
+        texto_cambiado = texto_cambiado.replaceAll('alumna', 'DAVID');
+
+        document.getElementById("texto").value= texto_cambiado;
+    }
+
+</script>
+</html>

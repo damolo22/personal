@@ -38,7 +38,7 @@ contenedor_media.innerHTML= "";
 let num = document.getElementById("num").value;
 let media = 0;
     for (let i = 0; i < num; i++) {
-        media = media + +document.getElementById("campo_" + i).value;
+        media = media + +document.getElementById("campo_" + i).value; //El + delante del document es para conseguir el valor numerico
     }
 media = media / num;
 document.getElementById("contenedor_media").innerHTML=media;
