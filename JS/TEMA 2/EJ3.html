@@ -33,6 +33,15 @@ for (let i = 0; i < num; i++) {
 }
 }
 
+function media(){
+let num = document.getElementById("num").value;
+let media;
+    for (let i = 0; i < num; i++) {
+        media = media + document.getElementById("campo_" + i).value;
+    }
+media = media / num;
+document.getElementById("contenedor_media").value=media;
+}
 
 
 </script>
