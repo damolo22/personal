@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" placeholder="Dime un numero" id="num">
+    <button onclick="generar()">Generar</button>
+    <div id="contenedor"></div>
+    <br>
+    <button onclick="media()">Calcular Media</button>
+    <button onclick="media_rnd()">Calcular Media Redondeada</button>
+    <div id="contenedor_media"></div>
+</body>
+
+
+
+<script>
+function generar() {
+let num = document.getElementById("num").value;
+
+//borramos si ya hay algo creado
+contenedor.innerHTML= "";
+
+//creamos los inputs
+for (let i = 0; i < num; i++) {
+    let nuevoInput = document.createElement("input");
+    nuevoInput.type="number";
+    nuevoInput.id="campo_" + i;
+    contenedor.appendChild(nuevoInput);
+}
+}
+
+
+
+</script>
+
+</html>
