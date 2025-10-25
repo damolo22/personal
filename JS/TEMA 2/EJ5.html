@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>ENLACES</h1>
+
+    <p>
+      <a href="https://www.google.com">GOOGLE</a>
+      <a href="https://www.youtube.com">YOUTUBE</a>
+      <a>"ESTO NO ES UN ENLACE"</a>
+    </p>
+
+    <p>
+      Numero de enlaces: <span id="N_enlaces"></span>
+      <br />
+      <a href="https://prueba1">prueba1</a>
+      <a href="https://prueba2">prueba2</a>
+      <br />
+      Numero de enlaces que enlazan https://prueba:
+      <span id="N_enlacesPrueba"></span>
+    </p>
+
+    <p>
+      <a href="#">Enlace A</a>
+      <a href="#">Enlace B</a>
+    </p>
+
+    <p>
+      Número de enlaces en el 3er párrafo: <span id="N_enlacesTercerP"></span>
+    </p>
+
+    <script>
+      let enlaces = document.getElementsByTagName("a");
+      let contadoresReales = 0; //para contar las anclas <a> que si sean enlaces
+      let contadoresPrueba = 0; //para contar los enlaces que enlazan a http://prueba
+
+      for (let i = 0; i < enlaces.length; i++) {
+        if (enlaces[i].hasAttribute("href")) {
+          contadoresReales++;
+        }
+
+        if (enlaces[i].href.includes("prueba")) {
+          contadoresPrueba++;
+        }
+      }
+
+      document.getElementById("N_enlaces").textContent = contadoresReales;
+      document.getElementById("N_enlacesPrueba").textContent = contadoresPrueba;
+
+      // Lógica para el Número de enlaces del tercer párrafo
+      let todosLosParrafos = document.getElementsByTagName("p");
+      let numEnlacesTercerP = 0;
+
+      if (todosLosParrafos.length >= 3) {
+        let tercerParrafo = todosLosParrafos[2];
+        let enlacesEnP3 = tercerParrafo.getElementsByTagName("a");
+        numEnlacesTercerP = enlacesEnP3.length;
+      }
+
+      document.getElementById("N_enlacesTercerP").textContent =
+        numEnlacesTercerP;
+    </script>
+  </body>
+</html>
