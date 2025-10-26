@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Quedan : <span id="diasReyes"></span> para el día de Reyes</h1>
+    <h1>Hoy es : <span id="hoy"></span></h1>
+</body>
+
+
+<script>
+    let Reyes = new Date("January 6, 2026");
+
+    let hoy = new Date();
+
+    document.getElementById("hoy").innerHTML=hoy;
+
+    let ms = 1000 * 60 * 60 * 24;
+
+    let diferencia = (Reyes.getTime()-hoy.getTime());
+
+    diferencia =Math.ceil(Math.abs(diferencia/ms));
+
+    document.getElementById("diasReyes").innerHTML=diferencia;
+</script>
+</html>
