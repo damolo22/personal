@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>BIENVENIDO AL CASINO</h1>
+    <h2>Dado 1 : <span id="dado1"></span></h2>
+    <h2>Dado 2 : <span id="dado2"></span></h2>
+
+    <button onclick="tirada()">TIRAR</button>
+
+    <script>
+      let intervaloDados; // Variable para guardar la referencia del intervalo
+
+      function tirada() {
+        // La variable 'tiempo' se sustituye por la comprobación del intervaloDados para evitar repeticiones.
+        if (intervaloDados) return;
+
+        intervaloDados = setInterval(function () {
+          // Ponemos un intervalo para que se vaya repitiendo la tirada
+
+          // El bucle for se ha eliminado, ya que setInterval ya repite la acción.
+          let dado1 = Math.floor(Math.random() * 6 + 1); //Devuelve un numero entre 0 y 1, lo multiplicamos por 6 y lo redondeamos
+          document.getElementById("dado1").innerHTML = dado1;
+          let dado2 = Math.floor(Math.random() * 6 + 1); //Devuelve un numero entre 0 y 1, lo multiplicamos por 6 y lo redondeamos
+          document.getElementById("dado2").innerHTML = dado2;
+        }, 500);
+
+        setTimeout(function () {
+          console.log("¡Se acabó la tirada automática!");
+          clearInterval(intervaloDados); // Detenemos el intervalo usando la referencia guardada
+          intervaloDados = null; // Reseteamos la variable
+        }, 5000);
+      }
+    </script>
+  </body>
+</html>
