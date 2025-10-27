@@ -67,6 +67,12 @@ html {
     color: var(--main-color);
 }
 
+h1 {
+    font-family: "Krona One";
+    padding: 1rem;
+    text-transform: uppercase;
+}
+
 
 
 .hero {
@@ -194,7 +200,34 @@ html {
         align-items: center;
 
         h1{
-            font-family: Nicomoji;
+            flex: 2;
+        }
+    
+
+        .product-name{
+            flex: 1;
+            height: 130px;
+
+            background-image: url(assets/img/logo2.png);
+            background-size: 100%;
+            background-position: top center;
+            background-repeat: no-repeat;
+        }
+    }
+
+    .select-content{
+        border: 2px solid red;
+        height: calc(100vh - 150px);
+
+
+        .select-menu{
+            flex:1;
+            height: 100%;
+            
+        }
+
+        .select-product{
+
         }
     }
 }
