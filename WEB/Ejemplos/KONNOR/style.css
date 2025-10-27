@@ -49,9 +49,13 @@ html {
     /*importante*/
 }
 
-.btn-primary-green {}
+.btn-primary-green {
 
-.btn-primary-orange {}
+}
+
+.btn-primary-orange {
+
+}
 
 .btn-secondary {
     background-color: transparent;
@@ -176,4 +180,21 @@ html {
 
     }
 
+}
+
+/* ----------------------------------------------------------------SELECT------------------------------------- */
+
+.select {
+    height: 100vh;
+    background-color: var(--main-color-75);
+
+    .select-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        h1{
+            font-family: Nicomoji;
+        }
+    }
 }
