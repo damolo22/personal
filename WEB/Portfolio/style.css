@@ -1,8 +1,28 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
 
 body{
     color: white;
     background-color: black;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.logo{
+    height: 40px; 
+    width: auto;
+    border: 1px solid white;
+}
+
+nav ul {
+    border: 1px solid red;
+    list-style: none;
+    display: flex; 
+    padding: 0;
+    margin: 0;
 }
