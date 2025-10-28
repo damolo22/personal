@@ -19,13 +19,12 @@ body {
     font-family: "Oswald", sans-serif;
     height: 100px;
     width: 100%;
-    padding: 1rem .5rem;
+    padding: -0.5rem;
 
     .logo {
-      border: 1px solid red;
-      width: 100px;
-      height: 100px;
-      background-image: url(assets/img/logo.png);
+      width: 8rem;
+      height: 6rem;
+      background-image: url(assets/img/logo2.png);
       background-size: contain;
       background-position: center top;
       background-repeat: no-repeat;
@@ -39,17 +38,15 @@ body {
         gap: 2rem;
 
         li a {
+          color: white;
           text-transform: uppercase;
           text-decoration: none;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
         }
 
-        .icon {
-          display: flex;
-          align-items: center;
-          width: 100px;
-          height: 100px;
-          border: 1px solid red;
+        .profile img { 
+          width: 80px; 
+          height: 80px;
         }
       }
     }
