@@ -2,11 +2,37 @@
 
 :root {
   --main-color: rgba(24, 124, 174, 1);
+  --btn-wight: 250px; 
+  --btn-height: 60px; 
 }
 
 body {
   color: white;
   background-color: black;
+  font-family: "Roboto", sans-serif;
+}
+
+button{
+    width: var(--btn-width);
+    height: var(--btn-height);
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    background-color: var(--main-color);
+    border: 1px solid green;
+}
+
+h1{
+  color: var(--main-color);
+  font-family:"Oswald", sans-serif;
+  font-size: 70px;
+  
+}
+
+b{ 
+  font-weight: 900;
+/* Es la mejor forma que se me ha ocurrido para poner negritas,
+ ya que la tipografia oswald no variaba cuando le ponia el font-weight */
 }
 
 .hero-section {
@@ -15,6 +41,7 @@ body {
   flex-direction: column;
 
   header {
+    font-weight: 500;
     border: 1px solid rgb(0, 255, 183);
     display: flex;
     align-items: center;
@@ -64,7 +91,7 @@ body {
       height: 100%;
 
       background-image: url(Assets/img/background.png);
-      background-size: cover;
+      background-size: contain;
       background-position: left top;
       background-repeat: no-repeat;
     }
