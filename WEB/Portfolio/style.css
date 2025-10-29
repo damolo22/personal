@@ -2,35 +2,36 @@
 
 :root {
   --main-color: rgba(24, 124, 174, 1);
-  --btn-width: 200px; 
-  --btn-height: 60px; 
+  --btn-width: 200px;
+  --btn-height: 60px;
 }
 
 body {
   color: white;
   background-color: black;
   font-family: "Roboto", sans-serif;
+  font-size: 36px;
 }
 
-button{
-    width: var(--btn-width);
-    height: var(--btn-height);
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    cursor: pointer;
-    background-color: var(--main-color);
-    border-radius: 6px;
+button {
+  width: var(--btn-width);
+  height: var(--btn-height);
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  background-color: var(--main-color);
+  border-radius: 6px;
 }
 
-h1{
+h1 {
   color: var(--main-color);
-  font-family:"Oswald", sans-serif;
+  font-family: "Oswald", sans-serif;
   font-size: 70px;
 }
 
-b{ 
+b {
   font-weight: 900;
-/* Es la mejor forma que se me ha ocurrido para poner negritas,
+  /* Es la mejor forma que se me ha ocurrido para poner negritas,
  ya que la tipografia oswald no variaba cuando le ponia el font-weight */
 }
 
@@ -98,6 +99,28 @@ b{
     .hero-text {
       width: 40%;
       padding: 4rem 2rem;
+      line-height: 1.6;
     }
   }
+}
+
+/* -------------------------------------------BIOGRAPHY----------------------------------------- */
+.biography {
+  margin-left: 10px;
+  
+  display: flex;
+  padding-left: 1px; 
+  align-items: flex-end;
+  .bio-text {
+    width: 50%;
+    line-height: 1.6;
+  }
+  .bio-photo {
+    border: 1px solid red;
+    display: flex;
+    /* Al no haber padding-right en el padre, justify-content: flex-end lo pega al borde */
+    justify-content: flex-end; 
+    align-items: flex-end;
+  }
+  
 }
