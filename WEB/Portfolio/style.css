@@ -209,3 +209,14 @@ b {
       height: 100%;
       object-fit: cover;
 }
+
+
+/* ----------------------------TOUR --------------------  */
+.tour{
+  .tour-title{
+    text-align: center;
+  }
+  .tour1{
+    background-color: rgb(51, 51, 51)
+  }
+}
