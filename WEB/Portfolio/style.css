@@ -6,11 +6,19 @@
   --btn-height: 60px;
 }
 
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
   color: white;
   background-color: black;
   font-family: "Roboto", sans-serif;
   font-size: 36px;
+  overflow-x: hidden;
 }
 
 button {
@@ -186,4 +194,18 @@ b {
     width: 570px;
 
   }
+
+  .others-albums{
+    .title-album-others{
+      padding-top: 40px;
+      text-align: center;
+    }
+  }
+}
+
+.background-photo1{
+  display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
 }
