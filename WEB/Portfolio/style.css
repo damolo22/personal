@@ -26,7 +26,9 @@ button {
 h1 {
   color: var(--main-color);
   font-family: "Oswald", sans-serif;
-  font-size: 70px;
+  font-size: 80px;
+  margin: 0; 
+  line-height: 1; 
 }
 
 b {
@@ -100,6 +102,24 @@ b {
       width: 40%;
       padding: 4rem 2rem;
       line-height: 1.6;
+      font-size: 1.1rem;
+
+    .title-top{
+      display: block; 
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+      font-weight: 400; 
+      font-size: 16px;
+
+    }
+
+    .title-bottom{
+      font-size: 1.2rem; /* Mismo tamaño que el de arriba */
+      font-weight: 400;
+      font-size: 24px;
+      font-style: italic; /* ¡Esto es la cursiva! */
+      margin-top: 0.5rem; /* Pequeña separación del H1 */
+    }
     }
   }
 }
