@@ -27,8 +27,8 @@ h1 {
   color: var(--main-color);
   font-family: "Oswald", sans-serif;
   font-size: 80px;
-  margin: 0; 
-  line-height: 1; 
+  margin: 0;
+  line-height: 1;
 }
 
 b {
@@ -104,22 +104,22 @@ b {
       line-height: 1.6;
       font-size: 1.1rem;
 
-    .title-top{
-      display: block; 
-      margin-bottom: 0.5rem;
-      font-size: 1.2rem;
-      font-weight: 400; 
-      font-size: 16px;
+      .title-top {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 16px;
 
-    }
+      }
 
-    .title-bottom{
-      font-size: 1.2rem; /* Mismo tamaño que el de arriba */
-      font-weight: 400;
-      font-size: 24px;
-      font-style: italic; /* ¡Esto es la cursiva! */
-      margin-top: 0.5rem; /* Pequeña separación del H1 */
-    }
+      .title-bottom {
+        font-size: 1.2rem;
+        font-weight: 400;
+        font-size: 24px;
+        font-style: italic;
+        margin-top: 0.5rem;
+      }
     }
   }
 }
@@ -127,20 +127,63 @@ b {
 /* -------------------------------------------BIOGRAPHY----------------------------------------- */
 .biography {
   margin-left: 10px;
-  
+
   display: flex;
-  padding-left: 1px; 
+  padding-left: 1px;
   align-items: flex-end;
+
   .bio-text {
     width: 50%;
     line-height: 1.6;
   }
-  .bio-photo {
+
+  .bio-photo img {
+    height: 1000px;
     border: 1px solid red;
     display: flex;
-    /* Al no haber padding-right en el padre, justify-content: flex-end lo pega al borde */
-    justify-content: flex-end; 
+    justify-content: flex-end;
     align-items: flex-end;
   }
-  
+
+}
+
+
+
+/* ----------------------------ALBUM --------------------  */
+.album {
+  .title-album {
+    padding-top: 20px;
+    text-align: center;
+  }
+
+  .top-album {
+    padding-top: 40px;
+    text-align: center;
+    align-items: center;
+
+    .top {
+      padding-top: 40px;
+      padding-right: 40px;
+      padding-left: 40px;
+      text-align: center;
+      width: 800px;
+    }
+  }
+
+  .bottom-album {
+    padding-top: 80px;
+    text-align: center;
+    align-items: center;
+
+
+  }
+
+  .bottom {
+    padding-top: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+    text-align: center;
+    width: 570px;
+
+  }
 }
