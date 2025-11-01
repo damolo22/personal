@@ -152,7 +152,6 @@ b {
 }
 
 .biography {
-
   margin-left: 20px;
 
   display: flex;
@@ -188,7 +187,6 @@ b {
     padding: 4rem;
 
     .album-photo {
-
       width: 60%;
       height: 600px;
 
@@ -201,7 +199,7 @@ b {
 
   .songs {
     display: flex;
-    max-width:85%;
+    max-width: 85%;
     margin: 0 auto;
     gap: 6rem;
     padding: 2rem 1rem;
@@ -231,40 +229,34 @@ b {
     }
   }
 
-  .title-album-others{
+  .title-album-others {
     text-align: center;
     padding: 2rem 0;
   }
 
-  .album-photos {
-    padding-top: 30px;
-    padding-bottom: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+  .others-albums {
     display: flex;
-
-
-    justify-content: space-between;
-
-    gap: 20px;
-
+    flex-direction: column;
     align-items: center;
 
-    .album1,
-    .album2,
-    .album3,
-    .album4 {
+    max-width: 85%;
+    margin: 0 auto;
+    gap: 6rem;
+    padding: 2rem 1rem;
 
-      width: 200px;
-      height: 200px;
-
+    .top-albums {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
     }
 
-
-    img {
-
+    .bottom-albums {
       width: 100%;
-      height: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5rem;
+      padding-bottom: 3rem;
     }
   }
 }
@@ -287,8 +279,6 @@ b {
   display: flex;
   align-items: center;
 
-
-
   .tour-menu {
     flex-direction: column;
     width: 500px;
@@ -302,17 +292,12 @@ b {
 
       p {
         font-family: "Oswald", sans-serif;
-        ;
         color: black;
       }
 
-
-
       span {
         font-size: 16px;
-
       }
     }
   }
-
 }
