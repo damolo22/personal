@@ -27,7 +27,7 @@ button {
   text-transform: uppercase;
   cursor: pointer;
   background-color: var(--main-color);
-  border-radius: 6px;
+  border-radius: 10px;
 }
 
 h1 {
@@ -284,10 +284,9 @@ b {
   max-width: 85%;
   margin: 0 auto;
 
-
   .tour-menu {
     display: flex;
-    
+
     flex-direction: column;
     width: 450px;
 
@@ -310,9 +309,57 @@ b {
         padding-bottom: 30px;
       }
     }
+  }
+}
 
-    .tour-video{
-      
+/* ----------------------------MERCHANDISING --------------------  */
+.merch-title {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 20px;
+}
+
+.merch {
+  font-size: 24px;
+
+  .merch-left {
+    border: 1px solid rebeccapurple;
+
+    padding: 2rem 4rem;
+    width: 50%;
+
+    .product1 {
+      display: flex;
+      gap: 40px;
+      padding: 1rem;
+      align-items: center;
+      align-items: flex-start;
+
+      .product-photo {
+        background-color: rgb(77 77 77);
+        font-family: "Oswald", sans-serif;
+        text-align: center;
+        width: 90%;
+
+        img{
+          width: 25rem;
+        }
+      }
+
+      .product-info {
+        flex-grow: 1;
+        border: 1px solid green;
+        height: 400px;
+
+        .info-text{
+          padding-bottom: 6rem;
+          line-height: 1.6;
+        }
+
+        .info-button{
+          text-align: center;
+        }
+      }
     }
   }
 }
