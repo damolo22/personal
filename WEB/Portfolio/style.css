@@ -489,30 +489,85 @@ b {
     border: 1px solid yellow;
     width: 33%;
 
+    display: flex;
+    flex-direction: column;
 
     .contact-title {
       text-align: center;
       padding: 2rem 0;
     }
     .contact-form {
-      text-align:  center;
+      text-align: center;
       input {
         border: 1px solid var(--main-color);
         background-color: black;
         color: white;
         height: 2rem;
         margin-top: 1rem;
-        width: 450px;
-
+        width: 500px;
       }
       textarea {
         border: 1px solid var(--main-color);
         background-color: black;
         margin-top: 1rem;
-        height: 5rem;
-        width: 450px;
+        margin-bottom: 1rem;
+        height: 8rem;
+        width: 500px;
         resize: none; /* esto hace que el usuario no pueda cambiar el tamaño del textarea, y no me rompa el orden de la pagina */
       }
     }
+
+    .contact-terms {
+      text-align: left;
+      padding-left: 3.5rem; /* es una chapuza pero asi esta todo en el mismo borde */
+      font-size: 16px;
+      padding-bottom: 2rem;
+    }
+    button {
+      margin-left: 3.5rem;
+    }
+
+    .google {
+      /* La verdad esque en el mockup queda mejor*/
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+
+      margin-left: 3.5rem;
+      margin-top: 1rem;
+
+      width: var(--btn-width);
+      height: var(--btn-height);
+      background-color: white;
+      color: black;
+      border-radius: 10px;
+      font-size: 16px;
+      cursor: pointer;
+
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
   }
+
+  .contact-center{
+    background-color: rgb(26 26 26);
+    
+    text-align: center;
+    font-size: 24px;
+    width: 33%;
+    border: 1px solid red;
+    line-height: 1.6;
+
+    h2{
+      font-size: 55px;
+    }
+    
+  }
+
+   .contact-right{
+    width: 33%;
+   }
 }
