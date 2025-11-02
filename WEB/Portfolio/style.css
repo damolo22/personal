@@ -321,8 +321,6 @@ b {
   font-size: 24px;
   display: flex;
   .merch-left {
-    border: 1px solid rebeccapurple;
-
     padding: 2rem 4rem;
     width: 50%;
 
@@ -338,6 +336,7 @@ b {
         font-family: "Oswald", sans-serif;
         text-align: center;
         width: 90%;
+        padding-bottom: 3rem;
 
         b {
           font-size: 40px;
@@ -345,12 +344,12 @@ b {
 
         img {
           width: 25rem;
+          height: 25rem;
         }
       }
 
       .product-info {
         flex-grow: 1;
-        border: 1px solid green;
         height: 400px;
 
         .info-text {
@@ -376,17 +375,19 @@ b {
         font-family: "Oswald", sans-serif;
         text-align: center;
         width: 90%;
+        padding-bottom: 3rem;
         b {
           font-size: 40px;
         }
         img {
           width: 25rem;
+          height: 25rem;
         }
       }
 
       .product-info {
         flex-grow: 1;
-        border: 1px solid green;
+
         height: 400px;
 
         .info-text {
@@ -402,8 +403,6 @@ b {
   }
 
   .merch-right {
-    border: 1px solid rebeccapurple;
-
     padding: 2rem 4rem;
     width: 50%;
 
@@ -419,17 +418,19 @@ b {
         font-family: "Oswald", sans-serif;
         text-align: center;
         width: 90%;
+        padding-bottom: 3rem;
         b {
           font-size: 40px;
         }
         img {
           width: 25rem;
+          height: 25rem;
         }
       }
 
       .product-info {
         flex-grow: 1;
-        border: 1px solid green;
+
         height: 400px;
 
         .info-text {
@@ -455,17 +456,19 @@ b {
         font-family: "Oswald", sans-serif;
         text-align: center;
         width: 90%;
+        padding-bottom: 3rem;
         b {
           font-size: 40px;
         }
         img {
           width: 25rem;
+          height: 25rem;
         }
       }
 
       .product-info {
         flex-grow: 1;
-        border: 1px solid green;
+
         height: 400px;
 
         .info-text {
@@ -486,7 +489,6 @@ b {
   display: flex;
 
   .contact-left {
-    border: 1px solid yellow;
     width: 33%;
 
     display: flex;
@@ -502,7 +504,7 @@ b {
         border: 1px solid var(--main-color);
         background-color: black;
         color: white;
-        height: 2rem;
+        height: 3rem;
         margin-top: 1rem;
         width: 500px;
       }
@@ -511,7 +513,7 @@ b {
         background-color: black;
         margin-top: 1rem;
         margin-bottom: 1rem;
-        height: 8rem;
+        height: 10rem;
         width: 500px;
         resize: none; /* esto hace que el usuario no pueda cambiar el tamaño del textarea, y no me rompa el orden de la pagina */
       }
@@ -552,22 +554,83 @@ b {
     }
   }
 
-  .contact-center{
+  .contact-center {
     background-color: rgb(26 26 26);
-    
+
     text-align: center;
     font-size: 24px;
     width: 33%;
-    border: 1px solid red;
-    line-height: 1.6;
+    line-height: 2;
+    padding-bottom: 3rem;
 
-    h2{
+    .numbers {
+      padding: 3rem 0;
+    }
+    .info {
+      font-size: 16px;
+      gap: 2rem;
+    }
+    h2 {
       font-size: 55px;
     }
-    
   }
 
-   .contact-right{
+  .contact-right {
     width: 33%;
-   }
+  }
+}
+
+/* ----------------------------FOOTER --------------------  */
+
+.footer1 {
+  background-color: var(--main-color);
+  display: flex;
+
+  .left-footer {
+    text-align: center;
+    width: 20%;
+    font-size: 24px;
+    padding: 5rem 0;
+    line-height: 1.8;
+  }
+
+  .center-footer {
+    width: 60%;
+
+    font-family: "Oswald", sans-serif;
+    font-size: 80px;
+    text-align: center;
+
+    .name-footer {
+      padding-top: 4rem;
+      p {
+        border-bottom: 3px solid white;
+        display: inline-block;
+        padding-bottom: 10px;
+      }
+    }
+    .social-footer {
+      display: flex;
+      justify-content: center;
+      padding-top: 2rem;
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+
+  .right-footer {
+    text-align: center;
+    width: 20%;
+    font-size: 24px;
+    padding: 5rem 0;
+    line-height: 1.6;
+  }
+}
+
+.footer2{
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 16px;
 }
