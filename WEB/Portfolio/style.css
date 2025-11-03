@@ -33,20 +33,29 @@ button {
 h1 {
   color: var(--main-color);
   font-family: "Oswald", sans-serif;
-  font-size: 80px;
+  font-size: 100px;
   margin: 0;
   line-height: 1;
+  font-weight: 900;
 }
 
 h2 {
+  color: var(--main-color);
+  font-family: "Oswald", sans-serif;
+  font-size: 80px;
+  margin: 0;
+  line-height: 1;
+  font-weight: 900;
+}
+
+h3 {
+  font-size: 60px;
   font-family: "Oswald", sans-serif;
   padding-top: 30px;
 }
 
-b {
+strong {
   font-weight: 900;
-  /* Es la mejor forma que se me ha ocurrido para poner negritas,
- ya que la tipografia oswald no variaba cuando le ponia el font-weight */
 }
 
 .hero-section {
@@ -122,7 +131,9 @@ b {
         font-weight: 400;
         font-size: 16px;
       }
-
+      .title-main{
+        padding: 5px 0;
+      }
       .title-bottom {
         padding-top: 10px;
         font-size: 1.2rem;
