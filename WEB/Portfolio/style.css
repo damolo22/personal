@@ -145,7 +145,7 @@ b {
 
 /* -------------------------------------------BIOGRAPHY----------------------------------------- */
 .bio-title {
-  padding-top: 30px;
+  padding-top: 40px;
   padding-bottom: 40px;
   padding-left: 20px;
 }
@@ -343,6 +343,16 @@ b {
         font-size: 16px;
         padding-bottom: 30px;
       }
+    }
+  }
+
+  .tour-video {
+    flex-grow: 1;
+    text-align: center;
+    video {
+      max-width: 100%;
+      height: auto;
+      margin: 20px;
     }
   }
 }
@@ -689,16 +699,17 @@ b {
 
     .hero-content {
       flex-direction: column;
+      height: auto;
 
       .hero-photo,
       .hero-text {
-        /* Ambos ocupan todo el ancho */
         width: 100%;
       }
 
       .hero-photo {
-        height: 50vh;
-        background-position: center top;
+        height: 70vh;
+        background-position: center center;
+        background-size: cover;
       }
     }
 
@@ -706,15 +717,255 @@ b {
       font-size: 60px;
     }
   }
-}
 
-/* ==================================== MÓVIL (max-width: 480px) ==================================== */
-@media screen and (max-width: 480px) {
-  /* Aquí van ajustes aún más agresivos para móviles pequeños */
-  body {
-    font-size: 18px; /* Texto base más pequeño */
+  .biography1,
+  .biography2 {
+    flex-direction: column;
+    padding: 2rem 20px;
+
+    .bio-text {
+      width: 100%;
+      order: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .bio-photo {
+      width: 100%;
+      order: 2;
+
+      img {
+        width: 100%;
+        max-height: 700px;
+      }
+    }
   }
-  h1 {
-    font-size: 45px;
+
+  .album {
+    padding: 0 20px;
+
+    .top-album {
+      padding: 2rem 0;
+
+      .album-photo {
+        width: 90%;
+        height: 400px;
+        margin: 0 auto;
+      }
+    }
+
+    .songs {
+      flex-direction: column;
+      max-width: 100%;
+      gap: 0;
+      padding: 0;
+
+      .left-songs,
+      .right-songs {
+        width: 100%;
+        padding: 0 0 2rem 0;
+        gap: 1.5rem;
+      }
+    }
+
+    .others-albums {
+      max-width: 100%;
+      gap: 3rem;
+
+      .top-albums,
+      .bottom-albums {
+        flex-direction: column;
+        width: 100%;
+        gap: 2rem;
+
+        iframe {
+          width: 100%;
+          height: 250px;
+        }
+      }
+    }
+  }
+
+  .background-photo {
+    img {
+      width: 100%;
+    }
+  }
+
+  .tour {
+    flex-direction: column;
+    padding: 2rem 20px;
+    max-width: 100%;
+
+    .tour-menu {
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .tour-video {
+      width: 100%;
+      text-align: center;
+
+      video {
+        width: 100%;
+        height: 400px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  .merch {
+    flex-direction: column;
+    padding: 0 20px;
+
+    .merch-left,
+    .merch-right {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product1,
+    .product2,
+    .product3,
+    .product4 {
+      width: 90%;
+      max-width: 440px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin-bottom: 40px;
+
+      .product-photo {
+        width: 100%;
+        text-align: center;
+
+        img {
+          width: 100%;
+          max-width: 360px;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+        }
+
+        b {
+          font-size: 24px;
+          display: block;
+          padding-top: 10px;
+        }
+      }
+
+      .product-info {
+        width: 90%;
+        height: auto;
+        text-align: center;
+
+        .info-text {
+          padding-bottom: 1rem;
+          text-align: center;
+        }
+
+        .info-button {
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  .contact {
+    flex-direction: column;
+
+    .contact-left,
+    .contact-center,
+    .contact-right {
+      width: 100%;
+    }
+
+    .contact-left {
+      padding: 2rem 0;
+
+      .contact-title {
+        padding: 0;
+      }
+
+      .contact-form {
+        input,
+        textarea {
+          width: 90%;
+          margin: 0.5rem auto;
+          display: block;
+        }
+      }
+
+      .contact-terms {
+        padding: 0;
+        margin: 0 auto;
+        width: 90%;
+        text-align: left;
+        padding-bottom: 2rem;
+      }
+
+      button {
+        margin: 0 auto;
+        display: block;
+      }
+
+      .google {
+        margin: 1rem auto;
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .contact-center {
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      line-height: 1.5;
+
+      h2 {
+        font-size: 45px;
+      }
+
+      .numbers {
+        padding: 1.5rem 0;
+      }
+    }
+
+    .contact-right {
+      height: 300px;
+    }
+  }
+
+  .footer1 {
+    flex-direction: column;
+    text-align: center;
+
+    .left-footer,
+    .center-footer,
+    .right-footer {
+      width: 100%;
+      padding: 1rem 0;
+      line-height: 2;
+    }
+
+    .center-footer {
+      font-size: 50px;
+
+      .name-footer {
+        padding-top: 2rem;
+      }
+
+      .social-footer {
+        padding-top: 1rem;
+
+        img {
+          width: 70px;
+        }
+      }
+    }
   }
 }
