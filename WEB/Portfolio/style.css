@@ -56,7 +56,6 @@ b {
 
   header {
     font-weight: 500;
-    border: 1px solid rgb(0, 255, 183);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -151,7 +150,28 @@ b {
   padding-left: 20px;
 }
 
-.biography {
+.biography1 {
+  margin-left: 1rem;
+
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+
+  .bio-text {
+    width: 50%;
+    line-height: 1.6;
+  }
+
+  .bio-photo {
+    width: 50%;
+    text-align: right;
+    img {
+      height: 1100px;
+    }
+  }
+}
+
+/* .biography1 {
   margin-left: 20px;
 
   display: flex;
@@ -164,11 +184,28 @@ b {
   }
 
   .bio-photo img {
-    height: 1000px;
-    border: 1px solid red;
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    height: 1100px;
+    padding-left: 8rem;
+
+  }
+} */
+
+.biography2 {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 1rem;
+
+  .bio-text {
+    width: 45%;
+    line-height: 1.6;
+  }
+
+  .bio-photo {
+    width: 55%;
+
+    img {
+      height: 1100px;
+    }
   }
 }
 
@@ -629,8 +666,55 @@ b {
   }
 }
 
-.footer2{
+.footer2 {
   text-align: center;
   padding: 1rem 0;
   font-size: 16px;
+}
+
+/* ----------------------RESPONSIVE DESIGN-------------- */
+
+@media screen and (max-width: 768px) {
+  .hero-section {
+    header {
+      justify-content: center;
+      flex-direction: column;
+      height: auto;
+      padding-bottom: 20px;
+    }
+
+    header nav ul {
+      gap: 1rem;
+    }
+
+    .hero-content {
+      flex-direction: column;
+
+      .hero-photo,
+      .hero-text {
+        /* Ambos ocupan todo el ancho */
+        width: 100%;
+      }
+
+      .hero-photo {
+        height: 50vh;
+        background-position: center top;
+      }
+    }
+
+    h1 {
+      font-size: 60px;
+    }
+  }
+}
+
+/* ==================================== MÓVIL (max-width: 480px) ==================================== */
+@media screen and (max-width: 480px) {
+  /* Aquí van ajustes aún más agresivos para móviles pequeños */
+  body {
+    font-size: 18px; /* Texto base más pequeño */
+  }
+  h1 {
+    font-size: 45px;
+  }
 }
