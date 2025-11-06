@@ -348,6 +348,12 @@ h1 {
 /* -----------------------  ABOUT  ------------------- */
 .team {
 
+    .team-img{
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
 
 }
 
@@ -456,7 +462,6 @@ h1 {
 /* --------------------- CONTACT   ------------------ */
 
 .contact {
-    height: 90vh;
 
     .contact-info {
         width: 85%;
@@ -651,6 +656,8 @@ footer {
         padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
+
+        
     }
 }
 
@@ -774,6 +781,35 @@ footer {
                     left: calc((100% - 200px) / 2);
                 }
             }
+        }
+    }
+
+    .about{
+        .about-text{
+            column:1;
+            padding: 2rem;
+
+            .about-text-right{
+                margin-left: 4rem;
+            }
+
+
+        }
+    }
+
+    .contact{
+        .contact-info{
+            flex-direction: column-reverse;
+        }
+
+        form{
+            width: 90%0;
+        }
+    }
+
+    footer{
+        .subfooter{
+
         }
     }
 }
