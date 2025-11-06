@@ -17,6 +17,7 @@
                     <div class="brand">Konnor Bikes</div>
                 </div>
                 <nav>
+
                     <ul>
                         <li><a href="">Home</a></li>
                         <li><a href="">About</a></li>
@@ -25,23 +26,29 @@
                         <li><a href="">Accesories</a></li>
                         <li><a href="">Contact</a></li>
                         <li>
-                            <a href="" class="icon-cart"><img src="assets/img/carrito.svg"></a>
-                            <a href="" class="icon-profile"><img src="assets/img/monigote.svg"></a>
+                            <a href="" class="icon-cart"><img src="assets/img/monigote.svg"></a>
+                            <a href="" class="icon-login"><img src="assets/img/carrito.svg"></a>
+                        </li>
+                        <li>
+                            <div class="burguer">
+                                <span></span><span></span><span></span>
+                            </div>
                         </li>
                     </ul>
+
+                    
                 </nav>
             </header>
             <div class="hero-content">
                 <div class="decoy">
                     <div class="product-brand"></div>
-                    <button class="btn btn-secondary">ORDER NOW</button>
+                    <button href="" class="btn btn-secondary">ORDER NOW!</button>
                 </div>
 
                 <div class="product-hero"></div>
             </div>
         </div>
     </div>
-
     <section class="select">
         <div class="select-header">
             <h1>Choose your weapon</h1>
@@ -49,28 +56,178 @@
         </div>
         <div class="select-content">
             <div class="select-menu">
-                <li><a href="">All</a></li>
-                <li><a href="">Enduro</a></li>
-                <li><a href="">Trail</a></li>
-                <li><a href="">Downhill</a></li>
-                <li><a href="">Gravel</a></li>
-                <li><a href="">Freeride</a></li>
-                <li><a href="">Dirt</a></li>
-                <li><a href="">Junior</a></li>
+                <ul>
+                    <li><a href="">All</a></li>
+                    <li><a href="">Enduro</a></li>
+                    <li><a href="">Trail</a></li>
+                    <li><a href="">Donwhill</a></li>
+                    <li><a href="">Gravel</a></li>
+                    <li><a href="">FreeRide</a></li>
+                    <li><a href="">Dirt</a></li>
+                    <li><a href="">Junior</a></li>
+                </ul>
             </div>
-            <div class="select-products">
-                <div class="button-price">
+            <div class="select-product">
+                <div class="btn-price">
                     <button class="btn btn-primary-orange">Buy</button>
-                  <div class="price">2999$</div>
+                    <div class="price">2,999€</div>
                 </div>
+
                 <div class="weapon-footer">
-                    <div class="equis"><img src="assets/img/bici2.png" alt=""></div>
+                    <div class="equis"><img src="assets/img/huesitos.png"></div>
                     <h3>M · L · XL</h3>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="team">
+        <picture>
+            <!-- para pantallas por debajo de 850px -->
+            <source src="assets/img/group_photo.jpg" media="(max-width: 850px)">
+            <!-- foto por defecto -->
+              <img src="assets/img/team.jpg" alt="" class="team-img">
+        </picture>
+    </section>
+
+    <section class="about">
+        <div class="about-header">
+            <div class="about-logo"></div>
+            <div class="about brand">konnor bikes</div>
+        </div>
+        <div class="about-text">
+            <div class="about-text-left">
+                <p>
+                    <strong>Thunder Bikes</strong> was founded in 2010 with a clear goal: to create high-performance
+                    mountain bikes that blend innovation, durability, and design. The company began as a small workshop
+                    in the foothills of the Pyrenees, where a group of cycling enthusiasts started handcrafting bikes
+                    for local riders. Passion for adventure and precision engineering quickly became the brand’s
+                    identity.
+                </p>
+                <p>
+                    Over the years, <strong>Thunder Bikes</strong> invested heavily in research and development,
+                    introducing lightweight frames made from advanced alloys and carbon fiber. Their models began to
+                    stand out in regional competitions, gaining recognition for their balance between strength and
+                    agility.
+                </p>
+            </div>
+            <div class="about-text-right">
+                <p>
+                    By 2015, the company expanded its facilities and started exporting to several European countries.
+                    The brand’s philosophy—“Ride beyond limits”—inspired a growing community of riders who sought
+                    quality and reliability on every trail.
+                </p>
+                <p>
+                    Today, <strong>Thunder Bikes</strong> continues to design and manufacture all its bikes in-house,
+                    maintaining strict quality standards and a sustainable production process. With a blend of tradition
+                    and cutting-edge technology, <strong>Thunder Bikes</strong> remains committed to pushing the
+                    boundaries of mountain biking worldwide.
+                </p>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="needs"></section>
+    <section class="accessories">
+        <h1>Accessories</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="assets/img/bottle.png">
+                <h2>PEDALS</h2>
+                <H2>14.99$</H2>
+                <button class="btn btn-secondary btn-border-orange">Buy</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/pedals.png">
+                <h2>TOOLKIT</h2>
+                <H2>17.99$</H2>
+                <button class="btn btn-secondary btn-border-disabled">Sold Out</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/bottle.png">
+                <h2>KIT</h2>
+                <H2>60.99$</H2>
+                <button class="btn btn-secondary btn-border-orange">Buy</button>
+            </div>
+            <div class="card">
+                <img src="assets/img/pedals.png">
+                <h2>BATTERY</h2>
+                <H2>25.99$</H2>
+                <button class="btn btn-secondary btn-border-orange">Buy</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact">
+        <h1>Contact</h1>
+        <div class="contact-info">
+            <form>
+                <input type="text" placeholder="Your Name">
+                <input type="email" placeholder="Your Email">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Send me a word"></textarea>
+                <div class="form-footer">
+                    <div class="privacy"><input type="checkbox"><label for="check">I accept the privacy policy</label>
+                    </div>
+                    <button class="btn btn-primary-green">Send</button>
+                </div>
+            </form>
+            <div class="contact-address">
+                <div class="main">
+                    <p>THUNDER BIKES</p>
+                    <p>Spring St, 26-28</p>
+                    <p>18008 Granda - Andalucía - ESP</p>
+                    <p>(+34) 958 777 888</p>
+
+                </div>
+                <div class="usa">
+                    <p>THUNDER BIKES U.S.A</p>
+                    <p>Main Street, 345</p>
+                    <p>W34L7 Orlando - Florida - USA</p>
+                    <p>(+4) 558 555 888</p>
+
+
+                </div>
+                <div class="france">
+                    <p>THUNDER BIKES FRANCE</p>
+                    <p>La Fayette, 345</p>
+                    <p>Amiens - FRANCE</p>
+                    <p>(+25) 558 655 868</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <footer>
+        <div class="geo">
+            <img src="assets/img/mapa.png" class="map">
+            <img src="assets/img/footer-shape.png" class="shape">
+        </div>
+
+        <div class="footer-content">
+            <div class="branding">
+                <div class="logo">
+                </div>
+                <div class="bran">Konnor Bikes</div>
+            </div>
+            <div class="footer-nav">
+                <ul>
+                        <li><a href="">Home</a></li>
+                        <li><a href="">About</a></li>
+                        <li><a href="">Bikes</a></li>
+                        <li><a href="">E-Bikes</a></li>
+                        <li><a href="">Accesories</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
+            </div>
+        </div>
+        <div class="subfooter">
+            <span><span>&copy;</span>2025 Konnor Bikes · Design by porfavor velocidad </span>
+            <span>Legal Terms ·  Privacy Policy</span>
+        </div>
+    </footer>
 </body>
 
 </html>
