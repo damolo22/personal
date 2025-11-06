@@ -368,6 +368,59 @@ strong {
   }
 }
 
+/* ----------------------------TICKETS --------------------  */
+.tickets{
+  display: flex;
+
+  .tickets-left{
+    width: 50%;
+    padding-left:4rem ;
+
+    .ticket-info{
+      border: 2px solid var(--main-color);
+      width: 80%;
+      text-align: center;
+      img{
+        padding: 1rem;
+        width: 100%;
+      }
+      p{
+        font-size: 32px;
+      }
+      iframe{
+        padding: 1rem;
+        width: 100%;
+      }
+    }
+  }
+
+  .tickets-right{
+    width: 50%;
+    padding-top: 10rem;
+    .ticket1{
+      height: 25%;
+      p{
+        color: var(--main-color);
+      }
+    }
+
+    .ticket2{
+      height: 25%;
+      p{
+        color: var(--main-color);
+      }
+    }
+
+    .ticket3{
+      height: 25%;
+      p{
+        color: var(--main-color);
+      }
+    }
+  }
+}
+
+
 /* ----------------------------MERCHANDISING --------------------  */
 .merch-title {
   text-align: center;
