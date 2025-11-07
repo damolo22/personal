@@ -58,6 +58,28 @@ strong {
   font-weight: 900;
 }
 
+.burguer {
+
+
+  width: 30px;
+  height: 20px;
+  cursor: pointer;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  span {
+    border: 1px solid white;
+    width: 100%;
+    height: 1px;
+    display: inline-block;
+
+  }
+
+  display: none;
+}
+
 .hero-section {
   min-height: 100vh;
   display: flex;
@@ -109,19 +131,16 @@ strong {
     flex-direction: row;
 
     .hero-photo {
-      width: 60%;
-      height: 100%;
-
-      background-image: url(Assets/img/background.png);
-      background-size: contain;
-      background-position: left top;
-      background-repeat: no-repeat;
+              width: 56%;
+      img {
+        width: 100%;
+      }
     }
 
     .hero-text {
       width: 40%;
       padding: 4rem 2rem;
-      line-height: 1.6;
+      line-height: 1.9;
       font-size: 1.1rem;
 
       .title-top {
@@ -131,9 +150,11 @@ strong {
         font-weight: 400;
         font-size: 16px;
       }
-      .title-main{
+
+      .title-main {
         padding: 5px 0;
       }
+
       .title-bottom {
         padding-top: 10px;
         font-size: 1.2rem;
@@ -176,6 +197,7 @@ strong {
   .bio-photo {
     width: 50%;
     text-align: right;
+
     img {
       height: 1100px;
     }
@@ -360,6 +382,7 @@ strong {
   .tour-video {
     flex-grow: 1;
     text-align: center;
+
     video {
       max-width: 100%;
       height: auto;
@@ -369,51 +392,58 @@ strong {
 }
 
 /* ----------------------------TICKETS --------------------  */
-.tickets{
+.tickets {
   display: flex;
 
-  .tickets-left{
+  .tickets-left {
     width: 50%;
-    padding-left:4rem ;
+    padding-left: 4rem;
 
-    .ticket-info{
+    .ticket-info {
       border: 2px solid var(--main-color);
       width: 80%;
       text-align: center;
-      img{
+
+      img {
         padding: 1rem;
         width: 100%;
       }
-      p{
+
+      p {
         font-size: 32px;
       }
-      iframe{
+
+      iframe {
         padding: 1rem;
         width: 100%;
       }
     }
   }
 
-  .tickets-right{
+  .tickets-right {
     width: 50%;
     padding-top: 10rem;
-    .ticket1{
+
+    .ticket1 {
       height: 25%;
-      p{
+
+      p {
         color: var(--main-color);
       }
     }
 
-    .ticket2{
+    .ticket2 {
       height: 25%;
-      p{
+
+      p {
         color: var(--main-color);
       }
     }
 
-    .ticket3{
+    .ticket3 {
       height: 25%;
-      p{
+
+      p {
         color: var(--main-color);
       }
     }
@@ -431,6 +461,7 @@ strong {
 .merch {
   font-size: 24px;
   display: flex;
+
   .merch-left {
     padding: 2rem 4rem;
     width: 50%;
@@ -487,9 +518,11 @@ strong {
         text-align: center;
         width: 90%;
         padding-bottom: 3rem;
+
         b {
           font-size: 40px;
         }
+
         img {
           width: 25rem;
           height: 25rem;
@@ -530,9 +563,11 @@ strong {
         text-align: center;
         width: 90%;
         padding-bottom: 3rem;
+
         b {
           font-size: 40px;
         }
+
         img {
           width: 25rem;
           height: 25rem;
@@ -568,9 +603,11 @@ strong {
         text-align: center;
         width: 90%;
         padding-bottom: 3rem;
+
         b {
           font-size: 40px;
         }
+
         img {
           width: 25rem;
           height: 25rem;
@@ -609,8 +646,10 @@ strong {
       text-align: center;
       padding: 2rem 0;
     }
+
     .contact-form {
       text-align: center;
+
       input {
         border: 1px solid var(--main-color);
         background-color: black;
@@ -619,6 +658,7 @@ strong {
         margin-top: 1rem;
         width: 500px;
       }
+
       textarea {
         border: 1px solid var(--main-color);
         background-color: black;
@@ -626,16 +666,19 @@ strong {
         margin-bottom: 1rem;
         height: 10rem;
         width: 500px;
-        resize: none; /* esto hace que el usuario no pueda cambiar el tamaño del textarea, y no me rompa el orden de la pagina */
+        resize: none;
+        /* esto hace que el usuario no pueda cambiar el tamaño del textarea, y no me rompa el orden de la pagina */
       }
     }
 
     .contact-terms {
       text-align: left;
-      padding-left: 3.5rem; /* es una chapuza pero asi esta todo en el mismo borde */
+      padding-left: 3.5rem;
+      /* es una chapuza pero asi esta todo en el mismo borde */
       font-size: 16px;
       padding-bottom: 2rem;
     }
+
     button {
       margin-left: 3.5rem;
     }
@@ -677,10 +720,12 @@ strong {
     .numbers {
       padding: 3rem 0;
     }
+
     .info {
       font-size: 16px;
       gap: 2rem;
     }
+
     h2 {
       font-size: 55px;
     }
@@ -714,12 +759,14 @@ strong {
 
     .name-footer {
       padding-top: 4rem;
+
       p {
         border-bottom: 3px solid white;
         display: inline-block;
         padding-bottom: 10px;
       }
     }
+
     .social-footer {
       display: flex;
       justify-content: center;
@@ -746,28 +793,65 @@ strong {
   font-size: 16px;
 }
 
+
+
 /* ----------------------RESPONSIVE DESIGN-------------- */
 
-@media screen and (max-width: 768px) {
-  .hero-section {
-    header {
-      justify-content: center;
-      flex-direction: column;
-      height: auto;
-      padding-bottom: 20px;
-    }
 
-    header nav ul {
-      gap: 1rem;
+
+
+@media screen and (max-width: 1000px) {
+  .hero-section {
+
+    header {
+      padding-right: 1rem;
+
+      nav {
+        ul {
+
+          li:nth-child(1),
+          li:nth-child(2),
+          li:nth-child(3),
+          li:nth-child(4),
+          li:nth-child(5) {
+            display: none;
+          }
+        }
+      }
+      nav {
+        ul {
+          .burguer {
+            display: flex;
+          }
+        }
+      }
+
     }
 
     .hero-content {
       flex-direction: column;
       height: auto;
 
-      .hero-photo,
-      .hero-text {
+      .hero-photo{
         width: 100%;
+        text-align: center;
+        background-position: center center;
+    background-repeat: no-repeat;
+    
+    /* 🔥 LA SOLUCIÓN CLAVE 🔥 */
+    /* 'contain' asegura que toda la imagen se vea dentro del contenedor. */
+    /* Puede dejar barras negras (tu fondo) si la relación de aspecto no encaja. */
+    background-size: contain;
+      }
+      .hero-text {
+        text-align: center;
+        width: 100%;
+
+        .title{
+          .title-main{
+            font-size: 100px;
+          }
+        }
       }
 
       .hero-photo {
@@ -957,6 +1041,7 @@ strong {
       }
 
       .contact-form {
+
         input,
         textarea {
           width: 90%;
