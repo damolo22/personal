@@ -781,7 +781,7 @@ strong {
   .contact-right {
     width: 33%;
 }
-
+}
 /* ----------------------------FOOTER --------------------  */
 
 .footer1 {
@@ -839,7 +839,16 @@ strong {
   font-size: 16px;
 }
 
+
+
+
+
 /* ----------------------RESPONSIVE DESIGN-------------- */
+
+
+
+
+
 
 @media screen and (max-width: 1250px) {
   .hero-section {
@@ -914,6 +923,8 @@ strong {
     }
 
     .bio-photo {
+      /* No he conseguido alinear la foto del bio, se me va para la derecha */
+      text-align: center;
       width: 100%;
       order: 2;
 
