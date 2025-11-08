@@ -123,12 +123,11 @@ strong {
   }
 
   .hero-content {
-    height: 100vh;
     display: flex;
     flex-direction: row;
 
     .hero-photo {
-      width: 56%;
+      width: 60%;
       img {
         width: 100%;
       }
@@ -317,12 +316,12 @@ strong {
   text-align: center;
 }
 
-  .background-photo {
+.background-photo {
+  width: 100%;
+  img {
     width: 100%;
-    img {
-      width: 100%;
-    }
   }
+}
 
 /* ----------------------------TOUR --------------------  */
 .tour-title {
@@ -411,7 +410,6 @@ strong {
   .tickets-right {
     width: 45%;
     padding-top: 10rem;
-    
 
     .ticket1 {
       height: 25%;
@@ -448,7 +446,7 @@ strong {
           color: var(--main-color);
           padding: 1rem 0;
         }
-        span{
+        span {
           font-size: 24px;
         }
       }
@@ -478,7 +476,7 @@ strong {
           color: var(--main-color);
           padding: 1rem 0;
         }
-        span{
+        span {
           font-size: 24px;
         }
       }
@@ -499,7 +497,6 @@ strong {
         }
       }
     }
-
   }
 }
 
@@ -517,7 +514,6 @@ strong {
   .merch-left {
     padding: 2rem 4rem;
     width: 50%;
-
 
     .product1 {
       display: flex;
@@ -727,7 +723,6 @@ strong {
     .contact-terms {
       text-align: left;
       padding-left: 3.5rem;
-      /* es una chapuza pero asi esta todo en el mismo borde */
       font-size: 16px;
       padding-bottom: 2rem;
     }
@@ -846,17 +841,7 @@ strong {
   font-size: 16px;
 }
 
-
-
-
-
 /* ----------------------RESPONSIVE DESIGN-------------- */
-
-
-
-
-
-
 
 @media screen and (max-width: 1250px) {
   .hero-section {
@@ -890,9 +875,6 @@ strong {
       .hero-photo {
         width: 100%;
         text-align: center;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-size: contain;
       }
       .hero-text {
         text-align: center;
@@ -904,11 +886,6 @@ strong {
           }
         }
       }
-
-      .hero-photo {
-        background-position: center center;
-        background-size: cover;
-      }
     }
 
     h1 {
@@ -916,9 +893,7 @@ strong {
     }
   }
 
-
-
-  .bio-title{
+  .bio-title {
     text-align: center;
   }
 
@@ -929,9 +904,15 @@ strong {
     padding: 2rem 20px;
 
     .bio-text {
+      font-size: 24px;
       width: 100%;
       order: 1;
       margin-bottom: 1.5rem;
+      line-height: 2;
+
+      h3 {
+        font-size: 55px;
+      }
     }
 
     .bio-photo {
@@ -946,7 +927,7 @@ strong {
   }
 
   .album {
-    padding: 0 20px;
+    padding: 0 30px;
 
     .top-album {
       padding: 2rem 0;
@@ -968,7 +949,7 @@ strong {
       .right-songs {
         width: 100%;
         padding: 0 0 2rem 0;
-        gap: 1.5rem;
+        gap: 2.5rem;
       }
     }
 
@@ -1015,6 +996,46 @@ strong {
         width: 100%;
         height: 400px;
         margin: 0 auto;
+      }
+    }
+  }
+
+  .tickets {
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: 0 auto;
+
+
+    .tickets-left {
+      width: 90%;
+      padding-left: 0;
+      text-align: center;
+      margin-bottom: 2rem;
+
+      .ticket-info {
+        width: 100%;
+      }
+    }
+
+    .tickets-right {
+      width: 90%;
+      padding-top: 2rem;
+      height: auto;
+
+
+      .ticket1,
+      .ticket2,
+      .ticket3 {
+        .ticket-number {
+          width: 50%;
+          margin: 2rem auto ;
+        }
+      }
+
+      .ticket-btn {
+        margin: 2rem auto;
+        display: block;
       }
     }
   }
@@ -1175,10 +1196,6 @@ strong {
   }
 }
 
-
-
-
-
 /* Como el merch me estaba dando mucho problema he hecho que se vuelva responsive antes que los demas
 aunque queda mucho espacio libre... */
 @media screen and (max-width: 1450px) {
@@ -1244,5 +1261,4 @@ aunque queda mucho espacio libre... */
       }
     }
   }
-
 }
