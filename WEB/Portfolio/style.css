@@ -518,6 +518,7 @@ strong {
     padding: 2rem 4rem;
     width: 50%;
 
+
     .product1 {
       display: flex;
       gap: 40px;
@@ -543,8 +544,8 @@ strong {
       }
 
       .product-info {
+        width: 100%;
         flex-grow: 1;
-        height: 400px;
 
         .info-text {
           padding-bottom: 6rem;
@@ -855,6 +856,8 @@ strong {
 
 
 
+
+
 @media screen and (max-width: 1250px) {
   .hero-section {
     header {
@@ -889,10 +892,6 @@ strong {
         text-align: center;
         background-position: center center;
         background-repeat: no-repeat;
-
-        /* 🔥 LA SOLUCIÓN CLAVE 🔥 */
-        /* 'contain' asegura que toda la imagen se vea dentro del contenedor. */
-        /* Puede dejar barras negras (tu fondo) si la relación de aspecto no encaja. */
         background-size: contain;
       }
       .hero-text {
@@ -907,7 +906,6 @@ strong {
       }
 
       .hero-photo {
-        height: 70vh;
         background-position: center center;
         background-size: cover;
       }
@@ -918,8 +916,15 @@ strong {
     }
   }
 
+
+
+  .bio-title{
+    text-align: center;
+  }
+
   .biography1,
   .biography2 {
+    text-align: center;
     flex-direction: column;
     padding: 2rem 20px;
 
@@ -934,8 +939,8 @@ strong {
       order: 2;
 
       img {
-        width: 100%;
-        max-height: 700px;
+        width: 70%;
+        height: auto;
       }
     }
   }
@@ -1032,7 +1037,6 @@ strong {
     .product3,
     .product4 {
       width: 90%;
-      max-width: 440px;
 
       display: flex;
       flex-direction: column;
@@ -1169,4 +1173,76 @@ strong {
       }
     }
   }
+}
+
+
+
+
+
+/* Como el merch me estaba dando mucho problema he hecho que se vuelva responsive antes que los demas
+aunque queda mucho espacio libre... */
+@media screen and (max-width: 1450px) {
+  .merch {
+    flex-direction: column;
+    padding: 0 20px;
+
+    .merch-left,
+    .merch-right {
+      width: 100%;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .product1,
+    .product2,
+    .product3,
+    .product4 {
+      width: 90%;
+      max-width: 440px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      margin-bottom: 40px;
+
+      .product-photo {
+        width: 100%;
+        text-align: center;
+
+        img {
+          width: 100%;
+          max-width: 360px;
+          height: auto;
+          margin: 0 auto;
+          display: block;
+        }
+
+        b {
+          font-size: 24px;
+          display: block;
+          padding-top: 10px;
+        }
+      }
+
+      .product-info {
+        width: 90%;
+        height: auto;
+        text-align: center;
+
+        .info-text {
+          padding-bottom: 1rem;
+          text-align: center;
+        }
+
+        .info-button {
+          text-align: center;
+        }
+      }
+    }
+  }
+
 }
