@@ -76,3 +76,43 @@ nav ul{
     font-weight: 600;
     color: white;
 }
+
+/* ----------------  HERO  --------------------- */
+
+.hero{
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .izda{
+        border: 1px solid rgb(0, 230, 31);
+        flex: 1;
+        height: 85vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+
+        h1{
+            text-align: right;
+            font-weight: 600;
+            font-size: clamp(5rem, 3.04rem + 7.467vw, 12rem);
+            line-height: 12rem;
+        }
+
+        h3{
+            font-size: 1.6rem;
+            font-weight: 300;
+
+            text-align: right;
+
+        }
+    }
+
+    .dcha{
+        flex: 1;
+        height: 85vh;
+        border: 1px solid rgb(21, 33, 73);
+    }
+}
