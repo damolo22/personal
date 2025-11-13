@@ -1,0 +1,84 @@
+.info-with-image {
+    display: flex; /* Esto es clave para que estén lado a lado */
+    align-items: center; /* Centra verticalmente el contenido */
+    gap: 2rem; /* Espacio entre la imagen y el texto */
+    padding: 4rem; /* Padding general */
+    background-color: #0D0D0D; /* O el color de fondo de la sección */
+}
+
+.image-container {
+    flex: 1; /* Ocupa la mitad del espacio disponible */
+    min-width: 50%; /* Asegura que no se haga demasiado pequeña */
+}
+.image-container img {
+    width: 100%; /* La imagen se ajusta al contenedor */
+    height: auto;
+    display: block;
+}
+
+.text-content {
+    flex: 1; /* Ocupa la otra mitad del espacio disponible */
+    color: #F5F5F5; /* Blanco Roto */
+}
+
+.text-content h2 {
+    font-family: 'Playfair Display', serif;
+    color: #B8860B; /* Dorado Cepillado */
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.text-content button {
+    /* Estilos de tu botón dorado */
+    background-color: #B8860B;
+    color: #0D0D0D;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    margin-top: 1.5rem;
+}
+
+
+@media screen and (max-width: 768px) { /* Por ejemplo, para tablet y móvil */
+    .info-with-image {
+        flex-direction: column; /* 🔥 APILA: Cambia de fila a columna */
+        padding: 2rem 1rem; /* Reduce el padding para móvil */
+        text-align: center; /* Centra el texto */
+        gap: 1.5rem; /* Espacio entre los elementos apilados */
+    }
+
+    .image-container {
+        width: 100%; /* La imagen ocupa todo el ancho */
+        min-width: unset; /* Resetea el min-width de escritorio */
+        order: -1; /* 🔥 OPCIONAL: Pone la imagen ARRIBA del texto si quieres */
+    }
+
+    .text-content {
+        width: 100%; /* El texto ocupa todo el ancho */
+        text-align: left; /* O puedes mantenerlo centrado si prefieres */
+    }
+
+    .text-content h2,
+    .text-content p,
+    .text-content button {
+        text-align: center; /* Centra los elementos de texto y botón si text-content es 'left' */
+    }
+}
+
+/* Opcional: Para pantallas un poco más grandes que móvil pero aún pequeñas (tablets) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .info-with-image {
+        padding: 3rem 2rem;
+    }
+    .image-container,
+    .text-content {
+        flex: none; /* Deshabilita flex-grow */
+        width: 48%; /* Ocupa casi la mitad, dejando espacio entre ellos */
+    }
+}
