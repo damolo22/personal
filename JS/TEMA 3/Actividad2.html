@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class Alumno {
+            #dni;
+            #fechaNacimiento;
+            #notaMediaCiclo;
+
+            /**
+             * Constructor de Alumno
+             */
+            constructor(dni, fechaNacimiento, notaMediaCiclo) {
+                this.#dni = dni;
+                this.#fechaNacimiento = fechaNacimiento;
+                this.#notaMediaCiclo = notaMediaCiclo;
+            }
+
+            // Getters
+            get dni() { return this.#dni; }
+            get fechaNacimiento() { return this.#fechaNacimiento; }
+            get notaMediaCiclo() { return this.#notaMediaCiclo; }
+
+            toString() {
+                return `DNI: ${this.#dni}, Nac: ${this.#fechaNacimiento}, Media: ${this.#notaMediaCiclo}`;
+            }
+        }
+
+        // -----------------------------------------------------------------------------
+
+
+        class Estudiantes {
+            #alumnos;
+
+
+            constructor(listaAlumnos = []) {
+                this.#alumnos = [...listaAlumnos];
+            }
+
+
+            ordenarPorDNI() {
+                this.#alumnos.sort((a, b) => {
+                    if (a.dni < b.dni) return -1;
+                    if (a.dni > b.dni) return 1;
+                    return 0;
+                });
+            }
+
+
+            ordenarPorFechaNacimiento() {
+                this.#alumnos.sort((a, b) => {
+                    if (a.fechaNacimiento < b.fechaNacimiento) return -1;
+                    if (a.fechaNacimiento > b.fechaNacimiento) return 1;
+                    return 0;
+                });
+            }
+
+
+            ordenarPorNotaMediaCiclo() {
+
+                this.#alumnos.sort((a, b) => b.notaMediaCiclo - a.notaMediaCiclo);
+            }
+
+
+            buscarSecuencialPorDNI(dniBuscado) {
+
+                for (const alumno of this.#alumnos) {
+                    if (alumno.dni === dniBuscado) {
+                        return alumno;
+                    }
+                }
+                return null;
+            }
+
+            buscarBinariaPorDNI(dniBuscado) {
+                let inicio = 0;
+                let fin = this.#alumnos.length - 1;
+
+                while (inicio <= fin) {
+                    const medio = Math.floor((inicio + fin) / 2);
+                    const dniMedio = this.#alumnos[medio].dni;
+
+                    if (dniMedio === dniBuscado) {
+                        return this.#alumnos[medio];
+                    } else if (dniMedio < dniBuscado) {
+                        inicio = medio + 1;
+                    } else {
+                        fin = medio - 1;
+                    }
+                }
+
+                return null;
+            }
+
+
+            get alumnos() { return [...this.#alumnos]; }
+        }
+
+
+        const listaAlumnos = [
+            new Alumno('444B', '2001-08-20', 8.5),
+            new Alumno('111A', '2000-01-10', 9.2),
+            new Alumno('333C', '2002-05-05', 7.0),
+            new Alumno('222D', '2000-01-10', 9.2),
+        ];
+
+        const gestor = new Estudiantes(listaAlumnos);
+
+        console.log("--- SECUENCIAL (Buscar 333C) ---");
+        console.log(gestor.buscarSecuencialPorDNI('333C')?.toString() || "No encontrado");
+
+        console.log("--- SECUENCIAL (Buscar 999X) ---");
+        console.log(gestor.buscarSecuencialPorDNI('999X')?.toString() || "No encontrado");
+
+
+        console.log("\n--- ORDENAR POR DNI ---");
+        gestor.ordenarPorDNI();
+        console.log(gestor.alumnos.map(a => a.dni)); 
+
+        console.log("\n--- ORDENAR POR NOTA MEDIA (Desc) ---");
+        gestor.ordenarPorNotaMediaCiclo();
+        console.log(gestor.alumnos.map(a => a.notaMediaCiclo));
+
+        console.log("\n--- ORDENAR POR FECHA NAC. (Asc) ---");
+        gestor.ordenarPorFechaNacimiento();
+        console.log(gestor.alumnos.map(a => a.fechaNacimiento)); 
+
+
+        gestor.ordenarPorDNI(); 
+        console.log("\n--- BINARIA (Buscar 222D) ---");
+        console.log(gestor.buscarBinariaPorDNI('222D')?.toString() || "No encontrado");
+
+        console.log("--- BINARIA (Buscar 111A) ---");
+        console.log(gestor.buscarBinariaPorDNI('111A')?.toString() || "No encontrado");
+
+        console.log("--- BINARIA (Buscar 0000) ---");
+        console.log(gestor.buscarBinariaPorDNI('0000')?.toString() || "No encontrado");
+    </script>
+</body>
+
+</html>

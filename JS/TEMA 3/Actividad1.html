@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        class Persona {
+            #nombre;
+            #apellidos;
+            #genero;
+            #fechaNacimiento;
+
+            /**
+             * Constructor de Persona
+             */
+            constructor(nombre, apellidos, genero, fechaNacimiento) {
+                this.#nombre = nombre;
+                this.#apellidos = apellidos;
+                this.#genero = genero;
+                this.#fechaNacimiento = fechaNacimiento;
+            }
+
+            // --- Getters ---
+            get nombre() { return this.#nombre; }
+            get apellidos() { return this.#apellidos; }
+            get genero() { return this.#genero; }
+            get fechaNacimiento() { return this.#fechaNacimiento; }
+
+            // --- Setters ---
+            set nombre(nuevoNombre) { this.#nombre = nuevoNombre; }
+            set apellidos(nuevosApellidos) { this.#apellidos = nuevosApellidos; }
+            set genero(nuevoGenero) { this.#genero = nuevoGenero; }
+            set fechaNacimiento(nuevaFecha) { this.#fechaNacimiento = nuevaFecha; }
+
+            /**
+             * Método toString()
+             */
+            toString() {
+                return `Persona: ${this.#nombre} ${this.#apellidos}, Género: ${this.#genero}, Nacimiento: ${this.#fechaNacimiento}`;
+            }
+        }
+
+        // -----------------------------------------------------------------------------
+
+        /**
+         * Clase Estudiante (extiende de Persona)
+         */
+        class Estudiante extends Persona {
+            #modulosMatriculados; 
+
+            constructor(nombre, apellidos, genero, fechaNacimiento, modulosMatriculados = []) {
+                super(nombre, apellidos, genero, fechaNacimiento);
+                this.#modulosMatriculados = [...modulosMatriculados];
+            }
+
+            // --- Getter y Setter ---
+            get modulosMatriculados() { return [...this.#modulosMatriculados]; }
+            set modulosMatriculados(nuevosModulos) {
+                if (Array.isArray(nuevosModulos)) {
+                    this.#modulosMatriculados = [...nuevosModulos];
+                }
+            }
+
+            // --- Métodos de Estudiante ---
+
+
+            obtenerNotaModulo(nombreModulo) {
+                const modulo = this.#modulosMatriculados.find(m => m.nombre.toLowerCase() === nombreModulo.toLowerCase());
+                return modulo ? modulo.nota : null;
+            }
+
+            actualizarNotaModulo(nombreModulo, nuevaNota) {
+                const moduloIndex = this.#modulosMatriculados.findIndex(m => m.nombre.toLowerCase() === nombreModulo.toLowerCase());
+
+                if (moduloIndex !== -1) {
+                    this.#modulosMatriculados[moduloIndex].nota = nuevaNota;
+                    return true;
+                }
+                return false;
+            }
+
+
+            calcularNotaMediaCiclo() {
+                if (this.#modulosMatriculados.length === 0) return 0;
+
+                const sumaNotas = this.#modulosMatriculados.reduce((acc, modulo) => acc + modulo.nota, 0);
+                return sumaNotas / this.#modulosMatriculados.length;
+            }
+
+
+            toString() {
+                const infoPersona = super.toString();
+                const modulosStr = this.#modulosMatriculados.map(m => `${m.nombre}: ${m.nota}`).join(' | ');
+                const media = this.calcularNotaMediaCiclo().toFixed(2);
+
+                return `${infoPersona}, Estudiante [Módulos: ${modulosStr}, Media: ${media}]`;
+            }
+        }
+
+        // -----------------------------------------------------------------------------
+
+        
+        const modulos = [{ nombre: 'M1', nota: 8 }, { nombre: 'M2', nota: 6 }];
+        const estudiante = new Estudiante('David', 'Moreno', 'Hombre', '2006-05-22', modulos);
+        console.log(estudiante.toString()); 
+        console.log('Nota M1:', estudiante.obtenerNotaModulo('m1'));
+        estudiante.actualizarNotaModulo('M2', 9);
+        console.log(estudiante.toString());
+        
+    </script>
+</body>
+
+</html>

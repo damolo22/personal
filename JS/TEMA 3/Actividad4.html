@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <script>
+
+        class Alumno {
+            #dni;
+            #fechaNacimiento;
+            #notaMediaCiclo;
+
+            /**
+             * Constructor de Alumno
+             */
+            constructor(dni, fechaNacimiento, notaMediaCiclo) {
+                this.#dni = dni;
+                this.#fechaNacimiento = fechaNacimiento;
+                this.#notaMediaCiclo = notaMediaCiclo;
+            }
+
+            // Getters
+            get dni() { return this.#dni; }
+            get fechaNacimiento() { return this.#fechaNacimiento; }
+            get notaMediaCiclo() { return this.#notaMediaCiclo; }
+
+            toString() {
+                return `DNI: ${this.#dni}, Nac: ${this.#fechaNacimiento}, Media: ${this.#notaMediaCiclo}`;
+            }
+        }
+
+        // -----------------------------------------------------------------------------
+
+
+        class Estudiantes {
+            #alumnos;
+
+
+            constructor(listaAlumnos = []) {
+                this.#alumnos = [...listaAlumnos];
+            }
+
+
+            ordenarPorDNI() {
+                this.#alumnos.sort((a, b) => {
+                    if (a.dni < b.dni) return -1;
+                    if (a.dni > b.dni) return 1;
+                    return 0;
+                });
+            }
+
+
+            ordenarPorFechaNacimiento() {
+                this.#alumnos.sort((a, b) => {
+                    if (a.fechaNacimiento < b.fechaNacimiento) return -1;
+                    if (a.fechaNacimiento > b.fechaNacimiento) return 1;
+                    return 0;
+                });
+            }
+
+
+            ordenarPorNotaMediaCiclo() {
+
+                this.#alumnos.sort((a, b) => b.notaMediaCiclo - a.notaMediaCiclo);
+            }
+
+
+            buscarSecuencialPorDNI(dniBuscado) {
+
+                for (const alumno of this.#alumnos) {
+                    if (alumno.dni === dniBuscado) {
+                        return alumno;
+                    }
+                }
+                return null;
+            }
+
+            buscarBinariaPorDNI(dniBuscado) {
+                let inicio = 0;
+                let fin = this.#alumnos.length - 1;
+
+                while (inicio <= fin) {
+                    const medio = Math.floor((inicio + fin) / 2);
+                    const dniMedio = this.#alumnos[medio].dni;
+
+                    if (dniMedio === dniBuscado) {
+                        return this.#alumnos[medio];
+                    } else if (dniMedio < dniBuscado) {
+                        inicio = medio + 1;
+                    } else {
+                        fin = medio - 1;
+                    }
+                }
+
+                return null;
+            }
+
+
+            get alumnos() { return [...this.#alumnos]; }
+        }
+
+
+        const listaAlumnos = [
+            new Alumno('444B', '2001-08-20', 8.5),
+            new Alumno('111A', '2000-01-10', 9.2),
+            new Alumno('333C', '2002-05-05', 7.0),
+            new Alumno('222D', '2000-01-10', 9.2),
+        ];
+
+        const gestor = new Estudiantes(listaAlumnos);
+
+        console.log("--- SECUENCIAL (Buscar 333C) ---");
+        console.log(gestor.buscarSecuencialPorDNI('333C')?.toString() || "No encontrado");
+
+        console.log("--- SECUENCIAL (Buscar 999X) ---");
+        console.log(gestor.buscarSecuencialPorDNI('999X')?.toString() || "No encontrado");
+
+
+        console.log("\n--- ORDENAR POR DNI ---");
+        gestor.ordenarPorDNI();
+        console.log(gestor.alumnos.map(a => a.dni));
+
+        console.log("\n--- ORDENAR POR NOTA MEDIA (Desc) ---");
+        gestor.ordenarPorNotaMediaCiclo();
+        console.log(gestor.alumnos.map(a => a.notaMediaCiclo));
+
+        console.log("\n--- ORDENAR POR FECHA NAC. (Asc) ---");
+        gestor.ordenarPorFechaNacimiento();
+        console.log(gestor.alumnos.map(a => a.fechaNacimiento));
+
+
+        gestor.ordenarPorDNI();
+        console.log("\n--- BINARIA (Buscar 222D) ---");
+        console.log(gestor.buscarBinariaPorDNI('222D')?.toString() || "No encontrado");
+
+        console.log("--- BINARIA (Buscar 111A) ---");
+        console.log(gestor.buscarBinariaPorDNI('111A')?.toString() || "No encontrado");
+
+        console.log("--- BINARIA (Buscar 0000) ---");
+        console.log(gestor.buscarBinariaPorDNI('0000')?.toString() || "No encontrado");
+
+        function generarAlumnos(n) {
+            const alumnos = [];
+            for (let i = 1; i <= n; i++) {
+                const dni = String(i).padStart(6, '0') + 'A';
+                const fechaNac = '2000-01-01';
+                const nota = Math.random() * 10;
+                alumnos.push(new Alumno(dni, fechaNac, nota));
+            }
+
+            // Desordenamos la mitad de la lista para simular un array desordenado
+            for (let i = 0; i < n / 2; i++) {
+                const idx1 = Math.floor(Math.random() * n);
+                const idx2 = Math.floor(Math.random() * n);
+                [alumnos[idx1], alumnos[idx2]] = [alumnos[idx2], alumnos[idx1]];
+            }
+
+            return alumnos;
+        }
+
+
+        function medirTiempo(func) {
+            const inicio = performance.now();
+            func();
+            const fin = performance.now();
+            return fin - inicio;
+        }
+
+
+        const NUM_ALUMNOS = 50000;
+        const DNI_MAS_PEQUENO = '000001A';
+        const DNI_MAS_GRANDE = String(NUM_ALUMNOS).padStart(6, '0') + 'A'; 
+
+
+        const listaDesordenada = generarAlumnos(NUM_ALUMNOS);
+        const gestorDesordenado = new Estudiantes(listaDesordenada);
+
+        const gestorOrdenado = new Estudiantes(generarAlumnos(NUM_ALUMNOS));
+        const tiempoOrdenacion = medirTiempo(() => gestorOrdenado.ordenarPorDNI());
+
+        console.log(`\n--- PRUEBA DE CASOS LÍMITE con ${NUM_ALUMNOS} alumnos ---`);
+        console.log(`Costo de ordenación inicial: ${tiempoOrdenacion.toFixed(4)} ms`);
+        console.log("----------------------------------------------------------");
+
+
+        // =========================================================================
+        // A) CASO LÍMITE: DNI MÁS PEQUEÑO ('000001A')
+        // =========================================================================
+
+        // Secuencial (O(n) - Mejor Caso si está al inicio, Peor Caso si está al final)
+        const tiempoSecuencialPequeno = medirTiempo(() => {
+            gestorDesordenado.buscarSecuencialPorDNI(DNI_MAS_PEQUENO);
+        });
+
+        // Binaria (O(log n) - Consistente, rápido)
+        const tiempoBinariaPequeno = medirTiempo(() => {
+            gestorOrdenado.buscarBinariaPorDNI(DNI_MAS_PEQUENO);
+        });
+
+        console.log(`\nCASO LÍMITE: DNI más pequeño (${DNI_MAS_PEQUENO})`);
+        console.log(`Secuencial (O(n)): ${tiempoSecuencialPequeno.toFixed(4)} ms`);
+        console.log(`Binaria (O(log n)): ${tiempoBinariaPequeno.toFixed(4)} ms`);
+
+
+        // =========================================================================
+        // B) CASO LÍMITE: DNI MÁS GRANDE (El último, que es el peor caso para Secuencial)
+        // =========================================================================
+
+        // Secuencial (O(n) - Peor Caso: tiene que revisar casi toda la lista)
+        const tiempoSecuencialGrande = medirTiempo(() => {
+            gestorDesordenado.buscarSecuencialPorDNI(DNI_MAS_GRANDE);
+        });
+
+        // Binaria (O(log n) - Consistente, rápido)
+        const tiempoBinariaGrande = medirTiempo(() => {
+            gestorOrdenado.buscarBinariaPorDNI(DNI_MAS_GRANDE);
+        });
+
+        console.log(`\nCASO LÍMITE: DNI más grande (${DNI_MAS_GRANDE})`);
+        console.log(`Secuencial (O(n)): ${tiempoSecuencialGrande.toFixed(4)} ms`);
+        console.log(`Binaria (O(log n)): ${tiempoBinariaGrande.toFixed(4)} ms`);
+
+
+        /*
+         * COMENTARIO FINAL (Actividad 4):
+         *
+         * - DNI Más Pequeño: Su tiempo es variable. Si el DNI por suerte está al inicio
+         * del array desordenado, puede ser muy rápido. Si está al final, es lento.
+         * - DNI Más Grande: Este es el peor caso garantizado si el DNI fue generado
+         * al final, ya que fuerza a revisar la mayor parte de los 50.000 elementos.
+         * Por lo tanto, la Secuencial es peor para el elemento más grande.
+         * 
+         */
+    </script>
+</body>
+
+</html>
