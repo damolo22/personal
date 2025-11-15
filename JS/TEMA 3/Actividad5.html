@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+
+
+      class Media {
+        #titulo;
+        #prestado; 
+        #valoraciones; 
+
+
+        constructor(titulo) {
+          this.#titulo = titulo;
+          this.#prestado = false; 
+          this.#valoraciones = []; 
+        }
+
+        // --- Getters Comunes ---
+
+        get titulo() {
+          return this.#titulo;
+        }
+
+        get prestado() {
+          return this.#prestado;
+        }
+
+        get valoraciones() {
+          return [...this.#valoraciones]; 
+        }
+
+        // --- Métodos Comunes ---
+
+
+        getMediaValoraciones() {
+          if (this.#valoraciones.length === 0) {
+            return 0;
+          }
+          const suma = this.#valoraciones.reduce((acc, val) => acc + val, 0);
+          return suma / this.#valoraciones.length;
+        }
+
+
+        cambiarEstadoPrestado() {
+          this.#prestado = !this.#prestado;
+        }
+
+
+        addValoracion(valoracion) {
+          this.#valoraciones.push(valoracion);
+        }
+      }
+
+
+      /**
+       * Subclase: Libro (Extiende de Media)
+       */
+      class Libro extends Media {
+        #autor;
+        #paginas;
+
+        /**
+         * Constructor de Libro
+         */
+        constructor(titulo, autor, paginas) {
+          super(titulo); // Llama al constructor de Media
+          this.#autor = autor;
+          this.#paginas = paginas;
+        }
+
+        // --- Getters Específicos de Libro ---
+
+        get autor() {
+          return this.#autor;
+        }
+
+        get paginas() {
+          return this.#paginas;
+        }
+
+      }
+
+
+      /**
+       * Subclase: Película (Extiende de Media)
+       */
+      class Pelicula extends Media {
+        #director;
+        #duracion;
+
+        /**
+         * Constructor de Película
+         */
+        constructor(titulo, director, duracion) {
+          super(titulo); 
+          this.#director = director;
+          this.#duracion = duracion;
+        }
+
+        // --- Getters Específicos de Película ---
+
+        get director() {
+          return this.#director;
+        }
+
+        get duracion() {
+          return this.#duracion;
+        }
+
+      }
+
+      // --- Creación de Instancias y Prueba de Métodos ---
+
+
+      console.log("         PRUEBAS DE LIBRO");
+
+
+      const libro1 = new Libro(
+        "Cien años de soledad",
+        "Gabriel García Márquez",
+        496
+      );
+
+      // 1. Mostrar propiedades iniciales (Getters)
+      console.log(`Título: ${libro1.titulo}`); // Cien años de soledad
+      console.log(`Autor: ${libro1.autor}`); // Gabriel García Márquez
+      console.log(`Páginas: ${libro1.paginas}`);
+      console.log(`¿Prestado inicialmente?: ${libro1.prestado}`); // false
+      console.log(`Valoración inicial: ${libro1.getMediaValoraciones()}`); // 0
+
+      // 2. Probar .addValoracion() y .getMediaValoraciones()
+      libro1.addValoracion(5);
+      libro1.addValoracion(4);
+      libro1.addValoracion(5);
+      console.log(`\nValoraciones añadidas: ${libro1.valoraciones}`); // [5, 4, 5]
+      console.log(
+        `Media de valoraciones: ${libro1.getMediaValoraciones().toFixed(2)}`
+      ); // 4.67
+
+      // 3. Probar .cambiarEstadoPrestado()
+      libro1.cambiarEstadoPrestado(); // De false a true
+      console.log(`\n¿Prestado después de cambio 1?: ${libro1.prestado}`); // true
+      libro1.cambiarEstadoPrestado(); // De true a false
+      console.log(`¿Prestado después de cambio 2?: ${libro1.prestado}`); // false
+
+
+      console.log("         PRUEBAS DE PELÍCULA");
+
+
+      const pelicula1 = new Pelicula("Pulp Fiction", "Quentin Tarantino", 154);
+
+      // 1. Mostrar propiedades iniciales (Getters)
+      console.log(`Título: ${pelicula1.titulo}`); // Pulp Fiction
+      console.log(`Director: ${pelicula1.director}`);
+      console.log(`Duración (min): ${pelicula1.duracion}`);
+      console.log(`¿Prestada inicialmente?: ${pelicula1.prestado}`); // false
+
+      // 2. Probar .addValoracion() y .getMediaValoraciones()
+      pelicula1.addValoracion(10);
+      pelicula1.addValoracion(9);
+      console.log(`\nValoraciones añadidas: ${pelicula1.valoraciones}`); // [10, 9]
+      console.log(
+        `Media de valoraciones: ${pelicula1.getMediaValoraciones().toFixed(2)}`
+      ); // 9.50
+
+      // 3. Probar .cambiarEstadoPrestado()
+      pelicula1.cambiarEstadoPrestado();
+      console.log(`\n¿Prestada después de cambio 1?: ${pelicula1.prestado}`); // true
+    </script>
+  </body>
+</html>
