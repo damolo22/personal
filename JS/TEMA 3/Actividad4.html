@@ -9,6 +9,14 @@
 
 <body>
 
+    Comprueba la terminal
+
+    <style>
+        html{
+            background-color: black;
+            color: white;
+        }
+    </style>
 
     <script>
 
@@ -35,8 +43,6 @@
                 return `DNI: ${this.#dni}, Nac: ${this.#fechaNacimiento}, Media: ${this.#notaMediaCiclo}`;
             }
         }
-
-        // -----------------------------------------------------------------------------
 
 
         class Estudiantes {
@@ -155,7 +161,6 @@
                 alumnos.push(new Alumno(dni, fechaNac, nota));
             }
 
-            // Desordenamos la mitad de la lista para simular un array desordenado
             for (let i = 0; i < n / 2; i++) {
                 const idx1 = Math.floor(Math.random() * n);
                 const idx2 = Math.floor(Math.random() * n);
@@ -190,9 +195,9 @@
         console.log("----------------------------------------------------------");
 
 
-        // =========================================================================
+       
         // A) CASO LÍMITE: DNI MÁS PEQUEÑO ('000001A')
-        // =========================================================================
+
 
         // Secuencial (O(n) - Mejor Caso si está al inicio, Peor Caso si está al final)
         const tiempoSecuencialPequeno = medirTiempo(() => {
@@ -209,9 +214,8 @@
         console.log(`Binaria (O(log n)): ${tiempoBinariaPequeno.toFixed(4)} ms`);
 
 
-        // =========================================================================
+     
         // B) CASO LÍMITE: DNI MÁS GRANDE (El último, que es el peor caso para Secuencial)
-        // =========================================================================
 
         // Secuencial (O(n) - Peor Caso: tiene que revisar casi toda la lista)
         const tiempoSecuencialGrande = medirTiempo(() => {
