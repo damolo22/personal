@@ -2,7 +2,7 @@
 
 :root {
     --main-color: #f4ac1c;
-    --foreground-color:#222;
+    --foreground-color: #222;
 }
 
 * {
@@ -11,35 +11,35 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: Poppins;
     color: var(--foreground-color);
 }
 
-.wrapper{
+.wrapper {
     width: 96%;
-    margin: 0 auto; /* margin-inline: auto*/
+    margin: 0 auto;
+    /* margin-inline: auto*/
 }
 
-header{
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 10vh;
-    border: 1px solid red;
 
 }
 
-.logo img{
+.logo img {
     max-width: 108px;
 }
 
 
-.navcollapse{
+.navcollapse {
     /* display: none; */
 }
 
-.menu_mobile{
+.menu_mobile {
     display: none;
 }
 
@@ -48,23 +48,27 @@ header{
     border: 2px solid var(--foreground-color);
 } */
 
-nav ul{
+nav ul {
     list-style-type: none;
     display: flex;
     align-items: center;
     gap: 2rem;
 }
 
-.item a{
+.item a {
     text-decoration: none;
     color: var(--foreground-color);
     font-size: 1.2rem;
     font-weight: 600;
 
     /* settings para la animacion */
+
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
 }
 
-.contact{
+.contact {
     text-transform: uppercase;
     padding: 6px 1.4rem;
     background-color: var(--main-color);
@@ -77,42 +81,175 @@ nav ul{
     color: white;
 }
 
+/* NAV HOVER ANIMATION */
+
+
+
 /* ----------------  HERO  --------------------- */
 
-.hero{
+.hero {
 
     display: flex;
     justify-content: center;
     align-items: stretch;
 
-    .izda{
-        border: 1px solid rgb(0, 230, 31);
+    .izda {
         flex: 1;
         height: 85vh;
 
         display: flex;
         flex-direction: column;
         align-items: end;
+        gap: 2rem;
+        padding: 2rem;
 
-        h1{
+        h1 {
             text-align: right;
             font-weight: 600;
             font-size: clamp(5rem, 3.04rem + 7.467vw, 12rem);
             line-height: 12rem;
         }
 
-        h3{
-            font-size: 1.6rem;
+        h3 {
+            font-size: clamp(1rem, 0.832rem + 0.64vw, 1.6rem);
             font-weight: 300;
-
             text-align: right;
+            margin-top: 1rem;
+        }
 
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+            div {
+                width: 40px;
+                aspect-ratio: 1;
+                border: 1px solid var(--foreground-color);
+                border-radius: 25px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .stadistics {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 4rem;
+
+            .col-1, .col-2{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                span:first-child{
+                    font-size: clamp(1.6rem, 1.32rem + 1.067vw, 2.6rem);
+                    font-weight: 600;
+                }
+            }
         }
     }
 
-    .dcha{
+    .dcha {
         flex: 1;
         height: 85vh;
-        border: 1px solid rgb(21, 33, 73);
+    }
+}
+
+.img-container {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    position: relative;
+    background-image: url(assets/img/chill-dude.png);
+    background-size: 50vh;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    .hire {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        background-color: var(--main-color);
+        outline: 10px solid white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 9;
+
+        transition: .5s;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 35px;
+            aspect-ratio: 1;
+            background: radial-gradient(circle 25px at top left, transparent 98%, white);
+        }
+
+        &::before {
+            bottom: -10px;
+            left: -35px;
+        }
+
+        &::after {
+            right: -10px;
+            top: -35px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            width: 200px;
+
+            span {
+                width: 100%;
+                justify-content: center;
+                color: white;
+            }
+
+            img {
+                transform: rotate(360deg);
+            }
+        }
+
+        span {
+            color: transparent;
+            overflow: hidden;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 1.8ch;
+            white-space: nowrap;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            gap: 1rem;
+
+            transition: .5s;
+
+            img {
+                width: 24px;
+                height: 24px;
+                transition: transform .5s ease-in;
+            }
+        }
     }
 }
