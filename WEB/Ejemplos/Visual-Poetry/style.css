@@ -65,7 +65,7 @@ nav ul {
 
     overflow: hidden;
     position: relative;
-    display: inline-block;
+    display: flex;
 }
 
 .contact {
@@ -251,5 +251,25 @@ nav ul {
                 transition: transform .5s ease-in;
             }
         }
+    }
+}
+
+
+@media ( max-width: 768px ) {
+    nav ul{
+        display: none;
+    }
+
+    nav .navcollapse{
+        display: flex;
+        position: absolute;
+        z-index: 9999;
+        height: 60px;
+        width: 60px;
+
+        top: 10px;
+        right: 0;
+
+        border: 1px solid red;
     }
 }
