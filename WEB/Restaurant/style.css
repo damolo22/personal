@@ -18,8 +18,22 @@
     body {
         color: black;
         font-family: "Montserrat";
-        font-size: 36px;
+        font-size: 24px;
         overflow-x: hidden;
+    }
+
+    h1{
+        font-family: "Playfair";
+        font-size: 80px;
+        color: var(--main-gold);
+        font-style: bold;
+    }
+
+    h5{
+        font-family: "Playfair";
+        font-size: 22px;
+        font-style: italic;
+        font-style: extrabold;
     }
 
     button {
@@ -34,15 +48,22 @@
         border: none;
     }
 
+    strong{
+        font-weight: 700;
+    }
+
+
+    /*---------------------------------------- HERO-------------------------------------- -->*/
+
     .hero {
-        border: 1px solid red;
         background-image: url(assets/img/hero-background.png);
         height: 100vh;
+        flex-direction: column;
+        display: flex;
 
         .header-hero {
             color: rgb(5, 0, 0);
             font-size: 20px;
-            border: 1px solid green;
 
             width: 100%;
             height: 10%;
@@ -73,6 +94,58 @@
             
         }
 
+        .hero-footer{
+            display: flex;
+            color: white;
+            font-size: 20px;
+            line-height: 2.5rem;
+            margin: 0 2rem;
 
+            margin-top: auto;
+
+            margin-bottom: 0;
+
+            .hero-left{
+                display: flex;
+                width: 50%;
+                gap: 3rem;
+                
+            }
+            .hero-right{
+                width: 50%;
+                text-align: end;
+            }
+        }
 
     }
+
+/* ----------------------------HOME------------------------------------ */
+
+.home{
+    display: flex;
+
+    .home-left{
+        width: 50%;
+        padding-left: 7rem;
+
+        h1,h5{
+            text-align: center;
+            padding-top: 3.5rem;
+        }
+
+        .home-info{
+            padding-top: 3rem;
+            line-height: 180%;
+
+            .info1,.info2{
+                padding: 2rem 0;
+            }
+        }
+    }
+
+    .home-right{
+        width: 50%;
+        text-align: center;
+        height: auto;
+    }
+}
