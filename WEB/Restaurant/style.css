@@ -1,151 +1,330 @@
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
 
-    :root {
-        --main-gold: rgb(184, 134, 11);
-        --btn-width: 170px;
-        --btn-height: 48px;
-    }
+:root {
+  --main-gold: rgb(184, 134, 11);
+  --btn-width: 170px;
+  --btn-height: 48px;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+body {
+  color: black;
+  font-family: "Montserrat";
+  font-size: 24px;
+  overflow-x: hidden;
+  line-height: 180%;
+}
 
+h1 {
+  font-family: "Playfair";
+  font-size: 80px;
+  color: var(--main-gold);
+  font-style: bold;
+}
 
+h2 {
+  font-family: "Playfair";
+  font-size: 48px;
+  color: var(--main-gold);
+  font-style: bold;
+}
 
-    body {
-        color: black;
-        font-family: "Montserrat";
-        font-size: 24px;
-        overflow-x: hidden;
-    }
+h5 {
+  font-family: "Playfair";
+  font-size: 22px;
+  font-style: italic;
+  font-style: extrabold;
+}
 
-    h1{
-        font-family: "Playfair";
-        font-size: 80px;
-        color: var(--main-gold);
-        font-style: bold;
-    }
+button {
+  width: var(--btn-width);
+  height: var(--btn-height);
+  cursor: pointer;
+  color: var(--main-gold);
+  font-size: 20px;
+  font-family: "Montserrat", medium;
+  border: 2px solid var(--main-gold);
+  background: transparent;
+}
 
-    h5{
-        font-family: "Playfair";
-        font-size: 22px;
-        font-style: italic;
-        font-style: extrabold;
-    }
+.button2 {
+  width: var(--btn-width);
+  height: var(--btn-height);
+  cursor: pointer;
+  background-color: var(--main-gold);
+  color: white;
+  font-size: 20px;
+  font-family: "Montserrat", bold;
+  font-weight: 700;
+  border: none;
+}
 
-    button {
-        width: var(--btn-width);
-        height: var(--btn-height);
-        cursor: pointer;
-        background-color: var(--main-gold);
-        color: white;
-        font-size: 20px;
-        font-family: "Montserrat", bold;
-        font-weight: 700;
-        border: none;
-    }
+strong {
+  font-weight: 700;
+}
 
-    strong{
-        font-weight: 700;
-    }
+/*---------------------------------------- HERO-------------------------------------- -->*/
 
+.hero {
+  background-image: url(assets/img/hero-background.png);
+  height: 100vh;
+  flex-direction: column;
+  display: flex;
 
-    /*---------------------------------------- HERO-------------------------------------- -->*/
+  .header-hero {
+    color: rgb(5, 0, 0);
+    font-size: 20px;
 
-    .hero {
-        background-image: url(assets/img/hero-background.png);
-        height: 100vh;
-        flex-direction: column;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+
+    nav {
+      ul {
+        padding-top: 1rem;
+        list-style-type: none;
         display: flex;
+        align-items: center;
+        gap: 4rem;
 
-        .header-hero {
-            color: rgb(5, 0, 0);
-            font-size: 20px;
-
-            width: 100%;
-            height: 10%;
-            display: flex;
-            justify-content: flex-end;
-
-            nav {
-
-                ul {
-                    padding-top: 1rem;
-                    list-style-type: none;
-                    display: flex;
-                    align-items: center;
-                    gap: 4rem;
-
-                    li a {
-                        color: white;
-                        text-decoration: none;
-                        font-size: 20px;
-                    }
-                }
-            }
+        li a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
         }
-
-        .hero-logo{
-            align-items: center;
-            text-align: center;
-            
-        }
-
-        .hero-footer{
-            display: flex;
-            color: white;
-            font-size: 20px;
-            line-height: 2.5rem;
-            margin: 0 2rem;
-
-            margin-top: auto;
-
-            margin-bottom: 0;
-
-            .hero-left{
-                display: flex;
-                width: 50%;
-                gap: 3rem;
-                
-            }
-            .hero-right{
-                width: 50%;
-                text-align: end;
-            }
-        }
-
+      }
     }
+  }
+
+  .hero-logo {
+    align-items: center;
+    text-align: center;
+  }
+
+  .hero-footer {
+    display: flex;
+    color: white;
+    font-size: 20px;
+    line-height: 2.5rem;
+    margin: 0 2rem;
+
+    margin-top: auto;
+
+    margin-bottom: 0;
+
+    .hero-left {
+      display: flex;
+      width: 50%;
+      gap: 3rem;
+    }
+    .hero-right {
+      width: 50%;
+      text-align: end;
+    }
+  }
+}
 
 /* ----------------------------HOME------------------------------------ */
 
-.home{
+.home {
+  display: flex;
+
+  .home-left {
+    width: 50%;
+    padding-left: 7rem;
+
+    h1,
+    h5 {
+      text-align: center;
+      padding-top: 3.5rem;
+    }
+
+    .home-info {
+      padding-top: 3rem;
+      line-height: 180%;
+
+      .info1,
+      .info2 {
+        padding: 2rem 0;
+      }
+    }
+  }
+
+  .home-right {
+    width: 50%;
+    text-align: center;
+    height: auto;
+  }
+}
+
+/* ----------------------------MENU------------------------------------ */
+
+.menu {
+  display: flex;
+  background-color: rgb(220, 220, 220);
+
+  .menu-left {
+    width: 40%;
+  }
+
+  .menu-right {
+    border: 1px solid blue;
+    width: 60%;
+
+    h1 {
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .menu-info {
+      width: 80%;
+      border: 1px solid green;
+      line-height: 180%;
+      padding: 0 3rem;
+
+      margin: 0 auto;
+    }
+
+    .menu-options {
+      display: flex;
+      border: 1px solid red;
+      .menu-option-1 {
+        line-height: 180%;
+        width: 50%;
+        border-right: 3px solid var(--main-gold);
+        padding-left: 2rem;
+        h2 {
+          padding: 2rem 0;
+        }
+        p {
+          width: 80%;
+          padding-bottom: 2rem;
+        }
+      }
+
+      .menu-option-2 {
+        line-height: 180%;
+        width: 50%;
+        padding-left: 2rem;
+        h2 {
+          padding: 2rem 0;
+        }
+        p {
+          width: 80%;
+          padding-bottom: 2rem;
+        }
+      }
+    }
+    .dish {
+      padding: 1rem 0;
+      .dish-info {
+        width: 80%;
+        margin: 0 auto;
+        padding: 0 3rem;
+      }
+      .dish-button {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ----------------------------GALLERY------------------------------------ */
+.gallery {
+  background-color: rgb(183, 183, 183);
+
+  /* 1. Flexbox para las imágenes */
+  display: flex;
+  justify-content: center; /* Centra el grupo de imágenes en el contenedor */
+  gap: 1.5rem; /* Espacio entre las imágenes */
+  padding: 4rem 0; /* Espacio vertical para las líneas y las imágenes */
+  position: relative; /* ¡CLAVE! Para posicionar las líneas dentro */
+  overflow: hidden; /* Oculta cualquier cosa que se salga del borde */
+  /* El ancho del .gallery-showcase dependerá de su padre (quizás 80% o 100%) */
+
+  /* 2. Pseudo-elementos para las líneas doradas */
+  /* Línea Superior (::before) */
+  &::before {
+    content: "";
+    position: absolute;
+    /* Ponemos la línea arriba */
+    top: 2rem;
+    left: 10%; /* Empieza desde el 10% */
+    width: 30%; /* Ocupa el 30% del ancho del contenedor */
+    height: 8px; /* El grosor de la línea */
+    background-color: var(--main-gold);
+    border-radius: 4px;
+  }
+
+  /* Línea Inferior (::after) */
+  &::after {
+    content: "";
+    position: absolute;
+    /* Ponemos la línea abajo */
+    bottom: 2rem;
+    right: 15%; /* Empieza desde la derecha (separado un 15%) */
+    width: 45%; /* Es un poco más larga que la de arriba */
+    height: 8px;
+    background-color: var(--main-gold);
+    border-radius: 4px;
+  }
+
+  .gallery-item {
+    /* Ajustes para las imágenes */
+    width: 20%; /* Ajusta el ancho para que quepan 4 con el gap */
+    max-width: 250px; /* Un límite para que no se hagan gigantes */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra para destacarlas */
+    overflow: hidden; /* Para que la imagen no se salga del item */
+
+    img {
+      /* Esto es clave para que las imágenes se vean bien sin distorsionarse */
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+  }
+}
+
+/* ---------------------------- TEAM ------------------------------------ */
+.team {
+  background-color: rgb(183, 183, 183);
+  padding-top: 4rem;
+  .team-title {
+    text-align: center;
+  }
+
+  .team-info {
     display: flex;
 
-    .home-left{
-        width: 50%;
-        padding-left: 7rem;
-
-        h1,h5{
-            text-align: center;
-            padding-top: 3.5rem;
-        }
-
-        .home-info{
-            padding-top: 3rem;
-            line-height: 180%;
-
-            .info1,.info2{
-                padding: 2rem 0;
-            }
-        }
+    .team-left {
+      width: 50%;
+      padding: 4rem;
+      p {
+        padding: 1rem 0;
+      }
     }
 
-    .home-right{
-        width: 50%;
-        text-align: center;
-        height: auto;
+    .team-right {
+      width: 50%;
+      padding: 4rem;
+      p {
+        padding: 1rem 0;
+      }
     }
+  }
+  .team-button {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .team-photo{
+    width: 100%;
+  }
 }
