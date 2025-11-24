@@ -324,7 +324,10 @@ strong {
     padding-bottom: 2rem;
   }
 
-  .team-photo{
+.team-photo {
+  width: 100%;
+  img {
     width: 100%;
   }
+}
 }
