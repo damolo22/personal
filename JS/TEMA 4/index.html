@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DAW 2ºB TARDE BILINGÜE</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="script" href="script.js" />
+  </head>
+  <body>
+    <div class="casino-container">
+      <header>
+        <h1>Royal DAW 2ºB TARDE BILINGÜE Casino</h1>
+        <p>Regístrate para empezar la partida</p>
+      </header>
+
+      <form id="formularioCasino" novalidate>
+        <div class="form-group">
+          <label for="alias">Alias de Jugador:</label>
+          <input
+            type="text"
+            id="alias"
+            placeholder="Ej: ElReyDelPoker"
+            autocomplete="off"
+          />
+          <span class="error-msg" id="errorAlias"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="edad">Edad:</label>
+          <input
+            type="number"
+            id="edad"
+            placeholder="Debes ser mayor de edad"
+          />
+          <span class="error-msg" id="errorEdad"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo Electrónico:</label>
+          <input type="email" id="email" placeholder="suerte@casino.com" />
+          <span class="error-msg" id="errorEmail"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="juego">Tu juego de la suerte:</label>
+          <select id="juego">
+            <option value="">-- Selecciona una mesa --</option>
+            <option value="poker">Texas Hold'em Poker</option>
+            <option value="blackjack">Blackjack</option>
+            <option value="ruleta">Ruleta</option>
+            <option value="slots">Tragamonedas</option>
+          </select>
+          <span class="error-msg" id="errorJuego"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="presupuesto">Presupuesto Inicial (€):</label>
+          <input
+            type="number"
+            id="presupuesto"
+            placeholder="Mínimo 50€ para entrar"
+          />
+          <span class="error-msg" id="errorPresupuesto"></span>
+        </div>
+
+        <div class="form-group checkbox-group">
+          <label for="terminos"
+            >Acepto jugármela toda (Términos y Condiciones)</label
+          >
+          <input type="checkbox" id="terminos" />
+          <div class="error-msg" id="errorTerminos"></div>
+        </div>
+
+        <button type="submit" id="btnEnviar">ENTRAR AL CASINO</button>
+      </form>
+
+      <div id="resultado" class="oculto"></div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
