@@ -25,6 +25,7 @@ h1 {
   font-size: 80px;
   color: var(--main-gold);
   font-style: bold;
+  line-height: 150%;
 }
 
 h2 {
@@ -72,7 +73,9 @@ strong {
 
 .hero {
   background-image: url(assets/img/hero-background.png);
-  height: 100vh;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  width: 100%;
   flex-direction: column;
   display: flex;
 
@@ -123,6 +126,7 @@ strong {
       width: 50%;
       gap: 3rem;
     }
+
     .hero-right {
       width: 50%;
       text-align: end;
@@ -159,9 +163,10 @@ strong {
   .home-right {
     width: 50%;
     text-align: center;
-    img{
-        display: block;
-        margin: 0 auto;
+
+    img {
+      display: block;
+      margin: 0 auto;
     }
   }
 }
@@ -197,14 +202,17 @@ strong {
     .menu-options {
       display: flex;
       border: 1px solid red;
+
       .menu-option-1 {
         line-height: 180%;
         width: 50%;
         border-right: 3px solid var(--main-gold);
         padding-left: 2rem;
+
         h2 {
           padding: 2rem 0;
         }
+
         p {
           width: 80%;
           padding-bottom: 2rem;
@@ -215,22 +223,27 @@ strong {
         line-height: 180%;
         width: 50%;
         padding-left: 2rem;
+
         h2 {
           padding: 2rem 0;
         }
+
         p {
           width: 80%;
           padding-bottom: 2rem;
         }
       }
     }
+
     .dish {
       padding: 1rem 0;
+
       .dish-info {
         width: 80%;
         margin: 0 auto;
         padding: 0 3rem;
       }
+
       .dish-button {
         text-align: center;
       }
@@ -244,19 +257,19 @@ strong {
 
 
   display: flex;
-  justify-content: center; 
-  gap: 1.5rem; 
-  padding: 4rem 0; 
-  position: relative; 
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 4rem 0;
+  position: relative;
 
   &::before {
     content: "";
     position: absolute;
 
     top: 2rem;
-    left: -5%; 
-    width: 55%; 
-    height: 14px; 
+    left: -5%;
+    width: 55%;
+    height: 14px;
     background-color: var(--main-gold);
     border-radius: 8px;
   }
@@ -265,8 +278,8 @@ strong {
     content: "";
     position: absolute;
     bottom: 2rem;
-    right: -5%; 
-    width: 55%; 
+    right: -5%;
+    width: 55%;
     height: 14px;
     background-color: var(--main-gold);
     border-radius: 8px;
@@ -287,6 +300,7 @@ strong {
   padding-top: 4rem;
   padding-bottom: 0;
   border: 1px solid red;
+
   .team-title {
     text-align: center;
   }
@@ -297,6 +311,7 @@ strong {
     .team-left {
       width: 50%;
       padding: 4rem;
+
       p {
         padding: 1rem 0;
       }
@@ -305,31 +320,140 @@ strong {
     .team-right {
       width: 50%;
       padding: 4rem;
+
       p {
         padding: 1rem 0;
       }
     }
   }
+
   .team-button {
     text-align: center;
     padding-bottom: 2rem;
   }
 
-.team-photo {
-  width: 100%;
-  height: 100%;
-  border: 1px solid blue;
-  padding-bottom: 0;
-  img {
+  .team-photo {
     width: 100%;
-    display: block;
+    height: 100%;
+    border: 1px solid blue;
+    padding-bottom: 0;
+
+    img {
+      width: 100%;
+      display: block;
+    }
   }
-}
 }
 
 
 
 /* ---------------------------- WINE ------------------------------------ */
-.wine{
-    background-color: rgb(37, 37, 37);
+.wine {
+  background-color: rgb(37, 37, 37);
+  display: flex;
+
+  .wine-left {
+    width: 50%;
+
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+
+  .wine-right {
+    border: 1px solid blue;
+    width: 50%;
+
+    h1 {
+      padding: 4.5rem 0;
+      text-align: center;
+      padding-bottom: 4.5rem;
+    }
+
+    .wine-info {
+      width: 80%;
+      border: 1px solid green;
+      color: white;
+      padding: 0 3rem;
+
+      margin: 0 auto;
+
+      p {
+        margin: 0 auto;
+        width: 100%;
+        padding-bottom: 6rem;
+      }
+    }
+  }
+}
+
+.wine-background {
+  background-image: url(assets/img/wine-background.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .wine-background-info {
+    border: 1px solid green;
+    text-align: center;
+
+    color: white;
+    max-width: 40%;
+    padding: 2rem;
+
+    h1 {
+      margin-bottom: 2.5rem;
+
+    }
+
+    p {
+      font-style: italic;
+      margin-bottom: 2rem;
+      font-size: 28px;
+      line-height: 150%;
+      font-family: "Playfair";
+      font-style: bold;
+    }
+  }
+}
+
+
+/* ---------------------------- PRIVATE DINNING ------------------------------------ */
+.private {
+  background-color: rgb(37, 37, 37);
+  display: flex;
+
+  .private-left {
+    width: 50%;
+    padding-left: 7rem;
+    color: white;
+
+    
+      h1 {
+        text-align: center;
+        padding-top: 3.5rem;
+      }
+
+
+    .private-info {
+      padding-top: 3rem;
+      
+
+
+    }
+  }
+
+  .private-right {
+    width: 50%;
+    text-align: center;
+
+    img {
+      display: block;
+      margin: 0 auto;
+    }
+  }
 }
