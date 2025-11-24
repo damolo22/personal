@@ -159,7 +159,10 @@ strong {
   .home-right {
     width: 50%;
     text-align: center;
-    height: auto;
+    img{
+        display: block;
+        margin: 0 auto;
+    }
   }
 }
 
@@ -239,55 +242,41 @@ strong {
 .gallery {
   background-color: rgb(183, 183, 183);
 
-  /* 1. Flexbox para las imágenes */
-  display: flex;
-  justify-content: center; /* Centra el grupo de imágenes en el contenedor */
-  gap: 1.5rem; /* Espacio entre las imágenes */
-  padding: 4rem 0; /* Espacio vertical para las líneas y las imágenes */
-  position: relative; /* ¡CLAVE! Para posicionar las líneas dentro */
-  overflow: hidden; /* Oculta cualquier cosa que se salga del borde */
-  /* El ancho del .gallery-showcase dependerá de su padre (quizás 80% o 100%) */
 
-  /* 2. Pseudo-elementos para las líneas doradas */
-  /* Línea Superior (::before) */
+  display: flex;
+  justify-content: center; 
+  gap: 1.5rem; 
+  padding: 4rem 0; 
+  position: relative; 
+
   &::before {
     content: "";
     position: absolute;
-    /* Ponemos la línea arriba */
+
     top: 2rem;
-    left: 10%; /* Empieza desde el 10% */
-    width: 30%; /* Ocupa el 30% del ancho del contenedor */
-    height: 8px; /* El grosor de la línea */
+    left: -5%; 
+    width: 55%; 
+    height: 14px; 
     background-color: var(--main-gold);
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
-  /* Línea Inferior (::after) */
   &::after {
     content: "";
     position: absolute;
-    /* Ponemos la línea abajo */
     bottom: 2rem;
-    right: 15%; /* Empieza desde la derecha (separado un 15%) */
-    width: 45%; /* Es un poco más larga que la de arriba */
-    height: 8px;
+    right: -5%; 
+    width: 55%; 
+    height: 14px;
     background-color: var(--main-gold);
-    border-radius: 4px;
+    border-radius: 8px;
   }
 
   .gallery-item {
-    /* Ajustes para las imágenes */
-    width: 20%; /* Ajusta el ancho para que quepan 4 con el gap */
-    max-width: 250px; /* Un límite para que no se hagan gigantes */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sutil sombra para destacarlas */
-    overflow: hidden; /* Para que la imagen no se salga del item */
+    width: 100%;
 
     img {
-      /* Esto es clave para que las imágenes se vean bien sin distorsionarse */
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
     }
   }
 }
@@ -296,6 +285,8 @@ strong {
 .team {
   background-color: rgb(183, 183, 183);
   padding-top: 4rem;
+  padding-bottom: 0;
+  border: 1px solid red;
   .team-title {
     text-align: center;
   }
@@ -326,8 +317,19 @@ strong {
 
 .team-photo {
   width: 100%;
+  height: 100%;
+  border: 1px solid blue;
+  padding-bottom: 0;
   img {
     width: 100%;
+    display: block;
   }
 }
+}
+
+
+
+/* ---------------------------- WINE ------------------------------------ */
+.wine{
+    background-color: rgb(37, 37, 37);
 }
