@@ -1,4 +1,4 @@
-// Agarramos todos los inputs y el formulario por su ID
+// Las variables
 const formulario = document.getElementById("formularioCasino");
 const aliasInput = document.getElementById("alias");
 const edadInput = document.getElementById("edad");
@@ -16,7 +16,7 @@ const validacion = {
   email: false,
   juego: false,
   terminos: false,
-  validacionpresupuesto: false,
+  presupuesto: false,
 };
 
 // Mostramos el error
@@ -39,6 +39,7 @@ const limpiarError = (input) => {
   spanError.innerText = "";
   input.classList.remove("input-error");
 };
+
 
 // Para validar si el usuario esta haciendo lo correcto
 
@@ -82,6 +83,7 @@ inputs.forEach((input) => {
   });
 });
 
+// Validación del Select ("Tu Juego de la Suerte")
 juegoSelect.addEventListener("change", () => {
   if (juegoSelect.value === "") {
     mostrarError(juegoSelect, "Selecciona una mesa para jugar.");
@@ -92,10 +94,11 @@ juegoSelect.addEventListener("change", () => {
   }
 });
 
+// Validación del presupuesto ("Tu Juego de la Suerte")
 presupuestoInput.addEventListener("blur", () => {
   // Regla: No puede estar vacío y mínimo 50€
   if (presupuestoInput.value === "" || presupuestoInput.value < 50) {
-    mostrarError(presupuestoInput, "El ingreso mínimo son 50€ (no fíamos).");
+    mostrarError(presupuestoInput, "El ingreso mínimo son 50€ (no me fio).");
     validacion.presupuesto = false;
   } else {
     limpiarError(presupuestoInput);
@@ -108,11 +111,12 @@ presupuestoInput.addEventListener("focus", () => {
   limpiarError(presupuestoInput);
 });
 
-// Un detallito extra en el botón para cumplir el requisito.
+// Cambia el boton
 btnEnviar.addEventListener("mouseover", () => {
   if (!btnEnviar.disabled) btnEnviar.innerText = " REAPOSTAR !!!";
 });
 
+// Devolvemos el boton a la normalidad
 btnEnviar.addEventListener("mouseout", () => {
   btnEnviar.innerText = "ENTRAR AL CASINO";
 });
@@ -140,7 +144,7 @@ formulario.addEventListener("submit", (e) => {
   }
   if (!validacion.presupuesto)
     presupuestoInput.focus(), presupuestoInput.blur();
-  else validacion.juego = true;
+  else validacion.presupuesto = true;
 
   // Comprobacion final
   if (
@@ -151,12 +155,14 @@ formulario.addEventListener("submit", (e) => {
     validacion.terminos &&
     validacion.presupuesto
   ) {
-    // ÉXITO: Ocultamos form y mostramos resumen
+
+
+    // En caso de Éxito: Ocultamos form y mostramos resumen
     formulario.style.display = "none";
     divResultado.classList.remove("oculto");
 
     divResultado.innerHTML = `
-            <h2>¡Bienvenido al Casino, ${aliasInput.value}! 🎰</h2>
+            <h2>¡Bienvenido al Casino, ${aliasInput.value}! </h2>
     <p>Fichas enviadas a: <strong>${emailInput.value}</strong></p>
     <p>Tu mesa de <strong>${
       juegoSelect.options[juegoSelect.selectedIndex].text
