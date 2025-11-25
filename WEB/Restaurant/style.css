@@ -90,7 +90,7 @@ strong {
 
     nav {
       ul {
-        padding-top: 1rem;
+        padding-top: 1.5rem;
         list-style-type: none;
         display: flex;
         align-items: center;
@@ -255,7 +255,6 @@ strong {
 .gallery {
   background-color: rgb(183, 183, 183);
 
-
   display: flex;
   justify-content: center;
   gap: 1.5rem;
@@ -345,8 +344,6 @@ strong {
   }
 }
 
-
-
 /* ---------------------------- WINE ------------------------------------ */
 .wine {
   background-color: rgb(37, 37, 37);
@@ -407,7 +404,6 @@ strong {
 
     h1 {
       margin-bottom: 2.5rem;
-
     }
 
     p {
@@ -421,7 +417,6 @@ strong {
   }
 }
 
-
 /* ---------------------------- PRIVATE DINNING ------------------------------------ */
 .private {
   background-color: rgb(37, 37, 37);
@@ -432,18 +427,24 @@ strong {
     padding-left: 7rem;
     color: white;
 
-    
-      h1 {
-        text-align: center;
-        padding-top: 3.5rem;
-      }
-
+    h1 {
+      text-align: center;
+      padding-top: 3.5rem;
+    }
 
     .private-info {
       padding-top: 3rem;
-      
 
-
+      p {
+        width: 100%;
+        padding-bottom: 6rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+      }
+    }
+    .private-button {
+      text-align: center;
+      padding-top: 3rem;
     }
   }
 
@@ -457,3 +458,90 @@ strong {
     }
   }
 }
+
+
+
+/* ---------------------------- FOOTER ------------------------------------ */
+.footer {
+    background-color: rgba(0, 0, 33,90%);
+    color: white;
+    display: flex;
+    justify-content: space-around; 
+    align-items: flex-start; 
+    padding: 4rem 8%; 
+    font-size: 18px;
+
+
+    .footer-col-1, .footer-col-2, .footer-col-3 {
+        width: 30%; 
+        padding: 0 1rem;
+        border-right: 1px solid var(--main-gold); /* Separador vertical */
+    }
+
+    .footer-col-3 {
+        border-right: none;
+
+        .social-icons {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+
+            img {
+                width: 24px; 
+                height: 24px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+
+            
+            p {
+                margin-bottom: 1rem;
+            }
+        }
+
+        .made-by {
+            margin-top: 3rem;
+            font-size: 14px;
+            opacity: 0.6;
+
+            span {
+
+            }
+        }
+    }
+
+    /* Estilos de la Columna 1 (Horario) */
+    .footer-col-1 {
+        .michelin-star {
+            margin-bottom: 2rem;
+        }
+
+        .star-icon {
+            margin: 2rem 0;
+        }
+
+        .schedule-day {
+            font-weight: 700;
+            margin-top: 1.5rem;
+        }
+
+        .schedule-time {
+            margin-bottom: 1.5rem;
+            font-size: 16px;
+        }
+    }
+
+    /* Estilos de la Columna 2 (Contacto/Dirección) */
+    .footer-col-2 {
+        p {
+            margin-bottom: 0.5rem;
+        }
+        
+        .bottom-margin {
+            margin-bottom: 2rem; 
+        }
+    }
+}
+
