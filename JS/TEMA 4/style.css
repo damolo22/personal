@@ -6,8 +6,7 @@
 }
 
 body {
-
-    background: radial-gradient(circle, #2b2b2b 0%, #000000 100%);
+    background-image: url('img/pexels-pixabay-269630.jpg');
     color: #fff;
     display: flex;
     justify-content: center;

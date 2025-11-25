@@ -9,7 +9,7 @@ const btnEnviar = document.getElementById("btnEnviar");
 const divResultado = document.getElementById("resultado");
 const presupuestoInput = document.getElementById("presupuesto");
 
-// Guardamos las validaciones
+// Empieza todo en false y conforme escribes se va verificando
 const validacion = {
   alias: false,
   edad: false,
@@ -19,7 +19,7 @@ const validacion = {
   presupuesto: false,
 };
 
-// Mostramos el error
+// Mostramos en caso de error
 const mostrarError = (input, mensaje) => {
   const idError =
     "error" + input.id.charAt(0).toUpperCase() + input.id.slice(1);
@@ -40,9 +40,7 @@ const limpiarError = (input) => {
   input.classList.remove("input-error");
 };
 
-
-// Para validar si el usuario esta haciendo lo correcto
-
+// Para validar si el usuario esta escrito
 aliasInput.addEventListener("blur", () => {
   if (aliasInput.value.trim() === "") {
     mostrarError(aliasInput, "¡El alias no puede estar vacío!");
@@ -155,8 +153,6 @@ formulario.addEventListener("submit", (e) => {
     validacion.terminos &&
     validacion.presupuesto
   ) {
-
-
     // En caso de Éxito: Ocultamos form y mostramos resumen
     formulario.style.display = "none";
     divResultado.classList.remove("oculto");
