@@ -82,7 +82,7 @@ header {
   .logo {
     width: 8rem;
     height: 6rem;
-    background-image: url(assets/img/logo-chikito.png);
+    background-image: url(../assets/img/logo-chikito.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;

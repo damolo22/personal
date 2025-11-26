@@ -35,6 +35,20 @@ h2 {
   font-style: bold;
 }
 
+h3 {
+  font-family: "Playfair";
+  font-size: 64px;
+  color: var(--main-gold);
+  font-style: bold;
+}
+
+h4 {
+  font-family: "Playfair";
+  font-size: 64px;
+  color: rgb(24, 24, 123);
+  font-style: bold;
+}
+
 h5 {
   font-family: "Playfair";
   font-size: 22px;
@@ -82,7 +96,7 @@ header {
   .logo {
     width: 8rem;
     height: 6rem;
-    background-image: url(assets/img/logo-chikito.png);
+    background-image: url(../assets/img/logo-chikito.png);
     background-size: contain;
     background-position: center center;
     background-repeat: no-repeat;
@@ -101,128 +115,6 @@ header {
         text-decoration: none;
         font-size: 20px;
       }
-    }
-  }
-}
-
-
-.menu {
-
-  h1 {
-    padding-top: 3rem;
-    text-align: center;
-  }
-
-  h5 {
-    text-align: center;
-    padding: 3rem 0;
-  }
-
-  .starters {
-    width: 70%;
-    margin: 0 auto;
-    border-bottom: 4px solid var(--main-gold);
-
-
-    h1 {
-      border-bottom: 4px solid var(--main-gold);
-
-      text-align: center;
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-    }
-
-    .starter1,
-    .starter2,
-    .starter3,
-    .starter4 {
-      padding: 1rem 0;
-      text-align: center;
-
-      h2 {
-        padding-top: 4rem;
-      }
-
-      p {
-        padding: 2.5rem 0;
-      }
-
-      img {
-        padding: 0 2rem;
-      }
-    }
-  }
-
-
-  .main-courses {
-    padding-top: 15rem;
-    width: 70%;
-    margin: 0 auto;
-    border-bottom: 4px solid var(--main-gold);
-
-
-    h1 {
-      border-bottom: 4px solid var(--main-gold);
-
-      text-align: center;
-      padding-top: 2rem;
-      padding-bottom: 1rem;
-    }
-
-    .main-course1,
-    .main-course2,
-    .main-course3,
-    .main-course4 {
-      padding: 1rem 0;
-      text-align: center;
-
-      h2 {
-        padding-top: 4rem;
-      }
-
-      p {
-        padding: 2.5rem 0;
-      }
-
-      img {
-        padding: 0 2rem;
-      }
-    }
-  }
-}
-
-
-
-.desserts {
-  padding-top: 15rem;
-  width: 70%;
-  margin: 0 auto;
-
-
-  h1 {
-    border-bottom: 4px solid var(--main-gold);
-
-    text-align: center;
-    padding-top: 2rem;
-    padding-bottom: 1rem;
-  }
-
-  .dessert1,
-  .dessert2,
-  .dessert3 {
-    padding: 1rem 0;
-    text-align: center;
-
-    h2 {
-      padding-top: 4rem;
-    }
-
-    p {
-      padding: 2.5rem 0;
-    }
-
-    img {
-      padding: 0 2rem;
     }
   }
 }
