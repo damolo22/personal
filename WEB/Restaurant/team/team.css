@@ -53,7 +53,6 @@ h5 {
   font-family: "Playfair";
   font-size: 22px;
   font-style: italic;
-  font-style: extrabold;
 }
 
 button {
@@ -117,4 +116,204 @@ header {
       }
     }
   }
+}
+
+.team {
+  h1 {
+    text-align: center;
+  }
+
+
+  .team1 {
+    padding-left: 3rem;
+
+    h4 {
+      width: 50%;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    h3 {
+      width: 50%;
+      text-align: center;
+    }
+
+    .team1-info {
+      padding-top: 4rem;
+      display: flex;
+
+      .team1-left {
+        width: 50%;
+        border: 1px solid rgb(63, 198, 120);
+      }
+
+      .team1-right {
+        width: 50%;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        .team1-right-bottom {
+          margin-top: auto;
+
+          padding-top: 1.5rem;
+
+          h5 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+
+          .social{
+            padding-top: 3rem;
+            img:first-child{
+              padding:0;
+              padding-right:1rem;
+            }
+            img{
+              padding: 0 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+.team2 {
+    padding-top: 8rem; 
+    padding-right: 3rem; 
+   
+    h4 {
+      width: 50%; 
+      text-align: center;
+      padding: 3rem 0;
+      margin-left: 50%; 
+    }
+
+    h3 {
+      width: 50%;
+      text-align: center;
+      margin-left: 50%;
+    }
+
+    .team2-info {
+      padding-top: 4rem;
+      display: flex; 
+
+      .team2-left {
+        width: 50%;
+        padding-right: 1.5rem; 
+        padding-left: 3.5rem;
+        
+
+        display: flex;
+        flex-direction: column; 
+        
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        .team2-left-bottom {
+          margin-top: auto; 
+          padding-top: 1.5rem;
+
+          h5 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+
+          .social {
+            padding-top: 3rem;
+            img:first-child {
+              padding: 0;
+              padding-right: 1rem;
+            }
+            img {
+              padding: 0 1rem;
+            }
+          }
+        }
+      }
+
+      .team2-right {
+        padding-left: 7rem;
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+
+
+  .team3 {
+    padding-top: 8rem;
+    padding-left: 3rem;
+
+    h4 {
+      width: 50%;
+      text-align: center;
+      padding: 3rem 0;
+    }
+
+    h3 {
+      width: 50%;
+      text-align: center;
+    }
+
+    .team3-info {
+      padding-top: 4rem;
+      display: flex;
+
+      .team3-left {
+        width: 50%;
+        border: 1px solid rgb(63, 198, 120);
+      }
+
+      .team3-right {
+        width: 50%;
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+        border: 1px solid red;
+        display: flex;
+        flex-direction: column;
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        .team3-right-bottom {
+          margin-top: auto;
+
+          padding-top: 1.5rem;
+
+          h5 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+
+          .social{
+            padding-top: 3rem;
+            img:first-child{
+              padding:0;
+              padding-right:1rem;
+            }
+            img{
+              padding: 0 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+
 }
