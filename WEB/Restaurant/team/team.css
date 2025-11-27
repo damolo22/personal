@@ -120,7 +120,9 @@ header {
 
 .team {
   h1 {
+    padding-top: 4rem;
     text-align: center;
+    padding-bottom: 12rem;
   }
 
 
@@ -144,14 +146,12 @@ header {
 
       .team1-left {
         width: 50%;
-        border: 1px solid rgb(63, 198, 120);
       }
 
       .team1-right {
         width: 50%;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
 
@@ -279,7 +279,6 @@ header {
         width: 50%;
         padding-right: 1.5rem;
         padding-left: 1.5rem;
-        border: 1px solid red;
         display: flex;
         flex-direction: column;
 
@@ -314,6 +313,79 @@ header {
 
 
 
+  .team4 {
+    padding-top: 8rem; 
+    padding-right: 3rem; 
+   
+    h4 {
+      width: 50%; 
+      text-align: center;
+      padding: 3rem 0;
+      margin-left: 50%; 
+    }
+
+    h3 {
+      width: 50%;
+      text-align: center;
+      margin-left: 50%;
+    }
+
+    .team4-info {
+      padding-top: 4rem;
+      display: flex; 
+
+      .team4-left {
+        width: 50%;
+        padding-right: 1.5rem; 
+        padding-left: 3.5rem;
+        
+
+        display: flex;
+        flex-direction: column; 
+        
+
+        p {
+          margin-bottom: 2rem;
+        }
+
+        .team4-left-bottom {
+          margin-top: auto; 
+          padding-top: 1.5rem;
+
+          h5 {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+          }
+
+          .social {
+            padding-top: 3rem;
+            img:first-child {
+              padding: 0;
+              padding-right: 1rem;
+            }
+            img {
+              padding: 0 1rem;
+            }
+          }
+        }
+      }
+
+      .team4-right {
+        padding-left: 7rem;
+        width: 50%;
+        text-align: center;
+      }
+    }
+  }
+
+  .team-photo-party{
+    padding-top: 7rem;
+    text-align: center;
+    width: 100%;
+    img{
+      width: 80%;
+    }
+  }
 
 
 }

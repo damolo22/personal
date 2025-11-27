@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reservations</title>
+    <link rel="stylesheet" href="reservation.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html"><div class="logo"></div></a>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#menu">Menu</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../index.html#wine">Wines</a></li>
+          <li>
+            <a href="reservation/reservation.html"><button class="button2">Reservations</button></a>
+          </li>
+          <li>
+            <div class="burguer"><span></span><span></span><span></span></div>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="reservation-hero">
+      <h1>Reservation</h1>
+    </div>
+
+    <div class="reservation">
+      <h2>BOOK YOUR TABLE</h2>
+
+      <div class="reservation-content">
+        <div class="reservation-col-left">
+
+
+          <div class="calendar-widget">
+            <div class="calendar-header">
+              <span class="nav-arrow">&lt;</span>
+              <span class="month">NOVEMBER 2025</span>
+              <span class="nav-arrow">&gt;</span>
+            </div>
+
+            <div class="calendar-days">
+              <div class="day-row day-names">
+                <span>M</span><span>T</span><span>W</span><span>T</span
+                ><span>F</span><span>S</span><span>S</span>
+              </div>
+
+              <div class="day-row">
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day-empty"></span>
+                <span class="day">1</span>
+                <span class="day">2</span>
+              </div>
+
+              <div class="day-row">
+                <span class="day">3</span><span class="day">4</span
+                ><span class="day">5</span><span class="day">6</span
+                ><span class="day">7</span><span class="day">8</span
+                ><span class="day">9</span>
+              </div>
+
+              <div class="day-row">
+                <span class="day">10</span><span class="day">11</span
+                ><span class="day">12</span><span class="day">13</span
+                ><span class="day">14</span><span class="day">15</span
+                ><span class="day">16</span>
+              </div>
+
+              <div class="day-row">
+                <span class="day">17</span><span class="day">18</span
+                ><span class="day">19</span><span class="day">20</span
+                ><span class="day">21</span><span class="day">22</span
+                ><span class="day">23</span>
+              </div>
+
+              <div class="day-row">
+                <span class="day">24</span><span class="day">25</span
+                ><span class="day">26</span><span class="day selected">27</span
+                ><span class="day">28</span><span class="day">29</span
+                ><span class="day">30</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" id="time" required />
+            <label for="time"  id="time">Time</label>
+          </div>
+        </div>
+
+        <div class="reservation-col-right">
+          <div class="input-group">
+            <input type="text" id="name" required />
+            <label for="name">Name</label>
+          </div>
+
+          <div class="input-group">
+            <input type="number" id="guests" required />
+            <label for="guests">Guests</label>
+          </div>
+
+          <div class="input-group">
+            <input type="tel" id="phone" required />
+            <label for="phone">Phone Number</label>
+          </div>
+
+          <div class="input-group">
+            <input type="email" id="email" required />
+            <label for="email">Email</label>
+          </div>
+        </div>
+      </div>
+
+      <button class="book-button">Book a Table</button>
+
+      <p class="opening-hours">
+        Monday - Friday: 1PM - 11PM | Saturday - Sunday: 12 AM - 1 AM | Holidays
+        Open
+      </p>
+    </div>
+    
+    <div class="map">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10239.906786719437!2d14.404510205566464!3d50.08672316511688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e91381d33f%3A0x2600af105c240cf2!2sPraga%201%2C%20Chequia!5e0!3m2!1ses!2ses!4v1764063755248!5m2!1ses!2ses"
+        width="100%"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </body>
+</html>

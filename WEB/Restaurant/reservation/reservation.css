@@ -1,0 +1,306 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap");
+
+:root {
+    --main-gold: rgb(184, 134, 11);
+    --btn-width: 170px;
+    --btn-height: 48px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: black;
+    font-family: "Montserrat";
+    font-size: 24px;
+    overflow-x: hidden;
+    line-height: 180%;
+    background-color: rgb(37, 37, 37);
+    color: white;
+}
+
+h1 {
+    font-family: "Playfair";
+    font-size: 80px;
+    color: var(--main-gold);
+    font-style: bold;
+    line-height: 150%;
+}
+
+h2 {
+    font-family: "Playfair";
+    font-size: 48px;
+    color: var(--main-gold);
+    font-style: bold;
+}
+
+h3 {
+    font-family: "Playfair";
+    font-size: 64px;
+    color: var(--main-gold);
+    font-style: bold;
+}
+
+h4 {
+    font-family: "Playfair";
+    font-size: 64px;
+    color: rgb(24, 24, 123);
+    font-style: bold;
+}
+
+h5 {
+    font-family: "Playfair";
+    font-size: 22px;
+    font-style: italic;
+}
+
+button {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    color: var(--main-gold);
+    font-size: 20px;
+    font-family: "Montserrat", medium;
+    border: 2px solid var(--main-gold);
+    background: transparent;
+}
+
+.button2 {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    background-color: var(--main-gold);
+    color: white;
+    font-size: 20px;
+    font-family: "Montserrat", bold;
+    font-weight: 700;
+    border: none;
+}
+
+strong {
+    font-weight: 700;
+}
+
+
+header {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10%;
+
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    padding: 0 4rem;
+
+    .logo {
+        width: 8rem;
+        height: 7rem;
+        background-image: url(../assets/img/logo-chikito.png);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+        filter: brightness(100);
+    }
+
+    nav {
+        ul {
+            padding-top: 1.5rem;
+            list-style-type: none;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+
+            li a {
+                text-decoration: none;
+                font-size: 20px;
+
+                color: white !important;
+            }
+        }
+    }
+}
+
+
+/* ---------------------------- RESERVATION ------------------------------------ */
+
+.reservation-hero {
+    background-image: url(../assets/img/reservation-header.png);
+    background-size: cover;
+    background-position: center center;
+    min-height: 35vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        font-style: extrabold;
+    }
+}
+
+
+
+.reservation {
+    padding: 6rem 0;
+    text-align: center;
+
+    h2 {
+        margin-bottom: 7rem;
+    }
+
+.reservation-content {
+    display: flex;
+    justify-content: center;
+    gap: 8rem;
+    width: 60%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+
+    .reservation-col-left,
+    .reservation-col-right {
+        width: 40%;
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; 
+    }
+
+    .reservation-col-right {
+        margin-top: 0;
+    }
+
+    /* -------------------  INPUTS  ------------------- */
+
+    .input-group {
+        position: relative;
+        margin-bottom: 0; 
+
+        input {
+            width: 300px;
+            border: none;
+            background: transparent;
+            border-bottom: 1px solid white;
+            color: white;
+            font-size: 20px;
+            padding-bottom: 0.5rem;
+
+            &:focus {
+                outline: none;
+            }
+        }
+
+        #time:last-child{
+            padding-top: 2rem;
+        }
+
+        #time:first-child{
+            padding-top: 2rem;
+        }
+
+        label {
+            position: absolute;
+            top: -1.5rem;
+            left: 0;
+            color: white;
+            font-size: 16px;
+            pointer-events: none;
+        }
+    }
+    
+}
+
+
+        /* -------------------  CALENDAR ------------------- */
+
+        .calendar-widget {
+            background-color: white;
+            color: black;
+            width: 300px;
+            padding: 1rem;
+            border-radius: 5px;
+            margin-bottom: 4%;
+
+            .calendar-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding-bottom: 1rem;
+                font-weight: 700;
+                color: var(--main-gold);
+
+                .nav-arrow {
+                    cursor: pointer;
+                    font-size: 1.2em;
+                }
+            }
+
+            .calendar-days {
+                gap: 5px;
+                text-align: center;
+
+                .day-row {
+                    display: flex;
+                    justify-content: space-between;
+                    text-align: center;
+                    margin-bottom: 3px;
+                }
+
+                .day-names span {
+                    flex: 1;
+                    font-weight: 700;
+                    color: #333;
+                    padding: 0.5rem 0;
+                    cursor: default;
+                }
+
+                .day-row span {
+                    flex: 1;
+                    padding: 0.5rem 0;
+                    font-size: 16px;
+                    border-radius: 3px;
+                    transition: background-color 0.2s, color 0.2s;
+                }
+
+                .day-empty {
+                    cursor: default;
+                    background-color: transparent;
+                }
+
+                .day {
+                    cursor: pointer;
+                    color: #333;
+                    font-weight: 500;
+
+                    &:hover:not(.selected) {
+                        background-color: rgba(184, 134, 11, 0.2);
+                        color: black;
+                    }
+                }
+
+                .selected {
+                    background-color: var(--main-gold);
+                    color: white;
+                    font-weight: 700;
+                }
+            }
+        }
+
+
+
+.book-button {
+    margin-bottom: 4rem;
+}
+
+.opening-hours {
+    font-size: 16px;
+    color: #aaa;
+}
+
+}
