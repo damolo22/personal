@@ -181,6 +181,7 @@ strong {
 .menu {
   display: flex;
   background-color: rgb(220, 220, 220);
+  padding-bottom: 1rem;
 
   .menu-left {
     width: 40%;
@@ -247,6 +248,7 @@ strong {
         width: 80%;
         margin: 0 auto;
         padding: 0 3rem;
+        padding-bottom: 1rem;
       }
 
       .dish-button {
