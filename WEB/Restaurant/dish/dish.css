@@ -135,7 +135,7 @@ header {
         overflow: hidden;
 
 
-        .dish1-info {
+        .dish-info {
             position: absolute;
 
             bottom: 0;
@@ -151,7 +151,7 @@ header {
             justify-content: space-between;
             align-items: flex-start;
 
-            h1{
+            h1 {
                 padding: 0;
             }
         }
@@ -163,8 +163,105 @@ header {
 
     }
 
-    .dish1-space{
+    .dish1-space {
         height: 350px;
         background-color: rgb(220, 220, 220);
     }
+}
+
+
+
+.dish2 {
+    background-image: url(../assets/img/dish2.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 1200px;
+    width: 100%;
+
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+
+
+    .dish-info {
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 1rem 2rem;
+    }
+
+    .dish-info-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h1 {
+            padding: 0;
+        }
+    }
+
+    .dish-info-bottom {
+        text-align: left;
+    }
+
+
+}
+
+.dish2-space {
+    height: 350px;
+    background-color: rgb(183,183,183);
+}
+
+
+.dish3 {
+    background-image: url(../assets/img/dish3.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    height: 1200px;
+    width: 100%;
+
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+
+
+    .dish-info {
+        position: absolute;
+
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.85);
+        color: white;
+        padding: 1rem 2rem;
+    }
+
+    .dish-info-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        h1 {
+            padding: 0;
+        }
+    }
+
+    .dish-info-bottom {
+        text-align: left;
+    }
+
+
+}
+
+.dish3-space {
+    height: 350px;
+    background-color: rgb(63,63,63);
 }
