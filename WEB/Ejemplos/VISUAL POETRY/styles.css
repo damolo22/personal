@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --main-color: #f4ac1c;
+    --foreground-color: #222;
+    --g: 120deg;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Poppins;
+    color: var(--foreground-color);
+}
+
+.wrapper {
+    width: 98%;
+    margin: 0 auto;
+    /*margin-inline: auto*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+
+.logo img {
+    max-width: 108px;
+}
+
+.navcollapse {
+    display: none;
+}
+
+.menu_mobile {
+    display: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.item a {
+    text-decoration: none;
+    color: var(--foreground-color);
+    font-size: 1.2rem;
+    font-weight: 600;
+
+    /* settings para la animación */
+
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+
+}
+
+.contact {
+    text-transform: uppercase;
+    padding: 6px 1.4rem;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 20px;
+    font-family: Poppins;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: white;
+}
+
+/*------------------------------------------------------------- NAV HOVER ANIMATIONS  --------*/
+
+/*-------------------------------------------------------------  HERO SECTION --------*/
+
+.hero {
+
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+
+    .izda {
+        flex: 1;
+        height: 85vh;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 2rem;
+
+        padding: 2rem;
+
+        h1 {
+            text-align: right;
+            font-weight: 600;
+            font-size: clamp(5rem, 3.04rem + 7.467vw, 12rem);
+            line-height: clamp(5rem, 3.04rem + 7.467vw, 12rem);
+        }
+
+        h3 {
+            font-size: clamp(1rem, 0.832rem + 0.64vw, 1.6rem);
+            font-weight: 400;
+            text-align: right;
+            margin-top: 1rem;
+        }
+
+        .social {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+
+
+            div {
+                width: 50px;
+                aspect-ratio: 1;
+                border: 1px solid var(--foreground-color);
+                border-radius: 25px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        }
+
+        .statistics {
+            width: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: start;
+            gap: 4rem;
+
+            .col-1,
+            .col-2 {
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+
+                span:first-child {
+                    font-size: clamp(1.6rem, 1.32rem + 1.067vw, 2.6rem);
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .dcha {
+        flex: 1;
+        height: 85vh;
+
+    }
+}
+
+.img-container {
+    background-color: var(--main-color);
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    position: relative;
+
+    background-image: url(assets/img/asian-business-fat-man-file-png.png);
+    background-size: 50vh;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+
+    .hire {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        height: 50px;
+        width: 50px;
+        border-radius: 25px;
+        background-color: var(--main-color);
+        outline: 10px solid white;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 9;
+
+        transition: .5s;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: '';
+            width: 35px;
+            aspect-ratio: 1;
+            background: radial-gradient(circle 25px at top left, transparent 98%, white);
+        }
+
+        &::before {
+            bottom: -10px;
+            left: -35px;
+        }
+
+        &::after {
+            right: -10px;
+            top: -35px;
+        }
+
+        &:hover {
+            cursor: pointer;
+            width: 200px;
+
+            span {
+                width: 100%;
+                justify-content: center;
+                color: white;
+            }
+
+            img {
+                transform: rotate(360deg);
+            }
+        }
+
+        span {
+            color: transparent;
+            overflow: hidden;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            width: 1.8ch;
+            white-space: nowrap;
+            letter-spacing: 2px;
+
+            display: flex;
+            justify-content: start;
+            align-items: center;
+
+            gap: 1rem;
+            transition: .5s;
+
+            img {
+                width: 24px;
+                height: 24px;
+                transition: transform .5s ease-in;
+            }
+        }
+
+
+    }
+}
+
+@property --g {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: false;
+}
+
+.relleno-1,
+.relleno-2,
+.relleno-3,
+.relleno-4,
+.relleno-5 {
+    height: 100vh;
+    background-color: rgb(216, 224, 226);
+    margin-top: 2rem;
+}
+
+.scrollToTop {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    border: none;
+
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    background-color: var(--foreground-color);
+
+    opacity: 0;
+
+    animation: fade-in 1s ease-in;
+    animation-fill-mode: forwards;
+    animation-timeline: scroll();
+    animation-range: 50vh 100vh;
+    
+
+    .arrow {
+        width: 30px;
+        height: 30px;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+    }
+
+    a {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 50%;
+
+        position: relative;
+        background-color: var(--foreground-color);
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &::before,
+        &::after {
+            position: absolute;
+            content: "";
+            border-radius: inherit;
+            inset: -5px;
+            z-index: -1;
+        }
+
+        &::after{
+            background: conic-gradient(var(--main-color) var(--g), transparent var(--g));
+
+            animation: scrollProgress auto linear;
+            animation-timeline: scroll(root);
+        }
+    }
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*  Hay que declararla con @properties, sintax, initial-value y inherits  */
+@keyframes scrollProgress {
+    from{
+        --g: 0%;
+    }
+    to{
+        --g: 100%;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero {
+        flex-direction: column-reverse;
+
+        .dcha {
+            width: 100%;
+            flex: auto;
+            height: 60vh;
+        }
+
+        .izda {
+            flex: 1;
+
+            h1 {
+                width: 100%;
+                text-align: center;
+            }
+
+            h3 {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+    }
+
+    nav .navcollapse {
+        display: flex;
+        position: absolute;
+        z-index: 9999;
+        width: 60px;
+        height: 60px;
+
+        top: 10px;
+        right: 0;
+    }
+
+    .menu_mobile {
+
+        position: absolute;
+        top: 0vh;
+        left: 0;
+
+        width: 100%;
+        height: 0;
+        z-index: 99;
+
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        flex-flow: column nowrap;
+        overflow: hidden;
+
+        backdrop-filter: blur(50px);
+
+        animation: grow-down .5s ease-in-out;
+        animation-fill-mode: forwards;
+
+        .menu_mobile_nav {
+            list-style-type: none;
+
+            li {
+                width: 100%;
+                text-align: center;
+            }
+
+            li a {
+                font-size: 1.4rem;
+            }
+        }
+
+        .logo-m {
+            text-align: center;
+
+            img {
+                max-width: 40vw;
+                margin-top: 20vh;
+                backdrop-filter: drop-shadow(6px 6px 0px rgba(0, 0, 0, .8));
+            }
+
+            .brand-m {
+                margin: 2rem auto;
+                font-family: Poppins;
+                font-size: 3rem;
+
+            }
+
+        }
+    }
+
+    .grow {
+
+        animation: grow-up .5s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .hero {
+        .izda {
+            .statistics {
+                flex-direction: column;
+                gap: 2rem;
+            }
+        }
+    }
+}
+
+@keyframes grow-up {
+    from {
+        height: 0%;
+    }
+
+    to {
+        height: 100%;
+    }
+}
+
+@keyframes grow-down {
+    from {
+        height: 100%;
+    }
+
+    to {
+        height: 0%;
+    }
+}
