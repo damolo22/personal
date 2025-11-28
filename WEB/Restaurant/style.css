@@ -11,7 +11,7 @@
   margin: 0;
   padding: 0;
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -21,7 +21,6 @@ body {
   font-size: 24px;
   overflow-x: hidden;
   line-height: 180%;
-
 }
 
 h1 {
@@ -125,7 +124,7 @@ strong {
 
     margin-bottom: 0;
 
-    padding-bottom: .5rem;
+    padding-bottom: 0.5rem;
 
     .hero-left {
       display: flex;
@@ -467,115 +466,115 @@ strong {
 }
 
 
+.map {
+  line-height: 0; 
+}
+
 
 /* ---------------------------- FOOTER ------------------------------------ */
-/* ======================================= */
-/* ESTILOS GLOBALES DEL FOOTER */
-/* ======================================= */
 
 .footer {
-    background-color: rgb(24, 24, 51); /* Color más oscuro para que se parezca a la imagen */
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    /* Reducimos el padding vertical para que el contenido esté más compactado */
-    padding: 4rem 8%; 
-    font-size: 18px;
-    
-    /* Aseguramos que todas las columnas se alineen al top */
-    align-items: flex-start; 
+  margin-top: 0;
+  background-color: rgb(
+    24,
+    24,
+    51
+  );
+  color: white;
+  display: flex;
+  justify-content: space-around;
+
+  padding: 4rem 8%;
+  font-size: 18px;
+
+
+  align-items: flex-start;
 }
 
 
-/* ======================================= */
-/* FOOTER COLUMNA 1 (Michelin) */
-/* ======================================= */
-
-
-/* Ajustes al icono/imagen */
 .star-icon {
-    /* La imagen en la foto es un SVG blanco y es más grande */
-    width: 60px; /* Tamaño un poco más grande para el icono */
-    height: auto;
-    margin: 1.5rem 0 3rem 0; /* Menos margen arriba, más abajo para separar del horario */
+  height: auto;
+  margin: 1.5rem 0 3rem 0; 
 }
 
-.schedule-day {
-    font-weight: 700;
-    margin-top: 0.5rem; /* Reducimos el margen superior */
-}
+
 
 .schedule-time {
-    margin-bottom: 2rem; /* Aumentamos el margen para separar los bloques de horario */
-    font-size: 16px;
-    line-height: 1.2; /* Para que quede más compacto */
+  margin-bottom: 2rem;
+  font-size: 16px;
+  line-height: 1.2; 
 }
-
-
-/* ======================================= */
-/* FOOTER COLUMNA 2 (Address/Contact) */
-/* ======================================= */
 
 .footer-col-2 {
-    h2 {
-        /* La separación entre Address y Contact es clave */
-        padding-bottom: 1rem; 
-    }
+  h2 {
+    padding-bottom: 1rem;
+  }
 
-    p {
-        margin-bottom: 0.2rem; /* Menos espacio entre líneas de dirección/contacto */
-    }
+  p {
+    margin-bottom: 0.2rem;
+  }
 
-    .bottom-margin {
-        margin-bottom: 4rem; /* Aumentamos la separación entre Address y Contact */
-    }
+  .bottom-margin {
+    margin-bottom: 4rem; 
+  }
 }
-
-
-/* ======================================= */
-/* FOOTER COLUMNA 3 (Media) */
-/* ======================================= */
 
 .footer-col-3 {
-    /* No tiene línea divisoria */
-    border-right: none; 
+  border-right: none;
 
-    .social-icons {
-        margin-bottom: 4rem; /* Aumentamos el margen para bajar los links de políticas */
-    }
+  h2 {
+    padding-bottom: 1rem;
+  }
 
+  .social-icons {
+    margin-bottom: 2rem;
     a {
-        text-decoration: none;
-        
-        p {
-             /* El color de los links debe ser púrpura/gris */
-            color: #b3a4e8; /* Un tono púrpura para los links, como en la foto */
-            font-size: 16px;
-            margin-bottom: 0.8rem; /* Espaciado más compacto entre links */
-        }
+      padding-right: 1.5rem;
     }
+  }
 
-    .made-by {
-        /* Se alinea más abajo, debajo de los links */
-        margin-top: 3rem; 
-        font-size: 14px; /* Un poco más pequeño */
-        
-        span {
-            /* El nombre del autor tiene el color dorado */
-            color: var(--main-gold); 
-        }
+  a {
+    text-decoration: none;
+
+    p {
+      color: #b3a4e8;
+      font-size: 16px;
+      margin-bottom: 1rem;
     }
+  }
+
+  .made-by {
+    margin-top: 3rem;
+    font-size: 14px;
+
+    span {
+      color: var(--main-gold);
+    }
+  }
 }
 
-
-/* Ajuste Final para las Líneas Verticales */
+.footer-col-1,
+.footer-col-2,
+.footer-col-3 {
+  flex-grow: 1;
+  padding: 0 3rem;
+  height: 25rem;
+}
 
 .footer-col-1,
 .footer-col-2 {
-    /* Mantenemos la línea divisoria vertical */
-    &::after {
-        top: 0; /* Que la línea empiece desde el top */
-        height: 100%; /* Que ocupe toda la altura de la columna */
-        /* ... (resto del código de la línea divisoria) ... */
-    }
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    top: 1px;
+    right: 0;
+    width: 1px;
+
+    height: 100%;
+
+    background-color: var(--main-gold);
+  }
 }
