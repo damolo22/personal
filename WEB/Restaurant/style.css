@@ -173,15 +173,15 @@ strong {
     width: 50%;
     height: 100%;
     text-align: center;
-    display: flex; /* Flex para ayudar a centrar la imagen */
+    display: flex;
     align-items: center;
-    padding-right: 2rem; /* Padding a la derecha */
+    padding-right: 2rem;
 
     img {
       text-align: center;
       padding-left: 5rem;
       display: block;
-      width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+      width: 100%;
       height: auto;
       margin: 0 auto;
     }
@@ -189,7 +189,6 @@ strong {
 }
 
 /* ----------------------------MENU------------------------------------ */
-
 .menu {
   display: flex;
   background-color: rgb(220, 220, 220);
@@ -197,11 +196,18 @@ strong {
 
   .menu-left {
     width: 40%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 
   .menu-right {
-    border: 1px solid blue;
     width: 60%;
+    color: black;
 
     h1 {
       padding: 2rem 0;
@@ -210,29 +216,27 @@ strong {
 
     .menu-info {
       width: 80%;
-      border: 1px solid green;
       line-height: 180%;
       padding: 0 3rem;
-
       margin: 0 auto;
     }
 
     .menu-options {
+      padding-top: 2rem;
       display: flex;
-      border: 1px solid red;
 
       .menu-option-1 {
         line-height: 180%;
         width: 50%;
         border-right: 3px solid var(--main-gold);
         padding-left: 2rem;
+        padding-right: 1rem;
 
         h2 {
           padding: 2rem 0;
         }
-
         p {
-          width: 80%;
+          width: 100%;
           padding-bottom: 2rem;
         }
       }
@@ -241,20 +245,20 @@ strong {
         line-height: 180%;
         width: 50%;
         padding-left: 2rem;
+        padding-right: 1rem;
 
         h2 {
           padding: 2rem 0;
         }
-
         p {
-          width: 80%;
+          width: 100%;
           padding-bottom: 2rem;
         }
       }
     }
 
     .dish {
-      padding: 1rem 0;
+      padding: 2rem 0;
 
       .dish-info {
         width: 80%;
@@ -317,7 +321,6 @@ strong {
   background-color: rgb(183, 183, 183);
   padding-top: 4rem;
   padding-bottom: 0;
-  border: 1px solid red;
 
   .team-title {
     text-align: center;
@@ -353,7 +356,6 @@ strong {
   .team-photo {
     width: 100%;
     height: 100%;
-    border: 1px solid blue;
     padding-bottom: 0;
 
     img {
@@ -378,7 +380,6 @@ strong {
   }
 
   .wine-right {
-    border: 1px solid blue;
     width: 50%;
 
     h1 {
@@ -389,7 +390,6 @@ strong {
 
     .wine-info {
       width: 80%;
-      border: 1px solid green;
       color: white;
       padding: 0 3rem;
 
@@ -414,12 +414,9 @@ strong {
   align-items: center;
 
   .wine-background-info {
-    border: 1px solid green;
     text-align: center;
 
     color: white;
-    max-width: 40%;
-    padding: 2rem;
 
     h1 {
       margin-bottom: 2.5rem;
@@ -602,7 +599,7 @@ strong {
         flex-direction: column;
         gap: 0;
         padding-top: 1rem;
-        font-size: 1rem;
+        font-size: 1.2rem;
       }
     }
 
@@ -621,7 +618,58 @@ strong {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+  .menu {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    background-image: url(assets/img/menu-photo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* efecto parallax */
+
+    .menu-left {
+      display: none;
+    }
+
+    .menu-right {
+      font-size: 1.2rem;
+      width: 100%;
+
+      background-color: rgba(67, 67, 67, 0.85);
+      color: white;
+
+      padding-bottom: 2rem;
+
+      .menu-info {
+        width: 100%;
+        padding: 0 5%;
+      }
+
+      .menu-options {
+        flex-direction: column;
+
+        .menu-option-1 {
+          width: 100%;
+          border-right: none;
+          padding: 0 5%;
+        }
+
+        .menu-option-2 {
+          width: 100%;
+          padding: 0 5%;
+        }
+      }
+
+      .dish-info {
+        width: 100%;
+        padding: 0 5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 968px) {
   .hero {
     .header-hero {
       nav {
@@ -679,4 +727,158 @@ strong {
       }
     }
   }
+
+  .gallery {
+    flex-direction: column;
+    padding: 2rem 5%;
+    gap: 2.2rem;
+    background-color: rgb(183, 183, 183);
+    padding-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .gallery-item {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
+
+  .team {
+    .team-title {
+      h1 {
+        font-size: 64px;
+      }
+    }
+
+    .team-info {
+      flex-direction: column;
+
+      .team-left,
+      .team-right {
+        width: 100%;
+        padding: 1.5rem 5%;
+
+        p {
+          padding: 0.5rem 0;
+          font-size: 1.2rem;
+          line-height: 180%;
+        }
+      }
+    }
+
+    .team-button {
+      padding-bottom: 1.5rem;
+    }
+
+    .team-photo {
+      img {
+        height: auto;
+      }
+    }
+  }
+
+  .wine {
+    flex-direction: column; 
+
+    .wine-left {
+      width: 100%; 
+     }
+
+    .wine-right {
+      width: 100%; 
+      padding-bottom: 2rem;
+
+      h1 {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        font-size: 64px;
+      }
+
+      .wine-info {
+        width: 90%; 
+        padding: 0 1rem; 
+
+        p {
+          padding-bottom: 1.5rem;
+          font-size: 1.2rem;
+          line-height: 180%;
+        }
+      }
+    }
+
+    .wine-background {
+
+      .wine-background-info {
+        padding: 0 2.5rem; 
+
+        h1 {
+          font-size: 2.5rem; 
+        }
+
+        p {
+          font-size: 1.1rem; 
+          margin-bottom: 1.5rem;
+        }
+      }
+    }
+  }
+
+  .private {
+        flex-direction: column; 
+        
+
+        padding-top: 2rem; 
+        padding-bottom: 2rem; 
+
+        .private-left {
+            width: 100%; 
+            padding-left: 0; 
+            order: 2; 
+
+            h1 {
+                padding-top: 1.5rem;
+                font-size: 64px; 
+            }
+
+            .private-info {
+                padding-top: 1.5rem; 
+                
+                p {
+                    width: 90%; 
+                    margin: 0 auto; 
+                    
+                    padding: 1rem 0; 
+                    line-height: 1.6;
+                    font-size: 1.2rem; 
+                }
+            }
+
+            .private-button {
+                padding-top: 1.5rem; 
+            }
+        }
+
+        .private-right {
+            width: 100%; 
+            padding: 0 5%; 
+            order: 1; 
+            
+            img {
+                width: 100%;
+                height: auto;
+                margin-top: 2rem;
+            }
+        }
+    }
+
 }
