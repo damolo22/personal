@@ -757,6 +757,7 @@ strong {
     .team-title {
       h1 {
         font-size: 64px;
+        padding: 0rem 5%;
       }
     }
 
@@ -788,14 +789,15 @@ strong {
   }
 
   .wine {
-    flex-direction: column; 
+    flex-direction: column;
 
     .wine-left {
-      width: 100%; 
-     }
+      width: 100%;
+      padding: 2rem 5%;
+    }
 
     .wine-right {
-      width: 100%; 
+      width: 100%;
       padding-bottom: 2rem;
 
       h1 {
@@ -805,8 +807,8 @@ strong {
       }
 
       .wine-info {
-        width: 90%; 
-        padding: 0 1rem; 
+        width: 90%;
+        padding: 0;
 
         p {
           padding-bottom: 1.5rem;
@@ -817,16 +819,15 @@ strong {
     }
 
     .wine-background {
-
       .wine-background-info {
-        padding: 0 2.5rem; 
+        padding: 0 2.5rem;
 
         h1 {
-          font-size: 2.5rem; 
+          font-size: 2.5rem;
         }
 
         p {
-          font-size: 1.1rem; 
+          font-size: 1.1rem;
           margin-bottom: 1.5rem;
         }
       }
@@ -834,51 +835,114 @@ strong {
   }
 
   .private {
-        flex-direction: column; 
-        
+    flex-direction: column;
 
-        padding-top: 2rem; 
-        padding-bottom: 2rem; 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 
-        .private-left {
-            width: 100%; 
-            padding-left: 0; 
-            order: 2; 
+    .private-left {
+      width: 100%;
+      padding-left: 0;
+      order: 2;
 
-            h1 {
-                padding-top: 1.5rem;
-                font-size: 64px; 
-            }
+      h1 {
+        padding-top: 1.5rem;
+        font-size: 64px;
+      }
 
-            .private-info {
-                padding-top: 1.5rem; 
-                
-                p {
-                    width: 90%; 
-                    margin: 0 auto; 
-                    
-                    padding: 1rem 0; 
-                    line-height: 1.6;
-                    font-size: 1.2rem; 
-                }
-            }
+      .private-info {
+        padding-top: 1.5rem;
 
-            .private-button {
-                padding-top: 1.5rem; 
-            }
+        p {
+          width: 90%;
+          margin: 0 auto;
+
+          padding: 1rem 0;
+          line-height: 1.6;
+          font-size: 1.2rem;
         }
+      }
 
-        .private-right {
-            width: 100%; 
-            padding: 0 5%; 
-            order: 1; 
-            
-            img {
-                width: 100%;
-                height: auto;
-                margin-top: 2rem;
-            }
-        }
+      .private-button {
+        padding-top: 1.5rem;
+      }
     }
 
+    .private-right {
+      width: 100%;
+      padding: 0 5%;
+      order: 1;
+
+      img {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    padding: 2rem 5%;
+    text-align: center;
+    gap: 0;
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+      width: 100%;
+      max-width: none;
+      padding: 2rem 1rem;
+      height: auto;
+    }
+
+    .footer-col-1,
+    .footer-col-2 {
+      border-bottom: 1px solid var(--main-gold);
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .footer-col-1 {
+      .star-icon {
+        margin: 1rem 0 1.5rem 0;
+      }
+      .schedule-time {
+        margin-bottom: 1rem;
+      }
+    }
+
+    .footer-col-2 {
+      .bottom-margin {
+        margin-bottom: 1.5rem;
+      }
+      h2 {
+        padding-bottom: 0.5rem;
+      }
+      p {
+        margin-bottom: 0.1rem;
+      }
+    }
+
+    .footer-col-3 {
+      .social-icons {
+        margin-bottom: 1.5rem;
+        a {
+          padding: 0 0.5rem;
+        }
+      }
+
+      a {
+        p {
+          margin-bottom: 0.5rem;
+        }
+      }
+
+      .made-by {
+        margin-top: 1.5rem;
+      }
+    }
+  }
 }
