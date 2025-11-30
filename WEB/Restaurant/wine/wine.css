@@ -287,8 +287,45 @@ header {
   }
 }
 
+/* <!---------------------------------------- MEDIA QUERY -------------------------------------- --> */
 
-@media (max-width: 768px) {
+@media (max-width: 1068px) {
+    header {
+    padding: 0 5%;
+
+    .logo {
+      width: 8rem;
+      height: 8rem;
+    }
+
+    nav {
+      ul {
+        gap: 1.5rem;
+
+        li {
+          &:nth-child(-n + 4) {
+            display: none;
+          }
+        }
+
+        li a {
+          font-size: 1rem;
+        }
+
+        .burguer {
+          cursor: pointer;
+          span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: var(--main-gold, black);
+          }
+        }
+      }
+    }
+  }
+
   .wine .wine-content {
     flex-direction: column;
     align-items: center;
@@ -298,5 +335,29 @@ header {
   .wine .wine-content .wine-right {
     width: 90%;
     margin-bottom: 3rem;
+  }
+
+    .footer {
+    flex-direction: column;
+    padding: 3rem 1.5rem;
+    text-align: center;
+
+    .footer-col-1,
+    .footer-col-2,
+    .footer-col-3 {
+      width: 100%;
+      height: auto;
+      padding: 2rem 0;
+      border: none;
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .footer-col-1,
+    .footer-col-2 {
+      border-bottom: 1px solid var(--main-gold);
+    }
   }
 }

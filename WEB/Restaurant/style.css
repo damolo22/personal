@@ -481,103 +481,274 @@ strong {
 }
 
 /* ---------------------------- FOOTER ------------------------------------ */
-
 .footer {
   margin-top: 0;
   background-color: rgb(24, 24, 51);
   color: white;
   display: flex;
   justify-content: space-around;
-
   padding: 4rem 8%;
   font-size: 18px;
-
   align-items: flex-start;
-}
 
-.star-icon {
-  height: auto;
-  margin: 1.5rem 0 3rem 0;
-}
-
-.schedule-time {
-  margin-bottom: 2rem;
-  font-size: 16px;
-  line-height: 1.2;
-}
-
-.footer-col-2 {
-  h2 {
-    padding-bottom: 1rem;
+  .footer-col-1,
+  .footer-col-2,
+  .footer-col-3 {
+    flex-grow: 1;
+    padding: 0 3rem;
+    height: 25rem;
   }
 
-  p {
-    margin-bottom: 0.2rem;
-  }
+  .footer-col-1 {
+    position: relative;
 
-  .bottom-margin {
-    margin-bottom: 4rem;
-  }
-}
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--main-gold);
+    }
 
-.footer-col-3 {
-  border-right: none;
+    .star-icon {
+      height: auto;
+      margin: 1.5rem 0 3rem 0;
+    }
 
-  h2 {
-    padding-bottom: 1rem;
-  }
-
-  .social-icons {
-    margin-bottom: 2rem;
-    a {
-      padding-right: 1.5rem;
+    .schedule-time {
+      margin-bottom: 2rem;
+      font-size: 16px;
+      line-height: 1.2;
     }
   }
 
-  a {
-    text-decoration: none;
+  .footer-col-2 {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 1px;
+      right: 0;
+      width: 1px;
+      height: 100%;
+      background-color: var(--main-gold);
+    }
+
+    h2 {
+      padding-bottom: 1rem;
+    }
 
     p {
-      color: #b3a4e8;
-      font-size: 16px;
-      margin-bottom: 1rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .bottom-margin {
+      margin-bottom: 4rem;
     }
   }
 
-  .made-by {
-    margin-top: 3rem;
-    font-size: 14px;
+  .footer-col-3 {
+    border-right: none;
 
-    span {
-      color: var(--main-gold);
+    h2 {
+      padding-bottom: 1rem;
+    }
+
+    .social-icons {
+      margin-bottom: 2rem;
+      a {
+        padding-right: 1.5rem;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      p {
+        color: #b3a4e8;
+        font-size: 16px;
+        margin-bottom: 1rem;
+      }
+    }
+
+    .made-by {
+      margin-top: 3rem;
+      font-size: 14px;
+
+      span {
+        color: var(--main-gold);
+      }
     }
   }
 }
 
-.footer-col-1,
-.footer-col-2,
-.footer-col-3 {
-  flex-grow: 1;
-  padding: 0 3rem;
-  height: 25rem;
-}
+/* ---------------------------- BURGUER ------------------------------------ */
+/* ========================================================================= */
+/* 🍔 CSS ANIDADO: Icono y Menú Hamburguesa */
+/* ========================================================================= */
 
-.footer-col-1,
-.footer-col-2 {
+/* --- 1. Estilos del Icono de Hamburguesa (#nav-icon) --- */
+/* NOTA: Asumo que esto está dentro del header para la media query. 
+         Si es un elemento aparte en el HTML, puedes dejarlo fuera de la anidación del header. */
+#nav-icon {
+  width: 30px;
+  height: 35px;
   position: relative;
+  cursor: pointer;
+  margin: 0 auto;
+  border: 1px solid green; /* Para debug, recuerda quitar esto en producción */
 
-  &::after {
-    content: "";
+  span {
+    display: block;
     position: absolute;
+    width: 50%;
+    height: 4px;
+    background: var(--foreground-color);
+    transition: 0.2s ease-in-out;
 
-    top: 1px;
-    right: 0;
-    width: 1px;
+    /* Mitades izquierda (odd) y derecha (even) */
+    &:nth-child(odd) {
+      left: 0;
+      border-radius: 8px 0 0 8px;
+    }
 
-    height: 100%;
+    &:nth-child(even) {
+      left: 50%;
+      border-radius: 0 8px 8px 0;
+    }
 
-    background-color: var(--main-gold);
+    /* Posiciones Verticales */
+    &:nth-child(1),
+    &:nth-child(2) {
+      top: 0;
+    }
+    &:nth-child(3),
+    &:nth-child(4) {
+      top: 9px;
+    }
+    &:nth-child(5),
+    &:nth-child(6) {
+      top: 18px;
+    }
   }
+
+  /* ESTADO ABIERTO (.open) */
+  &.open {
+    span {
+      /* Transformación base para formar la X */
+      &:nth-child(1),
+      &:nth-child(6) {
+        transform: rotate(45deg);
+      }
+      &:nth-child(2),
+      &:nth-child(5) {
+        transform: rotate(-45deg);
+      }
+
+      /* Posiciones de la X */
+      &:nth-child(1) {
+        left: 3px;
+        top: 5px;
+      }
+      &:nth-child(2) {
+        top: 5px;
+        right: 7px;
+        left: 50%;
+      } /* Corregí el left para mantener el 50% */
+      &:nth-child(5) {
+        left: 3px;
+        top: 16px;
+      }
+      &:nth-child(6) {
+        top: 16px;
+        left: 50%;
+      } /* Corregí el left para mantener el 50% */
+
+      /* Ocultar las líneas centrales (3 y 4) */
+      &:nth-child(3) {
+        transform: translateX(-100px);
+        opacity: 0;
+      }
+
+      &:nth-child(4) {
+        transform: translateX(100px);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+/* --- 2. Estilos del Menú Desplegable (#menu_mobile) --- */
+#menu_mobile {
+  /* Estado inicial: Oculto (Overlay) */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--main-dark-blue);
+  color: white;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 998;
+
+  /* ESTADO ABIERTO (.grow) */
+  &.grow {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  /* Estilos internos anidados */
+  .logo-m {
+    margin-bottom: 3rem;
+
+    img {
+      /* Estilo del logo dentro del menú */
+      width: 100px;
+      height: auto;
+    }
+
+    .brand-m {
+      /* Estilo del texto de la marca */
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+  }
+
+  .menu_mobile_nav {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+
+    li.item {
+      padding: 1rem 0;
+
+      a {
+        color: white;
+        font-size: 2rem;
+        text-decoration: none;
+
+        span {
+          /* Si usas la animación data-replace */
+        }
+      }
+    }
+  }
+}
+/* Estilo suelto que mencionaste en JS, si es necesario */
+.navcollapse {
+  overflow: hidden;
 }
 
 /* ---------------------------- MEDIA QUERY ------------------------------------ */
@@ -683,15 +854,13 @@ strong {
             }
 
             .burguer {
-              display: block;
-              width: 30px;
-              height: 20px;
               cursor: pointer;
               span {
                 display: block;
-                height: 2px;
-                background: white;
-                margin: 4px 0;
+                width: 25px;
+                height: 3px;
+                margin: 5px 0;
+                background-color: var(--main-gold, black);
               }
             }
           }

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Aeterna</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="animations.css" />
   </head>
 
   <body>
@@ -24,14 +25,39 @@
                 >
               </li>
               <li>
-                <div class="burguer">
+                <div class="burguer" id="nav-icon">
                   <span></span><span></span><span></span>
+    <span></span><span></span><span></span>
                   <!-- Gracias maestro por este truco -->
                 </div>
               </li>
             </ul>
           </nav>
         </header>
+
+        <!-- menu mobile -->
+
+        <div id="menu_mobile" class="">
+          <div class="logo-m">
+            <img src="assets/img/Logo-Orange.svg" alt="" />
+            <h1 class="brand-m">visual poetry</h1>
+          </div>
+
+          <ul class="menu_mobile_nav">
+            <li class="item">
+              <a href="" data-replace="HOME"><span>Home</span></a>
+            </li>
+            <li class="item">
+              <a href="" data-replace="ABOUT"><span>Menu</span></a>
+            </li>
+            <li class="item">
+              <a href="" data-replace="PORTFOLIO"><span>Team</span></a>
+            </li>
+            <li class="item">
+              <a href="" data-replace="EXHIBITIONS"><span>Wines</span></a>
+            </li>
+          </ul>
+        </div>
 
         <div class="hero-logo">
           <img src="assets/img/LOGO.png" />
@@ -343,5 +369,6 @@
         </div>
       </footer>
     </div>
+    <script src="assets/js/burguer.js"></script>
   </body>
 </html>
