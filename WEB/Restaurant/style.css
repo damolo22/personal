@@ -78,7 +78,7 @@ strong {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: red;
+  background-color: rgba(0, 0, 0, 0.8);
   color: white;
   transform: translateY(-100%);
   opacity: 0;
@@ -747,19 +747,6 @@ strong {
             &:nth-child(-n + 4) {
               display: none;
             }
-
-            /* .burguer {
-              cursor: pointer;
-              span {
-                display: block;
-                width: 25px;
-                height: 3px;
-                margin: 5px 0;
-                color: var(--main-gold);
-                background-color: var(--main-gold);
-
-              }
-            } */
           }
         }
       }
@@ -1015,12 +1002,16 @@ strong {
   /* ---------------------------- BURGUER ------------------------------------ */
 
   header nav ul li:last-child {
-    display: flex !important; /* Mostramos el contenedor LI */
+    display: flex !important;
     justify-content: flex-end;
+    justify-content: flex-end;
+
+    height: 35px;
+    align-items: center;
   }
 
   #nav-icon {
-    display: block; /* Mostramos el icono */
+    display: block;
   }
 
   .navcollapse {
@@ -1040,8 +1031,9 @@ strong {
     display: block;
     position: absolute;
     width: 50%;
-    height: 4px;
+    height: 6px;
     background: var(--main-gold);
+    border: 2px solid var(--main-gold);
     color: var(--main-gold);
     transition: 0.2s ease-in-out;
 

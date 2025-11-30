@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Our Team</title>
     <link rel="stylesheet" href="team.css" />
+    <link rel="stylesheet" href="../animations.css" />
   </head>
   <body>
     <header>
-      <a href="../index.html"><div class="logo"></div></a>
+      <a href="../index.html">
+        <div class="logo"></div>
+      </a>
       <nav>
         <ul>
           <li><a href="../index.html#home">Home</a></li>
@@ -21,11 +24,38 @@
             >
           </li>
           <li>
-            <div class="burguer"><span></span><span></span><span></span></div>
+            <div class="burguer" id="nav-icon">
+              <span></span><span></span><span></span> <span></span><span></span
+              ><span></span>
+            </div>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- menu mobile -->
+
+    <div id="menu_mobile" class="">
+      <div class="logo-m">
+        <h1>Aeterna</h1>
+      </div>
+
+      <ul class="menu_mobile_nav">
+        <li class="item">
+          <a href="../index.html#home"><span>Home</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#menu"><span>Menu</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#team"><span>Team</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#wine"><span>Wines</span></a>
+        </li>
+      </ul>
+    </div>
+
     <div class="team">
       <h1>Meet our Team</h1>
 
@@ -210,5 +240,6 @@
         <p class="made-by">Made by <span>David Moreno</span></p>
       </div>
     </footer>
+    <script src="../assets/js/burguer.js"></script>
   </body>
 </html>

@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Reservations</title>
     <link rel="stylesheet" href="reservation.css" />
+    <link rel="stylesheet" href="../animations.css" />
   </head>
   <body>
     <header>
-      <a href="../index.html"><div class="logo"></div></a>
+      <a href="../index.html">
+        <div class="logo"></div>
+      </a>
       <nav>
         <ul>
           <li><a href="../index.html#home">Home</a></li>
@@ -16,14 +19,42 @@
           <li><a href="../index.html#team">Team</a></li>
           <li><a href="../index.html#wine">Wines</a></li>
           <li>
-            <a href="reservation/reservation.html"><button class="button2">Reservations</button></a>
+            <a href="../reservation/reservation.html"
+              ><button class="button2">Reservations</button></a
+            >
           </li>
           <li>
-            <div class="burguer"><span></span><span></span><span></span></div>
+            <div class="burguer" id="nav-icon">
+              <span></span><span></span><span></span> <span></span><span></span
+              ><span></span>
+            </div>
           </li>
         </ul>
       </nav>
     </header>
+
+    <!-- menu mobile -->
+
+    <div id="menu_mobile" class="">
+      <div class="logo-m">
+        <h1>Aeterna</h1>
+      </div>
+
+      <ul class="menu_mobile_nav">
+        <li class="item">
+          <a href="../index.html#home"><span>Home</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#menu"><span>Menu</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#team"><span>Team</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#wine"><span>Wines</span></a>
+        </li>
+      </ul>
+    </div>
 
     <div class="reservation-hero">
       <h1>Reservation</h1>
@@ -34,8 +65,6 @@
 
       <div class="reservation-content">
         <div class="reservation-col-left">
-
-
           <div class="calendar-widget">
             <div class="calendar-header">
               <span class="nav-arrow">&lt;</span>
@@ -91,7 +120,7 @@
 
           <div class="input-group">
             <input type="text" id="time" required />
-            <label for="time"  id="time">Time</label>
+            <label for="time" id="time">Time</label>
           </div>
         </div>
 
@@ -125,7 +154,7 @@
         Open
       </p>
     </div>
-    
+
     <div class="map">
       <iframe
         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10239.906786719437!2d14.404510205566464!3d50.08672316511688!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b94e91381d33f%3A0x2600af105c240cf2!2sPraga%201%2C%20Chequia!5e0!3m2!1ses!2ses!4v1764063755248!5m2!1ses!2ses"
@@ -138,49 +167,50 @@
       ></iframe>
     </div>
     <!----------------------------------------  FOOTER  -------------------------------------- -->
-      <footer class="footer">
-        <div class="footer-col-1">
-          <h2>Michelin 2025</h2>
-          <div class="michelin-star">
-            <img
-              src="../assets/img/michelin-start.png"
-              alt="Michelin Star"
-              class="star-icon"
-            />
-          </div>
-          <p class="schedule-day">Monday - Friday</p>
-          <p class="schedule-time">1PM - 11PM</p>
+    <footer class="footer">
+      <div class="footer-col-1">
+        <h2>Michelin 2025</h2>
+        <div class="michelin-star">
+          <img
+            src="../assets/img/michelin-start.png"
+            alt="Michelin Star"
+            class="star-icon"
+          />
+        </div>
+        <p class="schedule-day">Monday - Friday</p>
+        <p class="schedule-time">1PM - 11PM</p>
 
-          <p class="schedule-day">Saturday - Sunday</p>
-          <p class="schedule-time">12AM - 1AM</p>
+        <p class="schedule-day">Saturday - Sunday</p>
+        <p class="schedule-time">12AM - 1AM</p>
+      </div>
+
+      <div class="footer-col-2">
+        <h2>Address</h2>
+        <p>Staré Město 110 00,</p>
+        <p class="bottom-margin">Prague, Czech Republic</p>
+
+        <h2>Contact</h2>
+        <p>info@aeternaprague.com</p>
+        <p>+420 221 088 888</p>
+      </div>
+
+      <div class="footer-col-3">
+        <h2>Media</h2>
+        <div class="social-icons">
+          <a href="#"><img src="../assets/img/twitter.png" alt="Twitter" /></a>
+          <a href="#"
+            ><img src="../assets/img/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"><img src="../assets/img/yt.png" alt="Youtube" /></a>
         </div>
 
-        <div class="footer-col-2">
-          <h2>Address</h2>
-          <p>Staré Město 110 00,</p>
-          <p class="bottom-margin">Prague, Czech Republic</p>
+        <a href="#"><p>Consent Preferences</p></a>
+        <a href="#"><p>Privacy Policy</p></a>
+        <a href="#"><p>Terms And Condition</p></a>
 
-          <h2>Contact</h2>
-          <p>info@aeternaprague.com</p>
-          <p>+420 221 088 888</p>
-        </div>
-
-        <div class="footer-col-3">
-          <h2>Media</h2>
-          <div class="social-icons">
-            <a href="#"><img src="../assets/img/twitter.png" alt="Twitter" /></a>
-            <a href="#"
-              ><img src="../assets/img/instagram.png" alt="Instagram"
-            /></a>
-            <a href="#"><img src="../assets/img/yt.png" alt="Youtube" /></a>
-          </div>
-
-          <a href="#"><p>Consent Preferences</p></a>
-          <a href="#"><p>Privacy Policy</p></a>
-          <a href="#"><p>Terms And Condition</p></a>
-
-          <p class="made-by">Made by <span>David Moreno</span></p>
-        </div>
-      </footer>
+        <p class="made-by">Made by <span>David Moreno</span></p>
+      </div>
+    </footer>
+    <script src="../assets/js/burguer.js"></script>
   </body>
 </html>

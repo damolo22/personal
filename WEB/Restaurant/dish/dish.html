@@ -6,28 +6,58 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Signature Dishes</title>
     <link rel="stylesheet" href="dish.css" />
+    <link rel="stylesheet" href="../animations.css" />
 </head>
 
 <body>
     <header>
-        <a href="../index.html">
-            <div class="logo"></div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#menu">Menu</a></li>
-                <li><a href="../index.html#team">Team</a></li>
-                <li><a href="../index.html#wine">Wines</a></li>
-                <li>
-                    <a href="../reservation/reservation.html"><button class="button2">Reservations</button></a>
-                </li>
-                <li>
-                    <div class="burguer"><span></span><span></span><span></span></div>
-                </li>
-            </ul>
-        </nav>
+      <a href="../index.html">
+        <div class="logo"></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#menu">Menu</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../index.html#wine">Wines</a></li>
+          <li>
+            <a href="../reservation/reservation.html"
+              ><button class="button2">Reservations</button></a
+            >
+          </li>
+          <li>
+            <div class="burguer" id="nav-icon">
+              <span></span><span></span><span></span> <span></span><span></span
+              ><span></span>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
+
+    <!-- menu mobile -->
+
+    <div id="menu_mobile" class="">
+      <div class="logo-m">
+        <h1>Aeterna</h1>
+      </div>
+
+      <ul class="menu_mobile_nav">
+        <li class="item">
+          <a href="../index.html#home"><span>Home</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#menu"><span>Menu</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#team"><span>Team</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#wine"><span>Wines</span></a>
+        </li>
+      </ul>
+    </div>
+
     <div class="dish">
         <h1>Our Signature Dishes</h1>
 
@@ -165,7 +195,7 @@
           <p class="made-by">Made by <span>David Moreno</span></p>
         </div>
       </footer>
-
+    <script src="../assets/js/burguer.js"></script>
 
 </body>
 

@@ -1,138 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Wines</title>
     <link rel="stylesheet" href="wine.css" />
-</head>
-<body>
-     <header>
-        <a href="../index.html">
-            <div class="logo"></div>
-        </a>
-        <nav>
-            <ul>
-                <li><a href="../index.html#home">Home</a></li>
-                <li><a href="../index.html#menu">Menu</a></li>
-                <li><a href="../index.html#team">Team</a></li>
-                <li><a href="../index.html#wine">Wines</a></li>
-                <li>
-                    <a href="../reservation/reservation.html"><button class="button2">Reservations</button></a>
-                </li>
-                <li>
-                    <div class="burguer"><span></span><span></span><span></span></div>
-                </li>
-            </ul>
-        </nav>
+    <link rel="stylesheet" href="../animations.css" />
+  </head>
+  <body>
+    <header>
+      <a href="../index.html">
+        <div class="logo"></div>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="../index.html#home">Home</a></li>
+          <li><a href="../index.html#menu">Menu</a></li>
+          <li><a href="../index.html#team">Team</a></li>
+          <li><a href="../index.html#wine">Wines</a></li>
+          <li>
+            <a href="../reservation/reservation.html"
+              ><button class="button2">Reservations</button></a
+            >
+          </li>
+          <li>
+            <div class="burguer" id="nav-icon">
+              <span></span><span></span><span></span> <span></span><span></span
+              ><span></span>
+            </div>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-   <div class="wine">
-    <div class="wine-title">
-        <h1>The Complete Wine List</h1>
+    <!-- menu mobile -->
+
+    <div id="menu_mobile" class="">
+      <div class="logo-m">
+        <h1>Aeterna</h1>
+      </div>
+
+      <ul class="menu_mobile_nav">
+        <li class="item">
+          <a href="../index.html#home"><span>Home</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#menu"><span>Menu</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#team"><span>Team</span></a>
+        </li>
+        <li class="item">
+          <a href="../index.html#wine"><span>Wines</span></a>
+        </li>
+      </ul>
     </div>
 
-    <div class="wine-content">
-        <div class="wine-left">
-            <div class="wine-category">
-                <h2>WHITE : France - Burgundy</h2>
-                <div class="wine-item">
-                    <p class="name">Domaine Leflaive Puligny-Montrachet 'Les Pucelles' 2017</p>
-                    <span class="price">320€</span>
-                </div>
-                <div class="wine-item">
-                    <p class="name">Domaine Roulot Meursault 'Clos des Bouchères' 2019</p>
-                    <span class="price">285€</span>
-                </div>
-                <div class="wine-item">
-                    <p class="name">Egon Müller Scharzhofberger Riesling Auslese 2018</p>
-                    <span class="price">450€</span>
-                </div>
-            </div>
+    <div class="wine">
+      <div class="wine-title">
+        <h1>The Complete Wine List</h1>
+      </div>
 
-            <div class="wine-category">
-                <h2>WHITE : Italy - Friuli</h2>
-                <div class="wine-item">
-                    <p class="name">Gravner Ribolla Gialla 'Anfora' 2014</p>
-                    <span class="price">90€</span>
-                </div>
+      <div class="wine-content">
+        <div class="wine-left">
+          <div class="wine-category">
+            <h2>WHITE : France - Burgundy</h2>
+            <div class="wine-item">
+              <p class="name">
+                Domaine Leflaive Puligny-Montrachet 'Les Pucelles' 2017
+              </p>
+              <span class="price">320€</span>
             </div>
+            <div class="wine-item">
+              <p class="name">
+                Domaine Roulot Meursault 'Clos des Bouchères' 2019
+              </p>
+              <span class="price">285€</span>
+            </div>
+            <div class="wine-item">
+              <p class="name">
+                Egon Müller Scharzhofberger Riesling Auslese 2018
+              </p>
+              <span class="price">450€</span>
+            </div>
+          </div>
+
+          <div class="wine-category">
+            <h2>WHITE : Italy - Friuli</h2>
+            <div class="wine-item">
+              <p class="name">Gravner Ribolla Gialla 'Anfora' 2014</p>
+              <span class="price">90€</span>
+            </div>
+          </div>
         </div>
 
         <div class="wine-right">
-            <div class="wine-category">
-                <h2>REDS : France - Burgundy</h2>
-                <div class="wine-item">
-                    <p class="name">Sierra Cantabria 'Amancio' 2018 <span class="special">*</span></p>
-                    <span class="price">210€</span>
-                </div>
+          <div class="wine-category">
+            <h2>REDS : France - Burgundy</h2>
+            <div class="wine-item">
+              <p class="name">
+                Sierra Cantabria 'Amancio' 2018 <span class="special">*</span>
+              </p>
+              <span class="price">210€</span>
             </div>
+          </div>
 
-            <div class="wine-category">
-                <h2>REDS : Czech Republic - Moravia</h2>
-                <div class="wine-item">
-                    <p class="name">Reisten Pinot Noir 'Elegance' 2019</p>
-                    <span class="price">95€</span>
-                </div>
-                <div class="wine-item">
-                    <p class="name">Château Lafite Rothschild Pauillac 2010</p>
-                    <span class="price">1500€</span>
-                </div>
+          <div class="wine-category">
+            <h2>REDS : Czech Republic - Moravia</h2>
+            <div class="wine-item">
+              <p class="name">Reisten Pinot Noir 'Elegance' 2019</p>
+              <span class="price">95€</span>
             </div>
+            <div class="wine-item">
+              <p class="name">Château Lafite Rothschild Pauillac 2010</p>
+              <span class="price">1500€</span>
+            </div>
+          </div>
         </div>
-        
-    </div>
-    
-    <div class="sommelier-note">
+      </div>
+
+      <div class="sommelier-note">
         <p><span class="special">*</span> Sommelier Current Recommendation</p>
+      </div>
     </div>
-</div>
 
+    <footer class="footer">
+      <div class="footer-col-1">
+        <h2>Michelin 2025</h2>
+        <div class="michelin-star">
+          <img
+            src="../assets/img/michelin-start.png"
+            alt="Michelin Star"
+            class="star-icon"
+          />
+        </div>
+        <p class="schedule-day">Monday - Friday</p>
+        <p class="schedule-time">1PM - 11PM</p>
 
+        <p class="schedule-day">Saturday - Sunday</p>
+        <p class="schedule-time">12AM - 1AM</p>
+      </div>
 
-      <footer class="footer">
-        <div class="footer-col-1">
-          <h2>Michelin 2025</h2>
-          <div class="michelin-star">
-            <img
-              src="../assets/img/michelin-start.png"
-              alt="Michelin Star"
-              class="star-icon"
-            />
-          </div>
-          <p class="schedule-day">Monday - Friday</p>
-          <p class="schedule-time">1PM - 11PM</p>
+      <div class="footer-col-2">
+        <h2>Address</h2>
+        <p>Staré Město 110 00,</p>
+        <p class="bottom-margin">Prague, Czech Republic</p>
 
-          <p class="schedule-day">Saturday - Sunday</p>
-          <p class="schedule-time">12AM - 1AM</p>
+        <h2>Contact</h2>
+        <p>info@aeternaprague.com</p>
+        <p>+420 221 088 888</p>
+      </div>
+
+      <div class="footer-col-3">
+        <h2>Media</h2>
+        <div class="social-icons">
+          <a href="#"><img src="../assets/img/twitter.png" alt="Twitter" /></a>
+          <a href="#"
+            ><img src="../assets/img/instagram.png" alt="Instagram"
+          /></a>
+          <a href="#"><img src="../assets/img/yt.png" alt="Youtube" /></a>
         </div>
 
-        <div class="footer-col-2">
-          <h2>Address</h2>
-          <p>Staré Město 110 00,</p>
-          <p class="bottom-margin">Prague, Czech Republic</p>
+        <a href="#"><p>Consent Preferences</p></a>
+        <a href="#"><p>Privacy Policy</p></a>
+        <a href="#"><p>Terms And Condition</p></a>
 
-          <h2>Contact</h2>
-          <p>info@aeternaprague.com</p>
-          <p>+420 221 088 888</p>
-        </div>
-
-        <div class="footer-col-3">
-          <h2>Media</h2>
-          <div class="social-icons">
-            <a href="#"><img src="../assets/img/twitter.png" alt="Twitter" /></a>
-            <a href="#"
-              ><img src="../assets/img/instagram.png" alt="Instagram"
-            /></a>
-            <a href="#"><img src="../assets/img/yt.png" alt="Youtube" /></a>
-          </div>
-
-          <a href="#"><p>Consent Preferences</p></a>
-          <a href="#"><p>Privacy Policy</p></a>
-          <a href="#"><p>Terms And Condition</p></a>
-
-          <p class="made-by">Made by <span>David Moreno</span></p>
-        </div>
-      </footer>
-</body>
+        <p class="made-by">Made by <span>David Moreno</span></p>
+      </div>
+    </footer>
+    <script src="../assets/js/burguer.js"></script>
+  </body>
 </html>
