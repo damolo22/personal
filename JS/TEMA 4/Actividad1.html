@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 1</title>
+    <style>
+        #hola {
+            width: 500px;
+            height: 500px;
+            background-color: red;
+            
+            position: relative; 
+            margin: 20px auto; 
+        }
+
+        #adios {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            border: 5px solid white; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="hola">
+        <div id="adios"></div>
+    </div>
+
+    <script>
+        const capaHola = document.getElementById('hola');
+        const capaAdios = document.getElementById('adios');
+        
+        // Función que salta el alert y frena la propagación
+        const handleClick = (event) => {
+            // event.currentTarget es la capa a la que le pusimos el listener ('hola' o 'adios')
+            alert('ID de la capa pulsada: ' + event.currentTarget.id); 
+            
+            // Esto evita que si pulsas en 'adios', 
+            // también se active el evento de 'hola' (que está por detrás).
+            event.stopPropagation(); 
+        };
+
+        // Asignar los listeners de click
+        capaHola.addEventListener('click', handleClick);
+        capaAdios.addEventListener('click', handleClick);
+    </script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividades HTML y JS - Completed</title>
+    <style>
+        #hola {
+            width: 500px;
+            height: 500px;
+            background-color: red; 
+            position: relative; 
+            margin: 20px auto;
+            /* Animaciones de CSS */
+            transition: background-color 0.3s ease, width 0.3s ease, height 0.3s ease;
+        }
+
+        #adios {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: absolute;
+            top: 50%; 
+            left: 50%; 
+            transform: translate(-50%, -50%);
+            border: 5px solid white; 
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Usa las teclas R, V, A, + y -</h1>
+    <div id="hola">
+        <div id="adios"></div>
+    </div>
+
+    <script>
+        const capaHola = document.getElementById('hola');
+        const capaAdios = document.getElementById('adios');
+        
+        // Inicializamos los estilos de ancho y alto 
+        capaHola.style.width = '500px';
+        capaHola.style.height = '500px';
+
+
+        // Reciclo de la actividad 1
+        const handleClick = (event) => {
+            alert('ID de la capa pulsada: ' + event.currentTarget.id); 
+            event.stopPropagation(); 
+        };
+
+        capaHola.addEventListener('click', handleClick);
+        capaAdios.addEventListener('click', handleClick);
+
+
+
+        document.addEventListener('keydown', (event) => {
+            
+            const tecla = event.key.toUpperCase();
+
+            // Cambiar de color 
+            switch (tecla) {
+                case 'R':
+                    capaHola.style.backgroundColor = 'red';
+                    console.log('Color: Rojo');
+                    break;
+                case 'V':
+                    capaHola.style.backgroundColor = 'green';
+                    console.log('Color: Verde');
+                    break;
+                case 'A':
+                    capaHola.style.backgroundColor = 'blue';
+                    console.log('Color: Azul');
+                    break;
+            }
+            
+            // Obtener el valor actual de ancho y alto 
+            let anchoActual = parseInt(capaHola.style.width, 10);
+            let altoActual = parseInt(capaHola.style.height, 10);
+            
+            // Si el style está vacío, usamos los valores por defecto del CSS (500)
+            if (isNaN(anchoActual)) {
+                anchoActual = 500;
+                altoActual = 500;
+            }
+
+            let nuevoAncho = anchoActual;
+            let nuevoAlto = altoActual;
+
+            if (tecla === '+') {
+                // Aumentar en 10px
+                nuevoAncho += 10;
+                nuevoAlto += 10;
+            } else if (tecla === '-') {
+                // Reducir en 10px
+                if (anchoActual > 10) {
+                    nuevoAncho -= 10;
+                    nuevoAlto -= 10;
+                } else {
+                    console.warn('Tamaño mínimo alcanzado, no se puede reducir más.');
+                    return; // Paramos la ejecución si ya estamos en el mínimo
+                }
+            }
+
+            // Si cambiamos el tamaño, actualizamos el style
+            if (tecla === '+' || tecla === '-') {
+                capaHola.style.width = nuevoAncho + 'px';
+                capaHola.style.height = nuevoAlto + 'px';
+                console.log('Tamaño actualizado a:', nuevoAncho + 'px');
+            }
+        });
+    </script>
+</body>
+</html>
