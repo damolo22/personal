@@ -1,0 +1,103 @@
+:root {}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery {
+    background-color: rgb(39, 39, 39);
+
+
+    h1 {
+        color: white;
+        padding: 1rem;
+    }
+
+}
+
+.grid-container {
+    border: 1px solid hotpink;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-auto-rows: minmax(300px, 100%);
+    gap: 5px;
+}
+
+.cell{
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.cell-wide{
+
+}
+
+.cell-tall{
+
+}
+
+.super-cell{
+    
+}
+
+.cell1{
+    background-image: url(img/agustin51.jpeg);
+}
+
+.cell2{
+    background-image: url(img/casino1.jpg);
+}
+
+.cell3{
+    background-image: url(img/casino2.jpg);
+}
+
+.cell4{
+    background-image: url(img/javier-rodriguez.jpg);
+}
+
+.cell5{
+    background-image: url(img/wizy.jpg);
+}
+
+.cell6{
+    background-image: url(img/agustin51.jpeg);
+}
+
+.cell7{
+    background-image: url(img/casino1.jpg);
+}
+
+.cell8{
+    background-image: url(img/casino2.jpg);
+}
+
+.cell9{
+    background-image: url(img/javier-rodriguez.jpg);
+}
+
+.cell10{
+    background-image: url(img/wizy.jpg);
+}
+
+.cell11{
+    background-image: url(img/67.webp);
+}
+
+.cell12{
+    background-image: url(img/wizy.jpg);
+}
+

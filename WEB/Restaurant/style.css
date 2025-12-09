@@ -11,6 +11,7 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
@@ -296,6 +297,7 @@ strong {
         h2 {
           padding: 2rem 0;
         }
+
         p {
           width: 100%;
           padding-bottom: 2rem;
@@ -311,6 +313,7 @@ strong {
         h2 {
           padding: 2rem 0;
         }
+
         p {
           width: 100%;
           padding-bottom: 2rem;
@@ -620,6 +623,7 @@ strong {
 
     .social-icons {
       margin-bottom: 2rem;
+
       a {
         padding-right: 1.5rem;
       }
@@ -682,129 +686,8 @@ strong {
       }
     }
   }
-}
 
-@media (max-width: 1200px) {
-  .menu {
-    flex-direction: column;
-    padding-bottom: 0;
 
-    background-image: url(assets/img/menu-photo.png);
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed; /* efecto parallax */
-
-    .menu-left {
-      display: none;
-    }
-
-    .menu-right {
-      font-size: 1.2rem;
-      width: 100%;
-
-      background-color: rgba(67, 67, 67, 0.85);
-      color: white;
-
-      padding-bottom: 2rem;
-
-      .menu-info {
-        width: 100%;
-        padding: 0 5%;
-      }
-
-      .menu-options {
-        flex-direction: column;
-
-        .menu-option-1 {
-          width: 100%;
-          border-right: none;
-          padding: 0 5%;
-        }
-
-        .menu-option-2 {
-          width: 100%;
-          padding: 0 5%;
-        }
-      }
-
-      .dish-info {
-        width: 100%;
-        padding: 0 5%;
-      }
-    }
-  }
-}
-
-@media (max-width: 968px) {
-  .hero {
-    .header-hero {
-      nav {
-        ul {
-          gap: 1.5rem;
-          padding-right: 1.5rem;
-
-          li {
-            &:nth-child(-n + 4) {
-              display: none;
-            }
-          }
-        }
-      }
-    }
-
-    .hero-logo {
-      img {
-        max-width: 70%;
-      }
-    }
-
-    .hero-footer {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      margin: 0 1rem;
-      padding-bottom: 2rem;
-      line-height: 1.5rem;
-      font-size: 1rem;
-
-      .hero-left {
-        width: 100%;
-        justify-content: space-around;
-        gap: 1rem;
-        margin-bottom: 1rem;
-      }
-
-      .hero-right {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-
-  .gallery {
-    flex-direction: column;
-    padding: 2rem 5%;
-    gap: 2.2rem;
-    background-color: rgb(183, 183, 183);
-    padding-bottom: 0;
-
-    &::before,
-    &::after {
-      display: none;
-    }
-
-    .gallery-item {
-      width: 100%;
-      max-width: 500px;
-      margin: 0 auto;
-
-      img {
-        width: 100%;
-        height: auto;
-        display: block;
-      }
-    }
-  }
 
   .team {
     .team-title {
@@ -933,6 +816,130 @@ strong {
       }
     }
   }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    flex-direction: column;
+    padding-bottom: 0;
+
+    background-image: url(assets/img/menu-photo.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* efecto parallax */
+
+    .menu-left {
+      display: none;
+    }
+
+    .menu-right {
+      font-size: 1.2rem;
+      width: 100%;
+
+      background-color: rgba(67, 67, 67, 0.85);
+      color: white;
+
+      padding-bottom: 2rem;
+
+      .menu-info {
+        width: 100%;
+        padding: 0 5%;
+      }
+
+      .menu-options {
+        flex-direction: column;
+
+        .menu-option-1 {
+          width: 100%;
+          border-right: none;
+          padding: 0 5%;
+        }
+
+        .menu-option-2 {
+          width: 100%;
+          padding: 0 5%;
+        }
+      }
+
+      .dish-info {
+        width: 100%;
+        padding: 0 5%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1068px) {
+  .hero {
+    .header-hero {
+      nav {
+        ul {
+          gap: 1.5rem;
+          padding-right: 1.5rem;
+
+          li {
+            &:nth-child(-n + 4) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    .hero-logo {
+      img {
+        max-width: 70%;
+      }
+    }
+
+    .hero-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin: 0 1rem;
+      padding-bottom: 2rem;
+      line-height: 1.5rem;
+      font-size: 1rem;
+
+      .hero-left {
+        width: 100%;
+        justify-content: space-around;
+        gap: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero-right {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+
+  .gallery {
+    flex-direction: column;
+    padding: 2rem 5%;
+    gap: 2.2rem;
+    background-color: rgb(183, 183, 183);
+    padding-bottom: 0;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .gallery-item {
+      width: 100%;
+      max-width: 500px;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
+    }
+  }
 
   .footer {
     flex-direction: column;
@@ -962,6 +969,7 @@ strong {
       .star-icon {
         margin: 1rem 0 1.5rem 0;
       }
+
       .schedule-time {
         margin-bottom: 1rem;
       }
@@ -971,9 +979,11 @@ strong {
       .bottom-margin {
         margin-bottom: 1.5rem;
       }
+
       h2 {
         padding-bottom: 0.5rem;
       }
+
       p {
         margin-bottom: 0.1rem;
       }
@@ -982,6 +992,7 @@ strong {
     .footer-col-3 {
       .social-icons {
         margin-bottom: 1.5rem;
+
         a {
           padding: 0 0.5rem;
         }
@@ -1051,10 +1062,12 @@ strong {
     &:nth-child(2) {
       top: 0;
     }
+
     &:nth-child(3),
     &:nth-child(4) {
       top: 9px;
     }
+
     &:nth-child(5),
     &:nth-child(6) {
       top: 18px;
@@ -1063,10 +1076,12 @@ strong {
 
   &.open {
     span {
+
       &:nth-child(1),
       &:nth-child(6) {
         transform: rotate(45deg);
       }
+
       &:nth-child(2),
       &:nth-child(5) {
         transform: rotate(-45deg);
@@ -1076,15 +1091,18 @@ strong {
         left: 3px;
         top: 5px;
       }
+
       &:nth-child(2) {
         top: 5px;
         right: 7px;
         left: 50%;
       }
+
       &:nth-child(5) {
         left: 3px;
         top: 16px;
       }
+
       &:nth-child(6) {
         top: 16px;
         left: 50%;
