@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title>Actividad 3</title>
+        
+        <script>
+            // La función que maneja el click para mostrar/ocultar
+            const toggleContenido = (event) => {
+                event.preventDefault(); 
+                
+                const enlace = event.currentTarget;
+                
+                const parrafoId = enlace.id.replace('enlace', 'contenido');
+                
+                const parrafo = document.getElementById(parrafoId);
+                
+                if (parrafo.style.display === 'none') {
+                    // Si está oculto, lo mostramos
+                    parrafo.style.display = 'block'; 
+                    enlace.textContent = 'Ocultar contenido'; // Cambiar el texto del enlace
+                } else {
+                    // Si está visible, lo ocultamos
+                    parrafo.style.display = 'none'; 
+                    enlace.textContent = 'Mostrar contenido'; // Cambiar el texto del enlace
+                }
+            };
+
+            // Esperamos a que el DOM esté completamente cargado antes de buscar los elementos
+            document.addEventListener('DOMContentLoaded', () => {
+                // Obtener todos los enlaces por ID
+                const enlace1 = document.getElementById('enlace_1');
+                const enlace2 = document.getElementById('enlace_2');
+                const enlace3 = document.getElementById('enlace_3');
+
+                // Asignar el evento 'click' a cada enlace
+                enlace1.addEventListener('click', toggleContenido);
+                enlace2.addEventListener('click', toggleContenido);
+                enlace3.addEventListener('click', toggleContenido);
+            });
+
+        </script>
+        </head>
+
+    <body>
+        <p id="contenido_1"> [1] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed Pellentesque vel lacus sit amet sapien ornare mollis consectetur vel neque. Sed dictum dolor non lorem rhoncus sodales. Suspendisse temporornare velit, sed molestie lorem rutrum eget. Etiam metus dui, pulvinar vel volutpat eu, luctus et sapien. Pellentesque commodo massa at porta egestas. Etiam a massa sit amet velit imperdiet maximus. Praesent id enim purus. Donec egestas massa dolor, quis cursus nulla tincidunt quis.</p>
+        <a id="enlace_1" href="#"> Ocultar contenido </a>
+        <br />
+        <p id="contenido_2"> [2] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacus sit amet sapien ornare mollis consectetur vel neque. Sed dictum dolor non lorem rhoncus sodales. Suspendisse tempor ornare velit, sed molestie lorem rutrum eget. Etiam metus dui, pulvinar vel volutpateu, luctus et sapien. Pellentesque commodo massa at porta egestas. Etiam a massa sit amet velit imperdiet maximus. Praesent id enim purus. Donec egestas massa dolor, quis cursus nulla tincidunt quis.</p>
+        <a id="enlace_2" href="#"> Ocultar contenido </a>
+        <br />
+        <p id="contenido_3"> [3] Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vel lacus sit amet sapien ornare mollis consectetur vel neque. Sed dictum dolor non lorem rhoncus sodales. Suspendisse tempor ornare velit, sed molestie lorem rutrum eget. Etiam metus dui, pulvinar vel volutpat eu, luctus et sapien. Pellentesque commodo massa at porta egestas. Etiam a massa sit amet velit imperdiet maximus. Praesent id enim purus. Donec egestas massa dolor, quis cursus nulla tincidunt quis.</p>
+        <a id="enlace_3" href="#"> Ocultar contenido </a>
+    </body>
+</html>
