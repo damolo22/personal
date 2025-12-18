@@ -369,7 +369,7 @@ strong {
           border-color: var(--main-blue);
           background: rgba(0, 210, 255, 0.07);
           transform: translateY(-8px);
-          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+          color: var(--main-blue);
         }
 
         .card-icon {
@@ -432,4 +432,133 @@ strong {
       }
     }
   }
+
+  .contenders {
+    display: flex;
+    flex-direction: column;
+
+    .contender-profile {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 7rem;
+      padding-bottom: 3rem;
+
+      .profile-image {
+        flex: 1;
+
+        h4 {
+          font-size: 30px;
+          margin-bottom: 1rem;
+        }
+      }
+
+      .profile-info {
+        flex: 1;
+        padding-top: 60px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .social-icons {
+        display: flex;
+        padding-top: 3rem;
+        gap: 4rem;
+      }
+    }
+  }
+}
+
+.image-fullwidth {
+  width: 100%;
+  height: 100%;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* ------------------------------------------------------ JOIN ------------------------------------------------------ */
+.join {
+  padding: 3rem 3rem;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+
+  .join-title {
+    text-align: center;
+  }
+
+  .join-content {
+    display: flex;
+    align-items: center;
+    gap: 5rem;
+
+    .join-info {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+
+      .join-botton {
+        text-align: center;
+
+        .button-large {
+          margin-top: 20px;
+        }
+      }
+    }
+
+    .join-media {
+      flex: 1;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .join-features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    .feature-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 2px solid #333;
+      border-radius: 11px;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      height: 80%;
+
+      &:hover {
+        border-color: var(--main-blue);
+        color: var(--main-blue);
+        background: rgba(0, 210, 255, 0.05);
+        transform: translateY(-5px);
+      }
+
+      .feature-icon {
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      span {
+        font-family: "Monument Expanded";
+        font-size: 18px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+}
+
+.map{
+  width: 100%;
+  height: 100%;
+  border: none;
 }
