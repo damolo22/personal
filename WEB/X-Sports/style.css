@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@font-face {
+  font-family: "Monument Expanded";
+  src: url("./assets/fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-red: rgb(255, 75, 58);
+  --main-blue: rgb(0, 210, 255);
+  --btn-width-small: 200px;
+  --btn-height-small: 55px;
+  --btn-width-large: 230px;
+  --btn-height-large: 55px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-family: "Roboto";
+  font-size: 32px;
+  overflow-x: hidden;
+  line-height: 160%;
+}
+
+h1 {
+  font-family: "Monument Expanded";
+  font-size: 128px;
+  font-style: bold;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: "Monument Expanded";
+  font-size: 80px;
+  color: var(--main-blue);
+  font-style: bold;
+}
+
+h3 {
+  font-family: "Monument Expanded";
+  font-size: 60px;
+  color: var(--main-blue);
+  font-style: bold;
+}
+
+h5 {
+  font-family: "Playfair";
+  font-size: 22px;
+  font-style: italic;
+  font-style: extrabold;
+}
+
+.button-small {
+  width: var(--btn-width-small);
+  height: var(--btn-height-small);
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-red);
+  font-size: 20px;
+  font-family: "Roboto";
+  border-radius: 11px;
+  border: none;
+}
+
+.button-large {
+  width: var(--btn-width-large);
+  height: var(--btn-height-large);
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-red);
+  font-size: 22px;
+  font-family: "Roboto";
+  border-radius: 11px;
+  border: none;
+}
+
+/* ------------------------------------------------------ HERO ------------------------------------------------------ */
+
+.hero {
+  background-image: url(assets/img/Hero-photo.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+
+  .header-hero {
+    font-family: "Monument Expanded";
+    font-size: 24px;
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-between;
+
+    a {
+      padding-left: 2rem;
+      .logo {
+        width: 8rem;
+        height: 6rem;
+        background-image: url(assets/img/logo-small.webp);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    nav {
+      ul {
+        padding-top: 1.5rem;
+        padding-right: 0.5rem;
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+
+        li a {
+          color: white;
+          text-decoration: none;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  p {
+    padding: 2rem 0;
+  }
+}
+
+/* ------------------------------------------------------ HOME ------------------------------------------------------ */
+.home {
+  display: flex;
+  padding-left: 3rem;
+  .home-left {
+    width: 50%;
+    h3 {
+      padding: 4rem 0;
+    }
+    p {
+      padding-bottom: 5rem;
+    }
+  }
+  .home-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
+/* ------------------------------------------------------ SPORTS ------------------------------------------------------ */
