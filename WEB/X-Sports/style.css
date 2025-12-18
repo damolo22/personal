@@ -29,7 +29,7 @@ body {
   background-color: rgb(22, 22, 22);
   color: white;
   font-family: "Roboto";
-  font-size: 32px;
+  font-size: 30px;
   overflow-x: hidden;
   line-height: 160%;
 }
@@ -52,6 +52,13 @@ h3 {
   font-family: "Monument Expanded";
   font-size: 60px;
   color: var(--main-blue);
+  font-style: bold;
+}
+
+h4 {
+  font-family: "Monument Expanded";
+  font-size: 40px;
+  color: white;
   font-style: bold;
 }
 
@@ -84,6 +91,10 @@ h5 {
   font-family: "Roboto";
   border-radius: 11px;
   border: none;
+}
+
+strong {
+  font-weight: 800;
 }
 
 /* ------------------------------------------------------ HERO ------------------------------------------------------ */
@@ -167,3 +178,258 @@ h5 {
 }
 
 /* ------------------------------------------------------ SPORTS ------------------------------------------------------ */
+.sports {
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5rem;
+
+  .sports-container {
+    display: flex;
+    justify-content: center;
+    gap: 7rem;
+    flex-wrap: wrap;
+
+    .sport-card {
+      background-color: white;
+      color: black;
+      width: 450px;
+      border-radius: 11px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+
+      img {
+        width: 100%;
+        height: 280px;
+        object-fit: cover;
+      }
+
+      .card-content {
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        h3 {
+          color: black;
+          font-family: "Monument Expanded";
+          font-size: 32px;
+          margin: 0;
+        }
+
+        .tags {
+          color: var(--main-red);
+          font-size: 20px;
+          font-weight: bold;
+          padding-bottom: 3rem;
+        }
+
+        p {
+          font-size: 22px;
+          line-height: 160%;
+          color: #333;
+          padding-bottom: 3rem;
+        }
+
+        .button-small {
+          align-self: center;
+          margin-top: auto;
+        }
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------ DISCIPLINES ------------------------------------------------------ */
+.disciplines {
+  padding: 4rem 3rem;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-direction: column;
+
+  .disciplines-title {
+    text-align: center;
+    border-bottom: 2px solid var(--main-blue);
+    padding-bottom: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .disciplines-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(300px, auto);
+    gap: 1rem;
+    grid-template-areas:
+      "tall img2 img3"
+      "tall img4 img5";
+
+    /* Responsive anidado */
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "tall"
+        "img2"
+        "img3"
+        "img4"
+        "img5";
+      grid-auto-rows: 250px;
+    }
+
+    /* Estilos de los items y sus imágenes */
+    .grid-item {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      /* Asignación de áreas */
+      &.item-1 {
+        grid-area: tall;
+        @media (max-width: 768px) {
+          min-height: 400px;
+        }
+      }
+      &.item-2 {
+        grid-area: img2;
+      }
+      &.item-3 {
+        grid-area: img3;
+      }
+      &.item-4 {
+        grid-area: img4;
+      }
+      &.item-5 {
+        grid-area: img5;
+      }
+    }
+  }
+
+  .border-bottom {
+    padding-top: 2rem;
+    border-bottom: 2px solid var(--main-blue);
+  }
+}
+/* ------------------------------------------------------ EVENTS ------------------------------------------------------ */
+.events-section {
+  padding: 3rem 3rem;
+  background-color: rgb(22, 22, 22);
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+
+  .main-title {
+    text-align: center;
+  }
+
+  .hall-of-fame,
+  .new-elite {
+    border-top: 2px solid var(--main-blue);
+    padding-top: 2rem;
+  }
+
+  .events-series {
+    p {
+      margin-bottom: 2.5rem;
+      margin-top: 1.5rem;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+
+      .event-card {
+        text-decoration: none;
+        background: rgba(255, 255, 255, 0.03);
+        border: 2px solid #444;
+        border-radius: 11px;
+        min-height: 220px;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: var(--main-blue);
+          background: rgba(0, 210, 255, 0.07);
+          transform: translateY(-8px);
+          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-icon {
+          width: 100%;
+          height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          img {
+            object-fit: contain;
+          }
+        }
+
+        span {
+          font-family: "Monument Expanded";
+          font-size: 18px;
+          color: white;
+          text-align: center;
+          letter-spacing: 1.5px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  .hall-of-fame {
+    .hof-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      padding: 1.5rem 0;
+
+      .hof-card {
+        height: 450px;
+        border-radius: 15px;
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-end;
+        padding: 1.5rem;
+
+        background-size: cover;
+        background-position: center;
+
+        &.patrick {
+          background-image: url("assets/img/fame1.webp");
+        }
+        &.felix {
+          background-image: url("assets/img/fame2.webp");
+        }
+
+        .hof-content {
+          position: relative;
+          z-index: 2;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}
