@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+@font-face {
+  font-family: "Monument Expanded";
+  src: url("./assets/fonts/MonumentExtended-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --main-red: rgb(255, 75, 58);
+  --main-blue: rgb(0, 210, 255);
+  --btn-width-small: 200px;
+  --btn-height-small: 55px;
+  --btn-width-large: 230px;
+  --btn-height-large: 55px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  font-family: "Roboto";
+  font-size: 28px;
+  overflow-x: hidden;
+  line-height: 160%;
+}
+
+h1 {
+  font-family: "Monument Expanded";
+  font-size: 128px;
+  font-style: bold;
+  line-height: 150%;
+}
+
+h2 {
+  font-family: "Monument Expanded";
+  font-size: 80px;
+  color: var(--main-blue);
+  font-style: bold;
+}
+
+h3 {
+  font-family: "Monument Expanded";
+  font-size: 60px;
+  font-style: bold;
+  text-align: center;
+}
+
+h4 {
+  font-family: "Monument Expanded";
+  font-size: 40px;
+  color: white;
+  font-style: bold;
+  letter-spacing: 1px;
+}
+
+h5 {
+  font-family: "Monument Expanded";
+  font-size: 32px;
+  text-align: center;
+  font-style: extrabold;
+}
+
+.button-small {
+  width: var(--btn-width-small);
+  height: var(--btn-height-small);
+  cursor: pointer;
+  font-style: bold;
+  color: white;
+  background-color: var(--main-red);
+  font-size: 24px;
+  font-family: "Roboto";
+  border-radius: 11px;
+  border: none;
+}
+
+.button-large {
+  width: var(--btn-width-large);
+  height: var(--btn-height-large);
+  cursor: pointer;
+  color: white;
+  background-color: var(--main-red);
+  font-size: 22px;
+  font-family: "Roboto";
+  border-radius: 11px;
+  border: none;
+}
+
+strong {
+  font-weight: 800;
+}
+
+.header {
+  font-family: "Monument Expanded";
+  font-size: 24px;
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+
+  a {
+    padding-left: 2rem;
+
+    .logo {
+      width: 8rem;
+      height: 6rem;
+      background-image: url(../assets/img/logo-small.webp);
+      background-size: contain;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  nav {
+    ul {
+      padding-top: 1.5rem;
+      padding-right: 0.5rem;
+      list-style-type: none;
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+
+      li a {
+        color: white;
+        text-decoration: none;
+        font-size: 20px;
+      }
+    }
+  }
+}
+h2 {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+/* ------------------------------------------------------ EVENTS ------------------------------------------------------ */
+
+.events {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+
+  h2 {
+    padding-top: 8rem;
+    padding-bottom: 2rem;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: var(--main-blue);
+    }
+  }
+
+  .title-section {
+    padding: 6rem 0;
+    text-align: center;
+
+    .sub-heading {
+      font-size: 25px;
+      letter-spacing: 2px;
+      padding-top: 1rem;
+    }
+  }
+
+  .masterclass-section {
+    padding: 2rem 0;
+    width: 65%;
+
+    p {
+      width: 85%;
+      margin-top: 2rem;
+    }
+  }
+
+  .event-map {
+    .event-header {
+      background-color: black;
+      padding: 1rem 1rem;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+
+      .header-left {
+        h4 {
+          color: var(--main-red);
+        }
+        width: 70%;
+      }
+      .header-right {
+        width: 30%;
+        text-align: end;
+      }
+    }
+    .event-photo {
+      width: 100%;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  /* ------------------------------------------------------ BREAKDOWN ------------------------------------------------------ */
+
+  .course-breakdown {
+    padding: 2rem 0;
+
+    h4 {
+      padding: 4rem 0;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+
+      .breakdown-box {
+        background-color: var(--main-blue);
+        padding: 3.5rem 3rem;
+        border-radius: 11px;
+        color: black;
+
+        h5 {
+          padding-bottom: 2rem;
+        }
+
+        p {
+          font-size: 24px;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+
+  .elite-squad {
+    padding: 4rem 0;
+    display: flex;
+    gap: 3rem;
+
+    .squad-content {
+      flex: 1;
+      h4 {
+        margin-bottom: 4rem;
+      }
+    }
+
+    .squad-media {
+      align-items: end;
+      justify-content: end;
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .stats-section {
+    padding: 4rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+      width: 100%;
+      height: 100%;
+      margin-bottom: 6rem;
+
+      .stat-card {
+        border-radius: 11px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 2px solid var(--main-blue);
+        padding: 3.5rem 2rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        transition: box-shadow 0.3s;
+
+        &:hover {
+          box-shadow: 0 0 20px rgba(0, 210, 255, 0.2);
+        }
+
+        .number {
+          font-family: "Monument Expanded";
+          color: white;
+          font-size: 100px;
+          padding-top: 2rem;
+        }
+
+        .label {
+          padding-top: 4rem;
+          font-family: "Monument Expanded";
+          color: var(--main-blue);
+          font-size: 35px;
+        }
+      }
+    }
+
+    /* Línea horizontal de cierre */
+    .section-divider {
+      width: 100%;
+      height: 2px;
+      background-color: var(--main-blue);
+    }
+  }
+}
+
+/* ------------------------------------------------------ OTHERS EVENTS ------------------------------------------------------ */
+
+.past-events {
+  padding: 0 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+
+  h3 {
+    padding: 3rem 3rem;
+  }
+
+  .event-row {
+    display: flex;
+    gap: 8rem;
+
+    &.reverse {
+      flex-direction: row-reverse;
+    }
+
+    .event-text {
+      flex: 1;
+      gap: 2.5rem;
+      h4{
+        padding-bottom: 3rem;
+      }
+    }
+
+    .event-media {
+      flex: 1.1;
+
+      img {
+        width: 100%;
+      }
+
+      .caption {
+        font-size: 22px;
+        font-style: italic;
+        text-align: left;
+      }
+    }
+  }
+}

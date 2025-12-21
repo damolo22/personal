@@ -30,7 +30,7 @@ body {
   background-color: rgb(22, 22, 22);
   color: white;
   font-family: "Roboto";
-  font-size: 30px;
+  font-size: 28px;
   overflow-x: hidden;
   line-height: 160%;
 }
@@ -171,9 +171,9 @@ h2 {
         object-fit: cover;
       }
 
-      .button-small {
-        align-self: flex-start;
-        margin-top: auto;
+      a,.button-small {
+        align-self: center;
+        text-align: center;
       }
     }
   }
@@ -202,11 +202,11 @@ h2 {
     .card {
       background-color: #e0e0e0;
       color: black;
-      padding: 3rem;
+      padding: 3rem 2rem;
       border-radius: 11px;
       flex: 1;
       max-width: 500px;
-      height: 700px;
+      min-height: 700px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -297,7 +297,7 @@ h2 {
 
 /* ------------------------------------------------------ WINGSUIT ------------------------------------------------------ */
 .wingsuit {
-  padding: 3rem 3rem;
+  padding: 8rem 3rem;
 
   h3,
   h4 {
@@ -318,7 +318,7 @@ h2 {
     .card {
       background-color: #e0e0e0;
       color: black;
-      padding: 3rem;
+      padding: 3rem 2rem;
       border-radius: 11px;
       flex: 1;
       max-width: 500px;
@@ -412,4 +412,115 @@ h2 {
       }
     }
   }
+}
+/* ------------------------------------------------------ BASE JUMPING ------------------------------------------------------ */
+.base {
+  padding: 0 3rem;
+
+  h3, h4 {
+    padding: 5rem 3rem; 
+  }
+
+  .base-cards {
+    padding: 0 3rem;
+    display: flex;
+    justify-content: space-between; 
+    gap: 0; 
+    margin-bottom: 8rem;
+    align-items: stretch;
+
+    .card {
+      background-color: #e0e0e0;
+      color: black;
+      padding: 3rem 2rem;
+      border-radius: 11px;
+      flex: 1;
+      max-width: 500px;
+      min-height: 700px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+
+      .icon-blue {
+        width: 150px;
+        img {
+          width: 100%;
+        }
+      }
+
+      /* Tus fuentes de 24px intactas */
+      p {
+        font-size: 24px;
+        line-height: 2;
+        text-align: left;
+      }
+    }
+  }
+
+  .danger-banner {
+    background-color: var(--main-red);
+    color: white;
+    padding: 2rem 4rem;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 800px;
+    height: 140px;
+    margin: 0 3rem;
+    gap: 1rem;
+
+    .warning-symbol {
+      font-size: 100px;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 20px;
+      font-weight: bold;
+    }
+  }
+
+  .gallery-grid {
+  display: grid;
+  /* Creamos 2 columnas iguales para mantener la estructura base */
+  grid-template-columns: repeat(2, 1fr);
+  /* Definimos una altura mínima para las filas */
+  grid-auto-rows: minmax(300px, auto);
+  gap: 1.5rem; /* El espacio justo para que respire */
+  padding-bottom: 5rem;
+
+  .grid-item {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      /* Fundamental: evita que las fotos se estiren feo en el grid asimétrico */
+      object-fit: cover; 
+      display: block;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        transform: scale(1.03); /* Un toque de interactividad chill */
+      }
+    }
+
+    /* --- Lógica del Mosaico Asimétrico --- */
+
+    /* La imagen 2 (derecha) se estira hacia abajo ocupando 2 filas */
+    &.item-2 {
+      grid-row: span 2;
+    }
+
+    /* La imagen 3 (izquierda) también se estira 2 filas para romper la simetría */
+    &.item-3 {
+      grid-row: span 2;
+    }
+  }
+}
 }

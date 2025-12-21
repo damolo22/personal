@@ -29,7 +29,7 @@ body {
   background-color: rgb(22, 22, 22);
   color: white;
   font-family: "Roboto";
-  font-size: 30px;
+  font-size: 28px;
   overflow-x: hidden;
   line-height: 160%;
 }
@@ -223,7 +223,7 @@ strong {
           color: var(--main-red);
           font-size: 20px;
           font-weight: bold;
-          padding-bottom: 3rem;
+          padding-bottom: 2rem;
         }
 
         p {
@@ -233,7 +233,7 @@ strong {
           padding-bottom: 3rem;
         }
 
-        .button-small {
+        a,.button-small {
           align-self: center;
           margin-top: auto;
         }
@@ -325,7 +325,6 @@ strong {
 /* ------------------------------------------------------ EVENTS ------------------------------------------------------ */
 .events-section {
   padding: 3rem 3rem;
-  background-color: rgb(22, 22, 22);
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -481,7 +480,6 @@ strong {
 /* ------------------------------------------------------ JOIN ------------------------------------------------------ */
 .join {
   padding: 3rem 3rem;
-  background-color: rgb(22, 22, 22);
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -524,7 +522,7 @@ strong {
     gap: 2.5rem;
 
     .feature-card {
-      background: rgba(255, 255, 255, 0.02);
+      background: rgba(255, 255, 255, 0.03);
       border: 2px solid #333;
       border-radius: 11px;
       padding: 40px;
