@@ -5,28 +5,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Hall Of Fame X-Aerial</title>
     <link rel="stylesheet" href="hof.css" />
+      <link rel="stylesheet" href="../animations.css" />
   </head>
 
-  <body>
-    <header class="header">
-      <a href="../index.html">
-        <div class="logo"></div>
-      </a>
-      <nav>
-        <ul>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="../sports/sports.html">Sports</a></li>
-          <li><a href="../events/events.html">Events</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li>
-            <div class="burguer" id="nav-icon">
-              <span></span><span></span><span></span> <span></span><span></span
-              ><span></span>
-            </div>
-          </li>
-        </ul>
-      </nav>
-    </header>
+
+<body>
+  <header class="header">
+    <a href="../index.html">
+      <div class="logo"></div>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a href="../index.html" data-replace="Home"><span>Home</span></a>
+        </li>
+        <li>
+          <a href="../sports/sports.html" data-replace="Sports"><span>Sports</span></a>
+        </li>
+        <li>
+          <a href="../events/events.html" data-replace="Events"><span>Events</span></a>
+        </li>
+        <li>
+          <a href="../contact/contact.html" data-replace="Contact"><span>Contact</span></a>
+        </li>
+        <li>
+          <div class="burguer" id="nav-icon">
+            <span></span><span></span><span></span> <span></span><span></span><span></span>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+    <!-- menu mobile -->
+
+    <div id="menu_mobile" class="">
+      <div class="logo-m">
+        <h2>X-AERIAL</h2>
+      </div>
+
+      <ul class="menu_mobile_nav">
+        <li class="item">
+          <a href="../index.html"><span>Home</span></a>
+        </li>
+        <li class="item">
+          <a href="../sports/sports.html"><span>Sports</span></a>
+        </li>
+        <li class="item">
+          <a href="../events/events.html"><span>Events</span></a>
+        </li>
+        <li class="item">
+          <a href="../contact/contact.html"><span>Contact</span></a>
+        </li>
+      </ul>
+    </div>
 
     <h2>HALL OF FAME</h2>
 
@@ -222,6 +253,88 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <footer class="main-footer">
+      <div class="footer-container">
+        <div class="footer-col brand-col">
+          <h2>X-AERIAL</h2>
+          <div class="wingsuit-graphic">
+            <img src="../assets/img/logo-grande.svg" />
+          </div>
+          <p class="designer-tag">DESIGN BY DAVID MORENO</p>
+        </div>
+
+        <div class="footer-col">
+          <h3>QUICK LINKS</h3>
+          <nav>
+            <a href="../index.html">Home</a>
+            <a href="../sports/sports.html">Sports</a>
+            <a href="../events/events.html">Events</a>
+            <a href="../contact/contact.html">Contact</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h3 class="contact-info">CONTACT INFO</h3>
+          <div class="contact-row">
+            <i class="fa-regular fa-envelope"
+              ><img src="../assets/img/mail.svg" alt=""
+            /></i>
+            <span>hello@x-aerial.com</span>
+          </div>
+          <div class="contact-row">
+            <i class="fa-solid fa-phone"
+              ><img src="../assets/img/phone.svg" alt=""
+            /></i>
+            <span>+1 555 123 4567</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>FOLLOW US</h3>
+          <div class="social-icons">
+            <a href="#"
+              ><i class="fa-brands fa-twitter"
+                ><img src="../assets/img/twitter.svg" alt="" /></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-youtube"
+                ><img src="../assets/img/yt.svg" alt="" /></i
+            ></a>
+            <a href="#"
+              ><i class="fa-brands fa-instagram"
+                ><img src="../assets/img/IG.svg" alt="" /></i
+            ></a>
+          </div>
+
+          <div class="newsletter-box">
+            <h3>NEWSLETTER</h3>
+            <input type="email" placeholder="Email" class="footer-input" />
+            <button class="button-small">SUBSCRIBE</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-legal">
+        <p>
+          © 2025 X-AERIAL. ALL RIGHTS RESERVED. | PRIVACY POLICY | TERMS OF
+          SERVICE
+        </p>
+      </div>
+    </footer>
+    <script src="../assets/js/burguer.js"></script>
+    <script src="../assets/js/arrow.js"></script>
+    <div class="progress-wrap" id="scrollProgress">
+      <svg
+        class="progress-circle"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+      </svg>
+      <div class="arrow-icon"><img src="../assets/img/arrow.svg" alt="" /></div>
     </div>
   </body>
 </html>
