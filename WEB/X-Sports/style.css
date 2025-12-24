@@ -562,11 +562,11 @@ header nav ul li:last-child {
 
   .join-title {
     text-align: center;
+    padding-bottom: 2rem;
   }
 
   .join-content {
     display: flex;
-    align-items: center;
     gap: 5rem;
 
     .join-info {
@@ -576,11 +576,9 @@ header nav ul li:last-child {
       gap: 3rem;
 
       .join-botton {
+        margin-bottom: 10rem;
         text-align: center;
 
-        .button-large {
-          margin-top: 20px;
-        }
       }
     }
 
