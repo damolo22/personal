@@ -1,0 +1,145 @@
+:root {
+    --paragraph: 'Regular';
+    --title: 'Bold';
+    --hero-color: rgb(37, 123, 215);
+}
+
+@font-face {
+    font-family: "Regular";
+    src: url(font/nouvelrregular-webfont.woff);
+    src: url(font/nouvelrregular-webfont.woff2);
+}
+
+
+@font-face {
+    font-family: "Bold";
+    src: url(font/nouvelrextrabold-webfont.woff);
+    src: url(font/nouvelrextrabold-webfont.woff2);
+}
+
+@font-face {
+    font-family: "Light";
+    src: url(font/nouvelrlight-webfont.woff);
+    src: url(font/nouvelrlight-webfont.woff2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-color: black;
+    background-image: url(img/stars-bg.png);
+    font-family: var(--paragraph);
+}
+
+header {
+    height: 125px;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+
+    .logo {
+        gap: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.2rem;
+        font-family: var(--title);
+        letter-spacing: .2rem;
+        text-transform: uppercase;
+
+        img {
+            width: 60px;
+            height: auto;
+            object-fit: contain;
+        }
+    }
+
+    nav {
+        ul {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+
+            li a {
+                text-transform: uppercase;
+                text-decoration: none;
+                color: white;
+                font-size: 1.2rem;
+                transition: .1s ease-in-out;
+                display: flex;
+            }
+
+            li a:hover {
+                transform: translateX(5px);
+            }
+        }
+    }
+}
+
+section {
+    height: 100vh;
+    padding: 5rem;
+}
+
+.section-one {
+    height: calc(100vh - 125px);
+
+
+
+    .left-side {
+        .title {
+            font-size: 3rem;
+
+            h1 {
+                color: var(--hero-color);
+                font-family: var(--title);
+                text-shadow: 0 2px rgba(255, 255, 255, 1),
+                    -2px 5px rgba(255, 255, 255, .9),
+                    -4px 8px rgba(255, 255, 255, .8),
+                    -6px 11px rgba(255, 255, 255, .7),
+                    -8px 13px rgba(255, 255, 255, .6),
+                    -10px 15px rgba(255, 255, 255, .5),
+                    -12px 18px rgba(255, 255, 255, .4),
+                    -14px 21px rgba(255, 255, 255, .3),
+                    -16px 24px rgba(255, 255, 255, .2);
+
+                span {
+                    color: red;
+                }
+            }
+        }
+
+        .parrafo {
+            font-size: 1.2rem;
+            margin-top: 2rem;
+            line-height: 1.6rem;
+        }
+
+        button {
+            cursor: pointer;
+            border: none;
+            outline: none;
+            background: linear-gradient(to right, blue, skyblue);
+            width: fit-content;
+            font-weight: 600;
+            padding: 1rem 2rem;
+            text-transform: uppercase;
+            border-radius: 3px;
+            color: white;
+            margin-top: 1rem;
+        }
+    }
+
+    .right-side {}
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+}
