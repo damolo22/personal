@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 3</title>
+  </head>
+  <body>
+    <table border="1" id="miTabla">
+      <thead>
+        <tr>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+
+      <tbody id="cuerpoTabla">
+        <tr>
+          <td>A1</td>
+          <td>B1</td>
+          <td>10</td>
+        </tr>
+      </tbody>
+    </table>
+    First Name
+    <input type="text" id="name" />
+    <br />
+
+    Last Name
+    <input type="text" id="lastName" />
+    <br />
+
+    Age
+    <input type="number" id="age" />
+    <br />
+    <button onclick="Añadir()">Add</button>
+    <button>Edit</button>
+    <button>Remove</button>
+  </body>
+
+  <script>
+    function Añadir() {
+      let nombre = document.getElementById("name").value;
+      let apellido = document.getElementById("lastName").value;
+      let edad = document.getElementById("age").value;
+
+      let fila = document.createElement("tr");
+      let celda1 = document.createElement("td");
+      let celda2 = document.createElement("td");
+      let celda3 = document.createElement("td");
+
+      
+      celda1.textContent = nombre;
+      celda2.textContent = apellido;
+      celda3.textContent = edad;
+
+     
+      fila.appendChild(celda1); 
+      fila.appendChild(celda2); 
+      fila.appendChild(celda3); 
+      document.getElementById("cuerpoTabla").appendChild(fila); 
+    }
+  </script>
+</html>

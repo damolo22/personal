@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Actividad 1</title>
+  </head>
+
+  <body>
+    <textarea name="" id="texto" maxlength="100"></textarea>
+    <div>Te quedan : <span id="restantes">100</span> palabras</div>
+  </body>
+
+  <script>
+    let cajaTexto = document.getElementById("texto");
+    let spanRestantes = document.getElementById("restantes");
+
+    cajaTexto.addEventListener("input", function () {
+      let palabras = cajaTexto.value.length;
+      let Numrestantes = 100 - palabras;
+      console.log("¡Estoy escribiendo!");
+      console.log(Numrestantes);
+
+      spanRestantes.textContent = Numrestantes;
+    });
+  </script>
+</html>
