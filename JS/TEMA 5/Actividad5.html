@@ -1,0 +1,81 @@
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Actividad 5 - Slideshow</title>
+        <style>
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #1a1a1a;
+                color: white;
+            }
+
+            .contenedor {
+                width: 80%;
+                max-width: 600px;
+                margin-top: 50px;
+                text-align: center;
+                border: 2px solid #333;
+                padding: 20px;
+                border-radius: 15px;
+                background-color: #222;
+            }
+
+            img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 10px;
+                transition: opacity 0.5s ease;
+            }
+
+            h2 {
+                margin-top: 15px;
+                color: #00d2ff;
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="contenedor">
+            <img id="foto" src="" alt="Diapositiva">
+            <h2 id="titulo">Cargando...</h2>
+        </div>
+
+        <script>
+
+            const diapositivas = [
+                { url: "img/foto1.jpg", nombre: "Casino Increíble" },
+                { url: "img/foto2.jpg", nombre: "Ruleta de los Afortunados" },
+                { url: "img/foto3.jpg", nombre: "Influencer" },
+                { url: "img/foto4.jpg", nombre: "Evento Catastrofico" }
+            ];
+
+            let indiceActual = 0;
+
+            //Función que cambia la foto
+            function cambiarDiapositiva() {
+                const imgElement = document.getElementById('foto');
+                const tituloElement = document.getElementById('titulo');
+
+                imgElement.src = diapositivas[indiceActual].url;
+                tituloElement.innerText = diapositivas[indiceActual].nombre;
+
+                indiceActual++;
+
+                if (indiceActual >= diapositivas.length) {
+                    indiceActual = 0;
+                }
+            }
+
+            // Ejecuta la función cada 2000ms
+            setInterval(cambiarDiapositiva, 2000);
+
+            cambiarDiapositiva();
+        </script>
+    </body>
+    </html>

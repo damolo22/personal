@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 4 - Movimiento con Flechas</title>
+    <style>
+        #hola {
+            width: 500px;
+            height: 500px;
+            background-color: red; 
+            position: relative; 
+            margin: 20px auto;
+        }
+
+        #adios {
+            width: 300px;
+            height: 300px;
+            background-color: green;
+            position: absolute;
+            top: 0px; 
+            left: 0px; 
+            border: 5px solid white; 
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Mueve el cuadrado verde con las flechas</h1>
+    <div id="hola">
+        <div id="adios"></div>
+    </div>
+
+    <script>
+        const capaHola = document.getElementById('hola');
+        const capaAdios = document.getElementById('adios');
+
+        // Variables para llevar el control de la posición
+        let posX = 0;
+        let posY = 0;
+
+
+        const limiteMax = 200; 
+
+        document.addEventListener('keydown', (event) => {
+            const tecla = event.key;
+
+            // Detectamos la flecha y sumamos/restamos 5px
+            switch (tecla) {
+                case 'ArrowUp':
+                    posY -= 5;
+                    break;
+                case 'ArrowDown':
+                    posY += 5;
+                    break;
+                case 'ArrowLeft':
+                    posX -= 5;
+                    break;
+                case 'ArrowRight':
+                    posX += 5;
+                    break;
+                default:
+                    return; 
+            }
+
+            
+            // Límites horizontales (X)
+            if (posX < 0) posX = 0; 
+            if (posX > limiteMax) posX = limiteMax; 
+
+            // Límites verticales (Y)
+            if (posY < 0) posY = 0; 
+            if (posY > limiteMax) posY = limiteMax; 
+
+
+            capaAdios.style.left = posX + 'px';
+            capaAdios.style.top = posY + 'px';
+
+            console.log(`Posición actual: X=${posX}, Y=${posY}`);
+        });
+
+        const handleClick = (event) => {
+            alert('ID de la capa pulsada: ' + event.currentTarget.id); 
+            event.stopPropagation(); 
+        };
+
+        capaHola.addEventListener('click', handleClick);
+        capaAdios.addEventListener('click', handleClick);
+    </script>
+</body>
+</html>

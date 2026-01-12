@@ -1,65 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actividad 3</title>
-  </head>
-  <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actividad 3 - CRUD Table</title>
+    <style>
+        /* Para destacar la fila seleccionada */
+        .seleccionada {
+            background-color: #d1e7ff;
+            cursor: pointer;
+        }
+        tr { cursor: pointer; }
+    </style>
+</head>
+<body>
     <table border="1" id="miTabla">
-      <thead>
-        <tr>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Age</th>
-        </tr>
-      </thead>
-
-      <tbody id="cuerpoTabla">
-        <tr>
-          <td>A1</td>
-          <td>B1</td>
-          <td>10</td>
-        </tr>
-      </tbody>
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+            <tr>
+                <td>A1</td>
+                <td>B1</td>
+                <td>10</td>
+            </tr>
+        </tbody>
     </table>
-    First Name
-    <input type="text" id="name" />
-    <br />
 
-    Last Name
-    <input type="text" id="lastName" />
-    <br />
+    <br>
+    First Name: <input type="text" id="name" /><br />
+    Last Name: <input type="text" id="lastName" /><br />
+    Age: <input type="number" id="age" /><br />
 
-    Age
-    <input type="number" id="age" />
-    <br />
     <button onclick="Añadir()">Add</button>
-    <button>Edit</button>
-    <button>Remove</button>
-  </body>
+    <button onclick="Editar()">Edit</button>
+    <button onclick="Borrar()">Remove</button>
 
-  <script>
+   <script>
+    // Guarda la fila que hayamos tocado para saber cuál editar o borrar luego.
+    let filaSeleccionada = null;
+
+    // 2. FUNCIÓN PARA AÑADIR
     function Añadir() {
-      let nombre = document.getElementById("name").value;
-      let apellido = document.getElementById("lastName").value;
-      let edad = document.getElementById("age").value;
+        let nombre = document.getElementById("name").value;
+        let apellido = document.getElementById("lastName").value;
+        let edad = document.getElementById("age").value;
+        let tabla = document.getElementById("cuerpoTabla");
 
-      let fila = document.createElement("tr");
-      let celda1 = document.createElement("td");
-      let celda2 = document.createElement("td");
-      let celda3 = document.createElement("td");
+        // Creamos la fila y las celdas
+        let nuevaFila = document.createElement("tr");
+        
+        let c1 = document.createElement("td");
+        c1.innerText = nombre;
+        let c2 = document.createElement("td");
+        c2.innerText = apellido;
+        let c3 = document.createElement("td");
+        c3.innerText = edad;
 
-      
-      celda1.textContent = nombre;
-      celda2.textContent = apellido;
-      celda3.textContent = edad;
+        // Metemos las celdas en la fila
+        nuevaFila.appendChild(c1);
+        nuevaFila.appendChild(c2);
+        nuevaFila.appendChild(c3);
 
-     
-      fila.appendChild(celda1); 
-      fila.appendChild(celda2); 
-      fila.appendChild(celda3); 
-      document.getElementById("cuerpoTabla").appendChild(fila); 
+        nuevaFila.onclick = function() {
+            seleccionarFila(nuevaFila);
+        };
+
+        if (filaSeleccionada != null) {
+            filaSeleccionada.after(nuevaFila); 
+        } else {
+            tabla.appendChild(nuevaFila);
+        }
     }
-  </script>
+
+    // 3. FUNCIÓN PARA SELECCIONAR 
+    function seleccionarFila(filaTocada) {
+        // Si ya había una fila seleccionada antes, le quitamos el color
+        if (filaSeleccionada != null) {
+            filaSeleccionada.style.backgroundColor = ""; 
+        }
+
+        filaSeleccionada = filaTocada;
+        filaSeleccionada.style.backgroundColor = "#d1e7ff"; 
+
+        document.getElementById("name").value = filaSeleccionada.cells[0].innerText;
+        document.getElementById("lastName").value = filaSeleccionada.cells[1].innerText;
+        document.getElementById("age").value = filaSeleccionada.cells[2].innerText;
+    }
+
+    // 4. FUNCIÓN PARA EDITAR
+    function Editar() {
+        if (filaSeleccionada != null) {
+            filaSeleccionada.cells[0].innerText = document.getElementById("name").value;
+            filaSeleccionada.cells[1].innerText = document.getElementById("lastName").value;
+            filaSeleccionada.cells[2].innerText = document.getElementById("age").value;
+        } else {
+            alert("Toca una fila primero!");
+        }
+    }
+
+    // 5. FUNCIÓN PARA BORRAR
+    function Borrar() {
+        if (filaSeleccionada != null) {
+            filaSeleccionada.remove(); 
+            filaSeleccionada = null;  
+        } else {
+            alert("No hay nada seleccionado!");
+        }
+    }
+</script>
+</body>
 </html>
