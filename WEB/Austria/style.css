@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+:root {
+    --main-red: rgb(200, 16, 46);
+    --alpine-blue: rgb(235, 242, 245);
+    --btn-width: 200px;
+    --btn-height: 50px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--alpine-blue);
+    color: black;
+    font-family: "Inter";
+    font-size: 28px;
+    overflow-x: hidden;
+    line-height: 160%;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 60px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
+}
+
+h3 {
+    font-family: "Monument Expanded";
+    font-size: 60px;
+    font-style: bold;
+}
+
+h4 {
+    font-family: "Monument Expanded";
+    font-size: 40px;
+    color: white;
+    font-style: bold;
+}
+
+h5 {
+    font-family: "Playfair";
+    font-size: 22px;
+    font-style: italic;
+    font-style: extrabold;
+}
+
+button {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    color: var(--alpine-blue);
+    background-color: var(--main-red);
+    font-size: 28px;
+    font-family: "Montserrat";
+    font-style: bold;
+    border-radius: 11px;
+    border: none;
+}
+
+strong {
+    font-weight: 600;
+}
+
+
+/* ------------------------------------------------------ HERO ------------------------------------------------------ */
+.hero {
+    padding: 0 2.5rem;
+    background-image: url(/img/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 100vh;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+
+    .header-hero {
+
+        font-family: "Inter";
+        font-style: bold;
+        font-size: 24px;
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            padding-top: 2rem;
+
+            .logo {
+                width: 4rem;
+                height: 4rem;
+                background-image: url(img/logo.webp);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+
+        nav {
+            ul {
+                padding-top: 2rem;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                gap: 3.5rem;
+
+                li a {
+                    color: var(--alpine-blue);
+                    text-decoration: none;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .hero-content {
+        padding-top: 4rem;
+
+        h1 {
+            font-size: 128px;
+
+        }
+
+        .white {
+            color: var(--alpine-blue);
+        }
+    }
+
+}
+
+
+/* ------------------------------------------------------ HOME ------------------------------------------------------ */
+.home {
+    padding: 3rem 2.5rem;
+
+    .home-content {
+        display: flex;
+        border-radius: 11px;
+        background-color: var(--main-red);
+
+        .home-left {
+            width: 50%;
+        }
+
+        .home-right {
+            padding: 3rem;
+            width: 50%;
+            color: var(--alpine-blue);
+
+            h1 {
+                text-align: center;
+                color: var(--alpine-blue);
+                padding-bottom: 2rem;
+            }
+
+            p {
+                padding-bottom: 3rem;
+            }
+
+
+        }
+    }
+}
