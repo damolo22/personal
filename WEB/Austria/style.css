@@ -1,302 +1,400 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-  --main-red: rgb(200, 16, 46);
-  --alpine-blue: rgb(235, 242, 245);
-  --btn-width: 250px;
-  --btn-height: 60px;
+    --main-red: rgb(200, 16, 46);
+    --alpine-blue: rgb(235, 242, 245);
+    --btn-width: 250px;
+    --btn-height: 60px;
 }
 
 * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 body {
-  background-color: var(--alpine-blue);
-  color: black;
-  font-family: "Inter";
-  font-size: 28px;
-  overflow-x: hidden;
-  line-height: 160%;
+    background-color: var(--alpine-blue);
+    color: black;
+    font-family: "Inter";
+    font-size: 28px;
+    overflow-x: hidden;
+    line-height: 160%;
 }
 
 h1 {
-  font-family: "Montserrat";
-  font-size: 60px;
-  font-style: bold;
-  line-height: 150%;
-  color: var(--main-red);
+    font-family: "Montserrat";
+    font-size: 60px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
 }
 
 h2 {
-  font-family: "Montserrat";
-  font-size: 40px;
-  font-style: bold;
-  line-height: 150%;
-  color: var(--main-red);
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
 }
 
 h3 {
-  font-family: "Montserrat";
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--main-red);
+    font-family: "Montserrat";
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--main-red);
 }
 
 h4 {
-  font-family: "Monument Expanded";
-  font-size: 40px;
-  color: white;
-  font-style: bold;
+    font-family: "Monument Expanded";
+    font-size: 40px;
+    color: white;
+    font-style: bold;
 }
 
 h5 {
-  font-family: "Playfair";
-  font-size: 22px;
-  font-style: italic;
-  font-style: extrabold;
+    font-family: "Playfair";
+    font-size: 22px;
+    font-style: italic;
+    font-style: extrabold;
 }
 
 button {
-  width: var(--btn-width);
-  height: var(--btn-height);
-  cursor: pointer;
-  color: var(--alpine-blue);
-  background-color: var(--main-red);
-  font-size: 28px;
-  font-family: "Montserrat";
-  font-weight: 800px;
-  border-radius: 11px;
-  border: none;
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    color: var(--alpine-blue);
+    background-color: var(--main-red);
+    font-size: 28px;
+    font-family: "Montserrat";
+    font-weight: 800px;
+    border-radius: 11px;
+    border: none;
 }
 
 strong {
-  font-weight: 600;
+    font-weight: 600;
 }
 
 /* ------------------------------------------------------ HERO ------------------------------------------------------ */
 .hero {
-  padding: 0 2.5rem;
-  background-image: url(assets/img/hero.webp);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom center;
-  min-height: 100vh;
-  width: 100%;
-  flex-direction: column;
-  display: flex;
-
-  .header-hero {
-    font-family: "Inter";
-    font-style: bold;
-    font-size: 24px;
+    padding: 0 2.5rem;
+    background-image: url(assets/img/hero.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 100vh;
     width: 100%;
-    height: 10%;
+    flex-direction: column;
     display: flex;
-    justify-content: space-between;
 
-    a {
-      padding-top: 2rem;
-
-      .logo {
-        width: 4rem;
-        height: 4rem;
-        background-image: url(assets/img/logo.webp);
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
-      }
-    }
-
-    nav {
-      ul {
-        padding-top: 2rem;
-        list-style-type: none;
+    .header-hero {
+        font-family: "Inter";
+        font-style: bold;
+        font-size: 24px;
+        width: 100%;
+        height: 10%;
         display: flex;
-        align-items: center;
-        gap: 3.5rem;
+        justify-content: space-between;
 
-        li a {
-          color: var(--alpine-blue);
-          text-decoration: none;
-          font-size: 24px;
+        a {
+            padding-top: 2rem;
+
+            .logo {
+                width: 4rem;
+                height: 4rem;
+                background-image: url(assets/img/logo.webp);
+                background-size: contain;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
         }
-      }
-    }
-  }
 
-  .hero-content {
-    padding-top: 4rem;
+        nav {
+            ul {
+                padding-top: 2rem;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                gap: 3.5rem;
 
-    h1 {
-      font-size: 128px;
+                li a {
+                    color: var(--alpine-blue);
+                    text-decoration: none;
+                    font-size: 24px;
+                }
+            }
+        }
     }
 
-    .white {
-      color: var(--alpine-blue);
+    .hero-content {
+        padding-top: 4rem;
+
+        h1 {
+            font-size: 128px;
+        }
+
+        .white {
+            color: var(--alpine-blue);
+        }
     }
-  }
 }
 
 /* ------------------------------------------------------ HOME ------------------------------------------------------ */
 .home1 {
-  padding: 3rem 3rem;
+    padding: 3rem 3rem;
 
-  .home-content {
-    display: flex;
-    border-radius: 11px;
-    background-color: var(--main-red);
+    .home-content {
+        display: flex;
+        border-radius: 11px;
+        background-color: var(--main-red);
 
-    .home-left {
-      width: 50%;
+        .home-left {
+            width: 50%;
 
-      img {
-        width: 100%;
-        height: 100%;
-      }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .home-right {
+            padding: 3rem;
+            width: 50%;
+            color: var(--alpine-blue);
+            gap: 4rem;
+
+            h1 {
+                text-align: center;
+                color: var(--alpine-blue);
+                margin-bottom: 4rem;
+            }
+
+            .p1 {
+                margin-bottom: 8rem;
+            }
+
+            strong {
+                font-weight: 650;
+            }
+        }
     }
-
-    .home-right {
-      padding: 3rem;
-      width: 50%;
-      color: var(--alpine-blue);
-      gap: 4rem;
-
-      h1 {
-        text-align: center;
-        color: var(--alpine-blue);
-        margin-bottom: 4rem;
-      }
-
-      .p1 {
-        margin-bottom: 8rem;
-      }
-
-      strong {
-        font-weight: 650;
-      }
-    }
-  }
 }
 
 .home2 {
-  padding: 3rem 3rem;
+    padding: 3rem 3rem;
 
-  h1 {
-    margin-bottom: 3rem;
-  }
-
-  .home2-content {
-    display: flex;
-    align-items: stretch;
-
-    .home2-left {
-      width: 50%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-
-      .legacy {
-        .svg {
-          margin-bottom: 1rem;
-        }
-      }
+    h1 {
+        margin-bottom: 3rem;
     }
 
-    .home2-right {
-      width: 50%;
+    .home2-content {
+        display: flex;
+        align-items: stretch;
 
-      .gallery-container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-        grid-template-rows: 300px 300px auto auto;
-        gap: 8px;
-        padding-left: 2rem;
+        .home2-left {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
 
-        .item {
-          overflow: hidden;
-          display: flex;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-          }
+            .legacy {
+                .svg {
+                    margin-bottom: 1rem;
+                }
+            }
         }
 
-        .item-1 {
-          grid-column: span 6;
-          grid-row: 1;
-        }
+        .home2-right {
+            width: 50%;
 
-        .item-2 {
-          grid-column: span 6;
-          grid-row: 2;
-        }
+            .gallery-container {
+                display: grid;
+                grid-template-columns: repeat(12, 1fr);
+                grid-template-rows: 300px 300px auto auto;
+                gap: 8px;
+                padding-left: 2rem;
 
-        .item-3 {
-          grid-column: 7 / span 6;
-          grid-row: 1 / span 2;
-        }
+                .item {
+                    overflow: hidden;
+                    display: flex;
 
-        .item-4 {
-          grid-column: span 5;
-          grid-row: 3;
-        }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        display: block;
+                    }
+                }
 
-        .item-5 {
-          grid-column: 6 / span 7;
-          grid-row: 3;
-        }
+                .item-1 {
+                    grid-column: span 6;
+                    grid-row: 1;
+                }
 
-        .item-6 {
-          grid-column: span 12;
-          grid-row: 4;
+                .item-2 {
+                    grid-column: span 6;
+                    grid-row: 2;
+                }
+
+                .item-3 {
+                    grid-column: 7 / span 6;
+                    grid-row: 1 / span 2;
+                }
+
+                .item-4 {
+                    grid-column: span 5;
+                    grid-row: 3;
+                }
+
+                .item-5 {
+                    grid-column: 6 / span 7;
+                    grid-row: 3;
+                }
+
+                .item-6 {
+                    grid-column: span 12;
+                    grid-row: 4;
+                }
+            }
         }
-      }
     }
-  }
 }
 
 /* ------------------------------------------------------ DESTINATIONS ------------------------------------------------------ */
 .destinations {
-  padding: 3rem 3rem;
-  h1 {
-    text-align: center;
-  }
-  .cards {
-    display: flex;
+    padding: 3rem 3rem;
 
-    .card {
-      background-color: white;
-      width: 28%;
-
-      .info {
-        padding: 2rem;
-
-        .tags {
-          background-color: rgb(217, 217, 217);
-          font-size: 20px;
-          border-radius: 11px;
-          padding: 0.5rem;
-        }
-
-        p {
-          font-size: 24px;
-        }
-        
-        .button{
-          align-items: center;
-          text-align: center;
-        }
-      }
+    h1 {
+        text-align: center;
+        padding-bottom: 3rem;
     }
-  }
+
+    .cards {
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            background-color: white;
+            width: 28%;
+            border-radius: 11px;
+
+            img {
+                width: 100%;
+            }
+
+            .info {
+                padding: 0 2rem 2rem 2rem;
+
+                .tags {
+                    background-color: rgb(217, 217, 217);
+                    font-size: 20px;
+                    border-radius: 11px;
+                    padding: 0.5rem;
+                    margin-right: 1rem;
+                }
+
+                p {
+                    font-size: 24px;
+                    padding: 1rem 0;
+                }
+
+                .button {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}
+
+/* ------------------------------------------------------ GALLERY ------------------------------------------------------ */
+.gallery {
+    padding: 3rem 3rem;
+
+    .gallery-container {
+        border-top: 3px solid var(--main-red);
+        border-bottom: 3px solid var(--main-red);
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 12px;
+
+        .item {
+            overflow: hidden;
+            display: flex;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .item-grande {
+            grid-column: span 4;
+            grid-row: 1 / span 2;
+        }
+
+        .item-top {
+            grid-column: span 6;
+            grid-row: 1;
+        }
+
+        .item-bottom {
+            grid-column: span 6;
+            grid-row: 2;
+        }
+    }
+}
+
+/* ------------------------------------------------------ ROUTES ------------------------------------------------------ */
+.routes {
+    padding: 3rem 3rem;
+
+    h1 {
+        padding-bottom: 2rem;
+    }
+
+    .route1 {
+        display: flex;
+
+        .route1-left {
+            width: 50%;
+
+            p {
+                padding-bottom: 6rem;
+            }
+        }
+
+        .route1-right {
+            width: 50%;
+            text-align: end;
+            justify-content: end;
+
+            img {
+                text-align: end;
+                height: 100%;
+            }
+        }
+    }
+
+    .route2 {
+        padding-top: 4rem;
+        display: flex;
+
+        .route2-left {
+            width: 50%;
+        }
+
+        .route2-right {
+            width: 50%;
+        }
+    }
 }
