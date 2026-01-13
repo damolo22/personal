@@ -1,184 +1,262 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --main-red: rgb(200, 16, 46);
-    --alpine-blue: rgb(235, 242, 245);
-    --btn-width: 200px;
-    --btn-height: 50px;
+  --main-red: rgb(200, 16, 46);
+  --alpine-blue: rgb(235, 242, 245);
+  --btn-width: 200px;
+  --btn-height: 50px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--alpine-blue);
-    color: black;
-    font-family: "Inter";
-    font-size: 28px;
-    overflow-x: hidden;
-    line-height: 160%;
+  background-color: var(--alpine-blue);
+  color: black;
+  font-family: "Inter";
+  font-size: 28px;
+  overflow-x: hidden;
+  line-height: 160%;
 }
 
 h1 {
-    font-family: "Montserrat";
-    font-size: 60px;
-    font-style: bold;
-    line-height: 150%;
-    color: var(--main-red);
+  font-family: "Montserrat";
+  font-size: 60px;
+  font-style: bold;
+  line-height: 150%;
+  color: var(--main-red);
 }
 
 h2 {
-    font-family: "Montserrat";
-    font-size: 40px;
-    font-style: bold;
-    line-height: 150%;
-    color: var(--main-red);
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-style: bold;
+  line-height: 150%;
+  color: var(--main-red);
 }
 
 h3 {
-    font-family: "Monument Expanded";
-    font-size: 60px;
-    font-style: bold;
+  font-family: "Monument Expanded";
+  font-size: 60px;
+  font-style: bold;
 }
 
 h4 {
-    font-family: "Monument Expanded";
-    font-size: 40px;
-    color: white;
-    font-style: bold;
+  font-family: "Monument Expanded";
+  font-size: 40px;
+  color: white;
+  font-style: bold;
 }
 
 h5 {
-    font-family: "Playfair";
-    font-size: 22px;
-    font-style: italic;
-    font-style: extrabold;
+  font-family: "Playfair";
+  font-size: 22px;
+  font-style: italic;
+  font-style: extrabold;
 }
 
 button {
-    width: var(--btn-width);
-    height: var(--btn-height);
-    cursor: pointer;
-    color: var(--alpine-blue);
-    background-color: var(--main-red);
-    font-size: 28px;
-    font-family: "Montserrat";
-    font-style: bold;
-    border-radius: 11px;
-    border: none;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  cursor: pointer;
+  color: var(--alpine-blue);
+  background-color: var(--main-red);
+  font-size: 28px;
+  font-family: "Montserrat";
+  font-style: bold;
+  border-radius: 11px;
+  border: none;
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
-
 
 /* ------------------------------------------------------ HERO ------------------------------------------------------ */
 .hero {
-    padding: 0 2.5rem;
-    background-image: url(/img/hero.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom center;
-    min-height: 100vh;
+  padding: 0 2.5rem;
+  background-image: url(assets/img/hero.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom center;
+  min-height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  display: flex;
+
+  .header-hero {
+    font-family: "Inter";
+    font-style: bold;
+    font-size: 24px;
     width: 100%;
-    flex-direction: column;
+    height: 10%;
     display: flex;
+    justify-content: space-between;
 
-    .header-hero {
+    a {
+      padding-top: 2rem;
 
-        font-family: "Inter";
-        font-style: bold;
-        font-size: 24px;
-        width: 100%;
-        height: 10%;
+      .logo {
+        width: 4rem;
+        height: 4rem;
+        background-image: url(assets/img/logo.webp);
+        background-size: contain;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+    }
+
+    nav {
+      ul {
+        padding-top: 2rem;
+        list-style-type: none;
         display: flex;
-        justify-content: space-between;
+        align-items: center;
+        gap: 3.5rem;
 
-        a {
-            padding-top: 2rem;
-
-            .logo {
-                width: 4rem;
-                height: 4rem;
-                background-image: url(img/logo.webp);
-                background-size: contain;
-                background-position: center center;
-                background-repeat: no-repeat;
-            }
+        li a {
+          color: var(--alpine-blue);
+          text-decoration: none;
+          font-size: 24px;
         }
+      }
+    }
+  }
 
-        nav {
-            ul {
-                padding-top: 2rem;
-                list-style-type: none;
-                display: flex;
-                align-items: center;
-                gap: 3.5rem;
+  .hero-content {
+    padding-top: 4rem;
 
-                li a {
-                    color: var(--alpine-blue);
-                    text-decoration: none;
-                    font-size: 24px;
-                }
-            }
-        }
+    h1 {
+      font-size: 128px;
     }
 
-    .hero-content {
-        padding-top: 4rem;
-
-        h1 {
-            font-size: 128px;
-
-        }
-
-        .white {
-            color: var(--alpine-blue);
-        }
+    .white {
+      color: var(--alpine-blue);
     }
-
+  }
 }
 
-
 /* ------------------------------------------------------ HOME ------------------------------------------------------ */
-.home {
-    padding: 3rem 2.5rem;
+.home1 {
+  padding: 3rem 3rem;
 
-    .home-content {
-        display: flex;
-        border-radius: 11px;
-        background-color: var(--main-red);
+  .home-content {
+    display: flex;
+    border-radius: 11px;
+    background-color: var(--main-red);
 
-        .home-left {
-            width: 50%;
-        }
-
-        .home-right {
-            padding: 3rem;
-            width: 50%;
-            color: var(--alpine-blue);
-
-            h1 {
-                text-align: center;
-                color: var(--alpine-blue);
-                padding-bottom: 2rem;
-            }
-
-            p {
-                padding-bottom: 3rem;
-            }
-
-
-        }
+    .home-left {
+      width: 50%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
     }
+
+    .home-right {
+      padding: 3rem;
+      width: 50%;
+      color: var(--alpine-blue);
+      gap: 4rem;
+
+      h1 {
+        text-align: center;
+        color: var(--alpine-blue);
+        margin-bottom: 4rem;
+      }
+
+      .p1 {
+        margin-bottom: 8rem;
+      }
+
+      strong {
+        font-weight: 650;
+      }
+    }
+  }
+}
+
+.home2 {
+  padding: 3rem 3rem;
+  h1 {
+    margin-bottom: 3rem;
+  }
+  .home2-content {
+    display: flex;
+
+    .home2-left {
+      width: 50%;
+      .legacy {
+        padding-bottom: 6rem;
+        .svg {
+          margin-bottom: 1rem;
+        }
+      }
+    }
+
+    .home2-right {
+      width: 50%;
+
+      .gallery-container {
+        display: grid;
+        /* Definimos las dos columnas */
+        grid-template-columns: repeat(2, 1fr);
+        /* Definimos las 4 filas: las tres primeras de 350px y la última de 250px */
+        grid-template-rows: 350px 200px 250px 350px;
+        gap: 8px;
+        padding: 15px;
+        margin: 0 auto;
+
+        .item {
+          overflow: hidden;
+          display: flex;
+          height: 100%;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+          }
+        }
+
+        .item-1 {
+          grid-column: 1;
+          grid-row: 1;
+        }
+
+        .item-2 {
+          grid-column: 1;
+          grid-row: 2;
+        }
+
+        .item-3 {
+          grid-column: 2;
+          grid-row: 1 / span 2;
+        }
+
+        .item-4 {
+          grid-column: 1;
+          grid-row: 3;
+        }
+
+        .item-5 {
+          grid-column: 2;
+          grid-row: 3;
+        }
+
+        .item-6 {
+          grid-column: 1 / span 2;
+          grid-row: 4;
+        }
+      }
+    }
+  }
 }
