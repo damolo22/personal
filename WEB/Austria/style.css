@@ -82,7 +82,7 @@ strong {
 
 /* ------------------------------------------------------ HERO ------------------------------------------------------ */
 .hero {
-  padding: 0 2.5rem;
+  padding: 0 3rem;
   background-image: url(assets/img/hero.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -107,10 +107,6 @@ strong {
       .logo {
         width: 4rem;
         height: 4rem;
-        background-image: url(assets/img/logo.webp);
-        background-size: contain;
-        background-position: center center;
-        background-repeat: no-repeat;
       }
     }
 
@@ -423,6 +419,7 @@ strong {
     align-items: center;
     display: flex;
     flex-direction: column;
+
     h1 {
       text-align: center;
       width: 50%;
@@ -433,93 +430,314 @@ strong {
     }
   }
 
- .testimonials {
-  padding: 5rem 2rem;
+  .testimonials {
+    padding: 5rem 2rem;
 
-  .testimonial-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 10rem 4rem; /* Más espacio vertical porque ahora las fotos son más grandes */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
 
-  .testimonial-wrapper {
-    position: relative;
-    display: flex;
-    align-items: center; /* Ayuda al centrado base */
-    width: 45%; /* Para que quepan dos arriba */
-    min-width: 500px; /* Evita que se rompa en pantallas pequeñas */
+    .testimonial-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      /* Aumentamos el gap horizontal (el segundo valor) para que no se toquen */
+      gap: 12rem 14rem;
+      max-width: 80%;
+      /* Un poco más de margen para que respire el conjunto */
+      margin: 0 auto;
 
-    /* 1. Caja de Imagen: Manda el tamaño */
-    .img-box {
-      position: relative; /* Clave: ahora no es absolute */
-      width: 80%; /* Ocupa la mayoría del wrapper, se hace "grande" solo */
-      z-index: 1;
-      border-radius: 11px;
-      overflow: hidden;
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 
-      img {
-        width: 100%;
-        height: auto; /* Mantiene proporción natural */
-        display: block;
-      }
-    }
-
-    /* 2. Tarjeta de Texto: Centrada en el eje Y de la foto */
-    .text-card {
-      position: absolute;
-      width: 320px;
-      background-color: white;
-      padding: 2rem;
-      border-radius: 12px;
-      z-index: 2;
-      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
-
-      /* CENTRADO VERTICAL PERFECTO */
-      top: 50%;
-      transform: translateY(-50%);
-      
-      /* POSICIÓN HORIZONTAL: "Muerde" la foto */
-      /* El 60% hace que empiece un poco después de la mitad de la foto */
-      left: 55%; 
-
-      .user-info {
+      .testimonial-wrapper {
+        position: relative;
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-bottom: 1rem;
+        /* Bajamos un pelín el width para que el 'proyectil' de la tarjeta blanca no golpee al de al lado */
+        width: 40%;
 
-        .avatar {
-          width: 45px;
-          height: 45px;
-          background-color: #ccc;
-          border-radius: 50%;
+        .img-box {
+          position: relative;
+          width: 100%;
+          z-index: 1;
+          border-radius: 11px;
+          overflow: hidden;
+          box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+
+          img {
+            width: 100%;
+            height: auto;
+            display: block;
+          }
         }
-        .name { color: var(--main-red); font-weight: 800; }
-        .stars { color: #ffcc00; font-size: 14px; }
-      }
 
-      p { font-size: 15px; line-height: 1.5; color: #333; }
-    }
+        .text-card {
+          position: absolute;
+          width: 75%;
+          /* Ajustamos el ancho para que no sea kilométrico */
+          background-color: white;
+          padding: 2rem;
+          border-radius: 11px;
+          z-index: 2;
+          box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+          top: 50%;
+          transform: translateY(-50%);
+          left: 55%;
 
-    /* --- FILA DE ABAJO (WIDE) --- */
-    &.wide {
-      width: 80%; /* Más ancho para la imagen horizontal */
-      margin-top: 2rem;
+          .user-info {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
 
-      .img-box {
-        width: 70%; /* Imagen muy grande */
-      }
+            .avatar {
+              width: 60px;
+              /* Un pelín más grande para que luzca la foto */
+              height: 60px;
+              background-color: #eee;
+              border-radius: 50%;
+              overflow: hidden;
+              /* Crucial para que la imagen se corte en círculo */
 
-      .text-card {
-        /* Ajuste de solape para el formato panorámico */
-        left: 50%; 
-        width: 350px;
+              img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                /* Para que la cara no se estire */
+              }
+            }
+
+            .name {
+              color: var(--main-red);
+              font-weight: 800;
+            }
+
+            .stars {
+              color: #ffcc00;
+              font-size: 14px;
+            }
+          }
+
+          p {
+            font-size: 24px;
+            /* Bajado de 24px porque era un poco 'too much' para un párrafo largo */
+            line-height: 1.6;
+          }
+        }
+
+        /* --- FILA DE ABAJO (WIDE) --- */
+        &.wide {
+          width: 80%;
+          margin-top: 2rem;
+
+          .img-box {
+            width: 70%;
+          }
+
+          .text-card {
+            left: 50%;
+            width: 400px;
+          }
+        }
       }
     }
   }
 }
+
+/* ------------------------------------------------------ CONTACT ------------------------------------------------------ */
+.contact {
+  padding: 3rem 3rem;
+
+
+  .contact-content {
+    padding-top: 2rem;
+    display: flex;
+
+
+    .contact-left {
+
+      width: 50%;
+
+      .help-top {
+        display: flex;
+        padding-top: 3rem;
+
+        .help {
+          width: 33%;
+          text-align: center;
+
+          .svg {}
+
+          p {}
+        }
+      }
+
+      .help-bottom {
+        display: flex;
+        padding-top: 3rem;
+
+        .help {
+          width: 33%;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+
+          .svg {}
+
+          p {}
+        }
+      }
+
+      .buttom {
+        text-align: center;
+        padding: 3rem 0;
+      }
+    }
+
+    .contact-right {
+
+      .right-bottom {
+        gap: 3rem;
+
+        .phone,
+        .mail {
+          display: flex;
+          gap: 2rem;
+        }
+
+        .phone {
+          padding: 2rem 0;
+        }
+
+        .mail {
+          padding: 1rem 0;
+        }
+
+      }
+    }
+  }
+}
+
+
+.map,iframe {
+  width: 100%;
+  height: 480px;
+  border: none;
+}
+
+/* ------------------------------------------------------ FOOTER ------------------------------------------------------ */
+.main-footer {
+  background-color: rgb(54, 54, 56);
+  color: white;
+  padding: 3rem 1rem;
+  /* Un poco más de aire arriba y abajo */
+
+  .footer-container {
+    max-width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 4rem;
+    /* Más espacio entre columnas */
+
+    /* Parte del Logo */
+    .footer-brand {
+      border: 1px solid red;
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex: 2;
+
+      .logo-shield img {
+        width: 110px;
+        /* Un poco más grande el escudo */
+        height: auto;
+      }
+
+      h2 {
+        /* Tamaño mucho más imponente */
+
+        color: white;
+        font-weight: 800;
+        /* Extra bold para que tenga peso visual */
+        margin: 0;
+      }
+    }
+
+    /* Columnas de Links */
+    .footer-column {
+      flex: 1;
+
+      h3 {
+        font-size: 36px;
+        margin-bottom: 2.5rem;
+        color: white;
+        font-weight: 700;
+
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          margin-bottom: 1.2rem;
+
+          a {
+            color: #ababab;
+            text-decoration: none;
+            font-size: 20px;
+            transition: color 0.3s;
+
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+
+    /* Sección Suscribirse */
+    .footer-subscribe {
+      flex: 1.5;
+
+      h3 {
+
+        font-size: 36px;
+        margin-bottom: 2.5rem;
+        color: white;
+        font-weight: 700;
+
+      }
+
+      p {
+        font-size: 20px;
+        margin-bottom: 2rem;
+        color: #eee;
+        line-height: 1.4;
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem;
+
+        input {
+          padding: 1rem 1.2rem;
+          border-radius: 8px;
+          border: none;
+          font-size: 18px;
+          width: 100%;
+          max-width: 350px;
+        }
+
+        button {
+          cursor: pointer;
+          transition: all 0.3s ease;
+
+          &:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(200, 16, 46, 0.4);
+          }
+        }
+      }
+    }
+  }
 }
