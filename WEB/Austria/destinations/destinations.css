@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+    --main-red: rgb(200, 16, 46);
+    --alpine-blue: rgb(235, 242, 245);
+    --btn-width: 250px;
+    --btn-height: 60px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--alpine-blue);
+    color: black;
+    font-family: "Inter";
+    font-size: 28px;
+    overflow-x: hidden;
+    line-height: 170%;
+}
+
+h1 {
+    font-family: "Montserrat";
+    font-size: 60px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
+}
+
+h2 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-style: bold;
+    line-height: 150%;
+    color: var(--main-red);
+}
+
+h3 {
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 700;
+    color: hex(2D2926);
+}
+
+h4 {
+    font-family: "Monument Expanded";
+    font-size: 40px;
+    color: white;
+    font-style: bold;
+}
+
+h5 {
+    font-family: "Playfair";
+    font-size: 22px;
+    font-style: italic;
+    font-style: extrabold;
+}
+
+button {
+    width: var(--btn-width);
+    height: var(--btn-height);
+    cursor: pointer;
+    color: var(--alpine-blue);
+    background-color: var(--main-red);
+    font-size: 28px;
+    font-family: "Montserrat";
+    font-weight: 800px;
+    border-radius: 11px;
+    border: none;
+}
+
+strong {
+    font-weight: 600;
+}
+
+.hero-destinations {
+    padding: 0 3rem;
+    background-image: url(../assets/img/header-destinations.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .header {
+        font-family: "Inter";
+        font-style: bold;
+        font-size: 24px;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            padding-top: 2rem;
+
+            .logo {
+                width: 4rem;
+                height: 4rem;
+            }
+        }
+
+        nav {
+            ul {
+                padding-top: 2rem;
+                list-style-type: none;
+                display: flex;
+                align-items: center;
+                gap: 3.5rem;
+
+                li a {
+                    color: var(--alpine-blue);
+                    text-decoration: none;
+                    font-size: 24px;
+                }
+            }
+        }
+    }
+
+    .hero-title {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 4rem;
+
+        h1 {
+            font-family: "Montserrat";
+            font-size: 100px;
+            color: var(--alpine-blue);
+            margin: 0;
+            line-height: 1;
+        }
+    }
+}
+
+h1 {
+    text-align: center;
+    padding: 5rem 3rem;
+}
+
+.destination1 {
+    padding: 0 3rem;
+    display: flex;
+
+    .left {
+        padding-right: 4rem;
+        width: 60%;
+
+        h3 {
+            padding-bottom: 5rem;
+        }
+
+        p {
+            padding-bottom: 3rem;
+        }
+
+        .cards {
+            display: flex;
+
+            .card {
+                border-radius: 11px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border: 3px solid black;
+
+
+
+            }
+        }
+    }
+
+    .right {
+        width: 40%;
+        display: flex;
+        justify-content: end;
+
+    }
+}
