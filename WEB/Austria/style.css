@@ -551,6 +551,7 @@ strong {
 
 
     .contact-left {
+      padding-right: 4rem;
 
       width: 50%;
 
@@ -562,9 +563,7 @@ strong {
           width: 33%;
           text-align: center;
 
-          .svg {}
 
-          p {}
         }
       }
 
@@ -578,9 +577,7 @@ strong {
           display: flex;
           flex-direction: column;
 
-          .svg {}
 
-          p {}
         }
       }
 
@@ -591,6 +588,7 @@ strong {
     }
 
     .contact-right {
+
 
       .right-bottom {
         gap: 3rem;

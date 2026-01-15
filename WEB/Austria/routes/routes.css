@@ -81,7 +81,6 @@ strong {
 }
 
 .hero-routes {
-  /* Imagen de fondo y dimensiones */
   padding: 0 3rem;
   background-image: url(../assets/img/header-routes.webp);
   background-repeat: no-repeat;
@@ -92,7 +91,7 @@ strong {
   display: flex;
   flex-direction: column;
 
-   .header {
+  .header {
     font-family: "Inter";
     font-style: bold;
     font-size: 24px;
@@ -126,24 +125,198 @@ strong {
     }
   }
 
-
-  /* Contenedor del título central */
   .hero-title {
     flex: 1;
-    /* Ocupa todo el espacio restante */
     display: flex;
     justify-content: center;
     align-items: center;
     padding-bottom: 4rem;
-    /* Ajuste visual para que no se vea tan pegado abajo */
 
     h1 {
       font-family: "Montserrat";
       font-size: 100px;
       color: var(--alpine-blue);
-      letter-spacing: 5px;
       margin: 0;
       line-height: 1;
+    }
+  }
+}
+
+.routes-intro {
+  padding: 3rem 3rem;
+  .routes-title {
+    text-align: center;
+
+    p {
+      font-size: 24px;
+      font-style: italic;
+    }
+  }
+  h2 {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+  }
+
+  .route-intro1,
+  .route-intro3 {
+    display: flex;
+
+    .left {
+      width: 50%;
+
+      .info {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding-bottom: 4rem;
+        p {
+          font-style: bold;
+        }
+      }
+
+      .first {
+        padding-top: 3rem;
+      }
+      .button {
+        text-align: center;
+      }
+    }
+    .right {
+      width: 50%;
+      align-items: center;
+      display: flex;
+
+      justify-content: end;
+    }
+  }
+
+  .route-intro2,
+  .route-intro4 {
+    display: flex;
+
+    .left {
+      width: 50%;
+      align-items: center;
+      display: flex;
+
+      justify-content: start;
+    }
+    .right {
+      width: 50%;
+
+      .info {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+        padding-bottom: 4rem;
+        p {
+          font-style: bold;
+        }
+      }
+      .button {
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* ------------------------------------------------------ ROUTES ------------------------------------------------------ */
+.route1 {
+  padding: 3rem 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  .title {
+    margin-bottom: 4rem;
+    h1 {
+      margin-bottom: 1.5rem;
+    }
+    .subtitle {
+      display: flex;
+      gap: 4rem;
+      margin-bottom: 2rem;
+      .info {
+        gap: 1rem;
+        display: flex;
+        align-items: center;
+        img {
+          width: 40px;
+        }
+      }
+    }
+    p {
+      font-size: 20px;
+      line-height: 1.6;
+    }
+  }
+
+  /* ESTILOS DE LA LÍNEA DE TIEMPO */
+  .timeline {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    /* La línea roja vertical que recorre todo el fondo */
+    &::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      background-color: var(--main-red);
+      transform: translateX(-50%);
+      z-index: 1;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 1fr 100px 1fr; /* Izquierda - Línea - Derecha */
+      align-items: center;
+      position: relative;
+      z-index: 2;
+
+      /* Estilo del círculo */
+      .marker-side {
+        display: flex;
+        justify-content: center;
+        .circle {
+          width: 35px;
+          height: 35px;
+          background-color: white;
+          border: 4px solid var(--main-red);
+          border-radius: 50%;
+        }
+      }
+
+      .text-side {
+        padding: 0 2rem;
+        h3 {
+          margin-bottom: 1rem;
+          font-weight: 800;
+        }
+        p {
+          font-size: 18px;
+          line-height: 1.5;
+          color: #444;
+        }
+      }
+
+      .image-side {
+        padding: 0 2rem;
+        img {
+          width: 100%;
+          border-radius: 15px;
+          box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+          display: block;
+        }
+      }
+
+      /* Ajuste para que el texto de los items normales (A y C) se alinee a la derecha */
+      &:not(.inverted) .text-side {
+        text-align: left;
+      }
     }
   }
 }
