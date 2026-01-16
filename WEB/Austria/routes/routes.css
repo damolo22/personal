@@ -82,7 +82,7 @@ strong {
 
 .hero-routes {
   padding: 0 3rem;
-  background-image: url(../assets/img/header-destinations.webp);
+  background-image: url(../assets/img/header-routes.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -221,12 +221,12 @@ strong {
 }
 
 /* ------------------------------------------------------ ROUTES ------------------------------------------------------ */
+/* 1. BASE: Lo que comparten todas las rutas */
 .route1,
 .route2,
 .route3,
 .route4 {
   padding: 7rem 3rem;
-
   margin: 0 auto;
 
   .title {
@@ -234,7 +234,6 @@ strong {
     h1 {
       margin-bottom: 1.5rem;
     }
-
     .subtitle {
       display: flex;
       gap: 4rem;
@@ -260,21 +259,18 @@ strong {
     &::before {
       content: "";
       position: absolute;
-      left: 50%;
       top: 0;
       bottom: 0;
       width: 3px;
       background-color: var(--main-red);
-      transform: translateX(-50%);
       z-index: 1;
     }
 
     .timeline-item {
+      padding: 1rem 0;
       display: grid;
-      grid-template-columns: 1fr 100px 1fr;
       align-items: center;
       position: relative;
-      gap: 1rem;
       z-index: 2;
 
       .marker-side {
@@ -289,30 +285,20 @@ strong {
         }
       }
 
-      .text-side {
-        h2 {
-          padding-bottom: 2rem;
-        }
+      .text-side h2 {
+        padding-bottom: 2rem;
       }
-
-      .image-side {
-        img {
-          width: 100%;
-          border-radius: 11px;
-          display: block;
-        }
-      }
-
-      &:not(.inverted) .text-side {
-        text-align: left;
+      .image-side img {
+        width: 100%;
+        border-radius: 11px;
+        display: block;
       }
     }
   }
 
   .tip {
     margin-top: 3.5rem;
-    background-color: rgb(217, 217, 217);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 11px;
     padding: 1.5rem;
     font-size: 24px;
@@ -321,37 +307,75 @@ strong {
       align-items: center;
       gap: 1rem;
       padding-bottom: 0.5rem;
-
       img {
         width: 40px;
       }
     }
   }
 }
-.route2 {
-  .tip.foodie {
-    background-color: #d8e6d1;
-    p {
-      color: #2d4a22;
+
+.route1 {
+  .timeline {
+    &::before {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      grid-template-columns: 1fr 100px 1fr;
+      gap: 4rem;
+    }
+  }
+  .tip {
+    background-color: rgb(217, 217, 217);
+  }
+}
+
+.route2,
+.route4 {
+  .timeline {
+    &::before {
+      left: 27px;
+    }
+    .timeline-item {
+      grid-template-columns: 55px 40% 1fr;
+      gap: 3rem;
+      .text-side {
+        text-align: left;
+      }
     }
   }
 }
 
 .route3 {
-  .tip.curiosity {
-    background-color: #fff9e5;
-    p {
-      color: #856404;
+  .timeline {
+    &::before {
+      right: 27px;
+    }
+    .timeline-item {
+      grid-template-columns: 1fr 40% 55px;
+      gap: 3rem;
+      .text-side {
+        text-align: left;
+      }
     }
   }
 }
 
-.route4 {
-  .tip.wellness {
-    background-color: #f5ebf7;
-    p {
-      color: #6a1b9a;
-    }
+.route2 .tip.foodie {
+  background-color: #d8e6d1;
+  p {
+    color: #2d4a22;
   }
 }
-
+.route3 .tip.curiosity {
+  background-color: #fff9e5;
+  p {
+    color: #856404;
+  }
+}
+.route4 .tip.wellness {
+  background-color: #f5ebf7;
+  p {
+    color: #6a1b9a;
+  }
+}

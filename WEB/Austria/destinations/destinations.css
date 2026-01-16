@@ -1,188 +1,283 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
-    --main-red: rgb(200, 16, 46);
-    --alpine-blue: rgb(235, 242, 245);
-    --btn-width: 250px;
-    --btn-height: 60px;
+  --main-red: rgb(200, 16, 46);
+  --alpine-blue: rgb(235, 242, 245);
+  --btn-width: 250px;
+  --btn-height: 60px;
 }
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--alpine-blue);
-    color: black;
-    font-family: "Inter";
-    font-size: 28px;
-    overflow-x: hidden;
-    line-height: 170%;
+  background-color: var(--alpine-blue);
+  color: black;
+  font-family: "Inter";
+  font-size: 28px;
+  overflow-x: hidden;
+  line-height: 170%;
 }
 
 h1 {
-    font-family: "Montserrat";
-    font-size: 60px;
-    font-style: bold;
-    line-height: 150%;
-    color: var(--main-red);
+  font-family: "Montserrat";
+  font-size: 60px;
+  font-style: bold;
+  line-height: 150%;
+  color: var(--main-red);
 }
 
 h2 {
-    font-family: "Montserrat";
-    font-size: 40px;
-    font-style: bold;
-    line-height: 150%;
-    color: var(--main-red);
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-style: bold;
+  line-height: 150%;
+  color: var(--main-red);
 }
 
 h3 {
-    font-family: "Montserrat";
-    font-size: 40px;
-    font-weight: 700;
-    color: hex(2D2926);
+  font-family: "Montserrat";
+  font-size: 40px;
+  font-weight: 700;
+  color: var(--main-red);
 }
 
 h4 {
-    font-family: "Monument Expanded";
-    font-size: 40px;
-    color: white;
-    font-style: bold;
+  font-family: "Monument Expanded";
+  font-size: 40px;
+  color: white;
+  font-style: bold;
 }
 
 h5 {
-    font-family: "Playfair";
-    font-size: 22px;
-    font-style: italic;
-    font-style: extrabold;
+  font-family: "Playfair";
+  font-size: 22px;
+  font-style: italic;
+  font-style: extrabold;
 }
 
 button {
-    width: var(--btn-width);
-    height: var(--btn-height);
-    cursor: pointer;
-    color: var(--alpine-blue);
-    background-color: var(--main-red);
-    font-size: 28px;
-    font-family: "Montserrat";
-    font-weight: 800px;
-    border-radius: 11px;
-    border: none;
+  width: var(--btn-width);
+  height: var(--btn-height);
+  cursor: pointer;
+  color: var(--alpine-blue);
+  background-color: var(--main-red);
+  font-size: 28px;
+  font-family: "Montserrat";
+  font-weight: 800px;
+  border-radius: 11px;
+  border: none;
 }
 
 strong {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .hero-destinations {
-    padding: 0 3rem;
-    background-image: url(../assets/img/header-destinations.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: 50vh;
+  padding: 0 3rem;
+  background-image: url(../assets/img/header-destinations.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  min-height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  .header {
+    font-family: "Inter";
+    font-style: bold;
+    font-size: 24px;
     width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
 
-    .header {
-        font-family: "Inter";
-        font-style: bold;
-        font-size: 24px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    a {
+      padding-top: 2rem;
 
-        a {
-            padding-top: 2rem;
-
-            .logo {
-                width: 4rem;
-                height: 4rem;
-            }
-        }
-
-        nav {
-            ul {
-                padding-top: 2rem;
-                list-style-type: none;
-                display: flex;
-                align-items: center;
-                gap: 3.5rem;
-
-                li a {
-                    color: var(--alpine-blue);
-                    text-decoration: none;
-                    font-size: 24px;
-                }
-            }
-        }
+      .logo {
+        width: 4rem;
+        height: 4rem;
+      }
     }
 
-    .hero-title {
-        flex: 1;
+    nav {
+      ul {
+        padding-top: 2rem;
+        list-style-type: none;
         display: flex;
-        justify-content: center;
         align-items: center;
-        padding-bottom: 4rem;
+        gap: 3.5rem;
 
-        h1 {
-            font-family: "Montserrat";
-            font-size: 100px;
-            color: var(--alpine-blue);
-            margin: 0;
-            line-height: 1;
+        li a {
+          color: var(--alpine-blue);
+          text-decoration: none;
+          font-size: 24px;
         }
+      }
     }
+  }
+
+  .hero-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 4rem;
+
+    h1 {
+      font-family: "Montserrat";
+      font-size: 100px;
+      color: var(--alpine-blue);
+      margin: 0;
+      line-height: 1;
+    }
+  }
 }
 
 h1 {
-    text-align: center;
-    padding: 5rem 3rem;
+  text-align: center;
+  padding: 5rem 3rem;
 }
-
 .destination1 {
     padding: 0 3rem;
     display: flex;
+    /* CLAVE: align-items stretch obliga a que ambas columnas midan lo mismo de alto */
+    align-items: stretch; 
+    gap: 0; 
+    width: 100%;
 
     .left {
-        padding-right: 4rem;
-        width: 60%;
+        /* Ajustamos el ancho para que sume 100% con la derecha y no se rompa */
+        width: 60%; 
+        padding-right: 5rem;
+        display: flex;
+        flex-direction: column;
 
         h3 {
             padding-bottom: 5rem;
+            /* Mantiene tu Montserrat 40px bold del h3 general */
         }
 
         p {
             padding-bottom: 3rem;
+            /* Mantiene tu Inter 28px y line-height 170% del body */
         }
 
         .cards {
             display: flex;
+            gap: 1.5rem;
+            padding-bottom: 4rem;
+            justify-content: space-between;
 
             .card {
+                cursor: pointer;
                 border-radius: 11px;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                gap: 0.8rem;
+                padding: 0.8rem 1.5rem;
                 border: 3px solid black;
+                background-color: transparent;
+                transition: all 0.3s ease;
 
+                .icon {
+                    width: 30px;
+                    transition: filter 0.3s ease;
+                }
 
+                p {
+                    padding-bottom: 0;
+                    font-weight: 500;
+                }
 
+                /* Animación Hover que pediste */
+                &:hover {
+                    background-color: var(--main-red);
+                    border-color: var(--main-red);
+                    color: white;
+
+                    .icon {
+                        /* Convierte el SVG negro en blanco */
+                        filter: brightness(0) invert(1);
+                    }
+                }
+            }
+        }
+
+        .testimonial-box {
+            background-color: white;
+            border: 3px solid black;
+            padding: 2rem;
+            border-radius: 12px;
+            /* Esto empuja la reseña al final si sobra espacio, alineándola con el fondo de la imagen */
+            margin-top: auto; 
+
+            .user-row {
+                display: flex;
+                align-items: center;
+                gap: 1.5rem;
+                margin-bottom: 1.5rem;
+
+                .avatar {
+                    width: 80px;
+                    height: 80px;
+                    background-color: #d9d9d9;
+                    border-radius: 50%;
+                    overflow: hidden; /* Corta la imagen en círculo */
+                    
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover; /* Evita que la foto se deforme */
+                    }
+                }
+
+                .meta {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.2rem;
+
+                    .user-name {
+                        color: var(--main-red); 
+                        font-weight: 800;
+                    }
+
+                    .stars {
+                        color: #ffcc00;
+                        letter-spacing: 2px;
+                        font-size: 45px; /* Tamaño grande para las estrellas */
+                        line-height: 1;  /* Reseteo para que el tamaño no empuje la caja */
+                        display: block;
+                    }
+                }
+            }
+
+            .quote {
+                padding-bottom: 0;
+                color: #333;
+                font-style: italic;
             }
         }
     }
 
     .right {
-        width: 40%;
+        width: 40%; 
         display: flex;
-        justify-content: end;
-
+        
+        img {
+            width: 100%;
+            height: 100%; 
+            object-fit: cover; 
+            display: block;
+        }
     }
 }
