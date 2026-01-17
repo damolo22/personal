@@ -429,28 +429,27 @@ strong {
       }
     }
   }
-
   .testimonials {
-    padding: 5rem 2rem;
-
+    padding: 5rem 3rem;
 
     .testimonial-grid {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
-      /* Aumentamos el gap horizontal (el segundo valor) para que no se toquen */
-      gap: 12rem 14rem;
-      max-width: 80%;
-      /* Un poco más de margen para que respire el conjunto */
+      justify-content: center;
+
+      gap: 6rem 20rem;
+
       margin: 0 auto;
 
+      padding-right: 8rem;
+      padding-left: 2rem;
 
       .testimonial-wrapper {
         position: relative;
         display: flex;
         align-items: center;
-        /* Bajamos un pelín el width para que el 'proyectil' de la tarjeta blanca no golpee al de al lado */
-        width: 40%;
+        width: 450px;
+        max-width: 100%;
 
         .img-box {
           position: relative;
@@ -469,16 +468,17 @@ strong {
 
         .text-card {
           position: absolute;
-          width: 75%;
-          /* Ajustamos el ancho para que no sea kilométrico */
+          width: 85%;
           background-color: white;
           padding: 2rem;
           border-radius: 11px;
           z-index: 2;
           box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+
           top: 50%;
           transform: translateY(-50%);
-          left: 55%;
+
+          left: 70%;
 
           .user-info {
             display: flex;
@@ -488,51 +488,53 @@ strong {
 
             .avatar {
               width: 60px;
-              /* Un pelín más grande para que luzca la foto */
               height: 60px;
               background-color: #eee;
               border-radius: 50%;
               overflow: hidden;
-              /* Crucial para que la imagen se corte en círculo */
+              flex-shrink: 0;
 
               img {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                /* Para que la cara no se estire */
               }
             }
 
             .name {
               color: var(--main-red);
               font-weight: 800;
+              display: block;
             }
 
             .stars {
               color: #ffcc00;
-              font-size: 14px;
+              letter-spacing: 2px;
+              font-size: 28px;
+              line-height: 1;
+              display: block;
             }
           }
 
           p {
-            font-size: 24px;
-            /* Bajado de 24px porque era un poco 'too much' para un párrafo largo */
+            font-size: 20px;
             line-height: 1.6;
+            margin: 0;
           }
         }
 
-        /* --- FILA DE ABAJO (WIDE) --- */
         &.wide {
-          width: 80%;
+          width: 900px;
           margin-top: 2rem;
+          margin-left: 6rem;
 
           .img-box {
-            width: 70%;
+            width: 60%;
           }
 
           .text-card {
             left: 50%;
-            width: 400px;
+            width: 45%;
           }
         }
       }
@@ -544,11 +546,9 @@ strong {
 .contact {
   padding: 3rem 3rem;
 
-
   .contact-content {
     padding-top: 2rem;
     display: flex;
-
 
     .contact-left {
       padding-right: 4rem;
@@ -562,8 +562,13 @@ strong {
         .help {
           width: 33%;
           text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-
+          p {
+            width: 80%;
+          }
         }
       }
 
@@ -576,8 +581,11 @@ strong {
           text-align: center;
           display: flex;
           flex-direction: column;
+          align-items: center;
 
-
+          p {
+            width: 80%;
+          }
         }
       }
 
@@ -588,8 +596,6 @@ strong {
     }
 
     .contact-right {
-
-
       .right-bottom {
         gap: 3rem;
 
@@ -606,16 +612,22 @@ strong {
         .mail {
           padding: 1rem 0;
         }
-
       }
     }
   }
 }
 
-
-.map,iframe {
+.map {
   width: 100%;
-  height: 480px;
+  height: 550px;
+  overflow: hidden;
+}
+
+.map iframe {
+  width: 100%;
+  height: calc(100% + 60px);
+  margin-top: -60px;
+
   border: none;
 }
 
@@ -623,11 +635,10 @@ strong {
 .main-footer {
   background-color: rgb(54, 54, 56);
   color: white;
-  padding: 3rem 1rem;
-  /* Un poco más de aire arriba y abajo */
+  padding: 3rem 3rem;
+
 
   .footer-container {
-    max-width: 90%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -637,9 +648,9 @@ strong {
 
     /* Parte del Logo */
     .footer-brand {
-      border: 1px solid red;
       display: flex;
       align-items: center;
+      align-self: center;
       gap: 2rem;
       flex: 2;
 
@@ -650,11 +661,9 @@ strong {
       }
 
       h2 {
-        /* Tamaño mucho más imponente */
 
         color: white;
         font-weight: 800;
-        /* Extra bold para que tenga peso visual */
         margin: 0;
       }
     }
@@ -668,7 +677,6 @@ strong {
         margin-bottom: 2.5rem;
         color: white;
         font-weight: 700;
-
       }
 
       ul {
@@ -697,18 +705,15 @@ strong {
       flex: 1.5;
 
       h3 {
-
         font-size: 36px;
-        margin-bottom: 2.5rem;
+        margin-bottom: 1rem;
         color: white;
         font-weight: 700;
-
       }
 
       p {
         font-size: 20px;
-        margin-bottom: 2rem;
-        color: #eee;
+        margin-bottom: 3rem;
         line-height: 1.4;
       }
 
@@ -719,7 +724,7 @@ strong {
 
         input {
           padding: 1rem 1.2rem;
-          border-radius: 8px;
+          border-radius: 11px;
           border: none;
           font-size: 18px;
           width: 100%;
@@ -729,6 +734,8 @@ strong {
         button {
           cursor: pointer;
           transition: all 0.3s ease;
+          width: 100%;
+                    max-width: 350px;
 
           &:hover {
             transform: translateY(-3px);

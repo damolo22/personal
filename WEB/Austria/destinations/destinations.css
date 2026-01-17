@@ -239,7 +239,6 @@ h1 {
           display: flex;
           flex-direction: column;
 
-
           .user-name {
             color: var(--main-red);
             font-weight: 800;
@@ -447,41 +446,45 @@ h1 {
       display: flex;
       flex-direction: column;
 
-      h3 { padding-bottom: 3rem; }
-      p { padding-bottom: 3rem; }
+      h3 {
+        padding-bottom: 3rem;
+      }
+      p {
+        padding-bottom: 3rem;
+      }
     }
 
-    .left-content { padding-right: 5rem; }
-    .right-content { padding-left: 5rem; }
+    .left-content {
+      padding-right: 5rem;
+    }
+    .right-content {
+      padding-left: 5rem;
+    }
 
-    /* Columnas de Imagen */
     .left-img,
     .right-img {
       width: 40%;
       img {
         width: 100%;
         height: 100%;
-        object-fit: cover; /* Clave para que ocupen todo el alto */
+        object-fit: cover;
         border-radius: 15px;
         display: block;
       }
     }
 
-    /* Estilo de la Cita */
     .photographer-quote {
       font-size: 22px;
       padding-bottom: 2rem;
       color: #555;
-      line-height: 1.4;
     }
 
-    /* Botones */
     .cards {
       display: flex;
       gap: 1.5rem;
       padding-bottom: 4rem;
       width: 100%;
-      
+
       .card {
         cursor: pointer;
         border-radius: 11px;
@@ -494,25 +497,32 @@ h1 {
         background-color: transparent;
         transition: all 0.3s ease;
 
-        .icon { width: 30px; transition: filter 0.3s ease; }
-        p { padding-bottom: 0; font-weight: 500; }
+        .icon {
+          width: 30px;
+          transition: filter 0.3s ease;
+        }
+        p {
+          padding-bottom: 0;
+          font-weight: 500;
+        }
 
         &:hover {
           background-color: var(--main-red);
           border-color: var(--main-red);
           color: white;
-          .icon { filter: brightness(0) invert(1); }
+          .icon {
+            filter: brightness(0) invert(1);
+          }
         }
       }
     }
 
-    /* Caja de Testimonio */
     .testimonial-box {
       background-color: white;
       border: 3px solid black;
       padding: 1rem 1.5rem;
       border-radius: 11px;
-      margin-top: auto; /* Alineación al fondo */
+      margin-top: auto;
 
       .user-row {
         display: flex;
@@ -526,23 +536,34 @@ h1 {
           background-color: #d9d9d9;
           border-radius: 50%;
           overflow: hidden;
-          img { width: 100%; height: 100%; object-fit: cover; }
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
         }
 
         .meta {
           display: flex;
           flex-direction: column;
-          .user-name { color: var(--main-red); font-weight: 800; }
-          .stars { 
-            color: #ffcc00; 
-            letter-spacing: 2px; 
-            font-size: 45px; 
-            line-height: 1; 
-            display: block; 
+          .user-name {
+            color: var(--main-red);
+            font-weight: 800;
+          }
+          .stars {
+            color: #ffcc00;
+            letter-spacing: 2px;
+            font-size: 45px;
+            line-height: 1;
+            display: block;
           }
         }
       }
-      .quote { padding-bottom: 0; color: #333; font-style: italic; }
+      .quote {
+        padding-bottom: 0;
+        color: #333;
+        font-style: italic;
+      }
     }
   }
 }
