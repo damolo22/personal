@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -35,6 +35,31 @@
           </nav>
         </header>
 
+        <!-- menu mobile -->
+
+        <div id="menu_mobile" class="">
+          <div class="logo-m">
+            <h2>AUSTRIA</h2>
+          </div>
+
+          <ul class="menu_mobile_nav">
+            <li class="item">
+              <a href="../index.html"><span>Home</span></a>
+            </li>
+            <li class="item">
+              <a href="../destinations/destinations.html"
+                ><span>Destinations</span></a
+              >
+            </li>
+            <li class="item">
+              <a href="../routes/routes.html"><span>Routes</span></a>
+            </li>
+            <li class="item">
+              <a href="../contact/contact.html"><span>Contact</span></a>
+            </li>
+          </ul>
+        </div>
+
         <div class="hero-title">
           <h1>ROUTES</h1>
         </div>
@@ -68,17 +93,17 @@
               <p><strong>Transport: Railjet Train (ÖBB).</strong></p>
             </div>
             <div class="button">
-              <button>See Route</button>
+              <a href="#route1"><button>See Route</button></a>
             </div>
           </div>
           <div class="right">
-            <img src="../assets/img/map-route1.png" alt="" />
+            <img src="../assets/img/route-map1.webp" alt="" />
           </div>
         </div>
 
         <div class="route-intro2">
           <div class="left">
-            <img src="../assets/img/map-route1.png" alt="" />
+            <img src="../assets/img/route-map2.webp" alt="" />
           </div>
           <div class="right">
             <h2 class="reversed">ROUTE 2: ALPINES & LAKE ADVENTURE</h2>
@@ -103,7 +128,7 @@
               <p><strong>Transport: Rental Car or Regional Bus.</strong></p>
             </div>
             <div class="button">
-              <button>See Route</button>
+              <a href="#route2"><button>See Route</button></a>
             </div>
           </div>
         </div>
@@ -130,17 +155,17 @@
               <p><strong>Transport: River Cruise or Bicycle.</strong></p>
             </div>
             <div class="button">
-              <button>See Route</button>
+              <a href="#route3"><button>See Route</button></a>
             </div>
           </div>
           <div class="right">
-            <img src="../assets/img/map-route1.png" alt="" />
+            <img src="../assets/img/route-map2.webp" alt="" />
           </div>
         </div>
 
-        <div class="route-intro2">
+        <div class="route-intro4">
           <div class="left">
-            <img src="../assets/img/map-route1.png" alt="" />
+            <img src="../assets/img/route-map4.webp" alt="" />
           </div>
           <div class="right">
             <h2 class="reversed">ROUTE 4: THE SOUND JOURNEY</h2>
@@ -165,13 +190,13 @@
               <p><strong>Transport: Rental Car or Regional Bus.</strong></p>
             </div>
             <div class="button">
-              <button>See Route</button>
+              <a href="#route4"><button>See Route</button></a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="route1">
+      <div class="route1" id="route1">
         <div class="title">
           <h1>ROUTE 1: THE IMPERIAL HERITAGE TRAIL</h1>
           <div class="subtitle">
@@ -258,7 +283,7 @@
         </div>
       </div>
 
-      <div class="route2">
+      <div class="route2" id="route2">
         <div class="title">
           <h1>ROUTE 2: ALPINES & LAKE ADVENTURE</h1>
           <div class="subtitle">
@@ -361,7 +386,7 @@
           </div>
         </div>
       </div>
-      <div class="route3">
+      <div class="route3" id="route3">
         <div class="title">
           <h1>ROUTE 3: THE DANUBE VALLEY ESCAPE</h1>
           <div class="subtitle">
@@ -448,7 +473,7 @@
         </div>
       </div>
 
-      <div class="route4">
+      <div class="route4" id="route4">
         <div class="title">
           <h1>ROUTE 4: THE SOUND JOURNEY</h1>
           <div class="subtitle">
@@ -540,4 +565,58 @@
       </div>
     </div>
   </body>
+  <!-- /* ------------------------------------------------------ FOOTER ------------------------------------------------------ */ -->
+
+  <footer class="main-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <div class="logo-shield">
+          <img src="../assets/img/logo-footer.webp" alt="Shield" />
+        </div>
+        <h2>Austrian National Tourism Office</h2>
+      </div>
+
+      <div class="footer-column">
+        <h3>Navegate</h3>
+        <ul>
+          <li><a href="../">Home</a></li>
+          <li><a href="../destinations/destinations.html">Destinations</a></li>
+          <li><a href="../routes/routes.html">Routes</a></li>
+          <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h3>Legal</h3>
+        <ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Condition</a></li>
+          <li><a href="#">Cookie Policy</a></li>
+          <li><a href="#">Sitemap</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-subscribe">
+        <h3>Stay Inpired</h3>
+        <p>Subscribe for exclusive routes and news</p>
+        <form>
+          <input type="email" placeholder="Email" />
+          <button type="submit">Subscribe</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/burguer/burguer.js"></script>
+  <script src="../assets/arrow.js"></script>
+  <div class="progress-wrap" id="scrollProgress">
+    <svg
+      class="progress-circle"
+      width="100%"
+      height="100%"
+      viewBox="-1 -1 102 102"
+    >
+      <path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98" />
+    </svg>
+    <div class="arrow-icon"><img src="../assets/img/arrow.svg" alt="" /></div>
+  </div>
 </html>
