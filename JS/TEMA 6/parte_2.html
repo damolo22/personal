@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Source Code Leaker</title>
+    <style>
+      body {
+        background-color: #0d0d0d;
+        color: #00ff41;
+        font-family: "Courier New", monospace;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        margin: 0;
+      }
+
+      .terminal {
+        width: 80%;
+        max-width: 800px;
+        border: 2px solid #00ff41;
+        padding: 20px;
+        background: rgba(0, 20, 0, 0.9);
+        box-shadow: 0 0 20px rgba(0, 255, 65, 0.2);
+      }
+
+      h1 {
+        margin-top: 0;
+        text-transform: uppercase;
+        border-bottom: 1px dashed #00ff41;
+        padding-bottom: 10px;
+      }
+
+      .control-panel {
+        margin: 20px 0;
+        display: flex;
+        gap: 10px;
+      }
+
+      input {
+        flex-grow: 1;
+        padding: 10px;
+        background: #000;
+        border: 1px solid #00ff41;
+        color: #00ff41;
+        font-family: inherit;
+      }
+
+      button {
+        padding: 10px 20px;
+        background: #00ff41;
+        color: #000;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        font-family: inherit;
+        text-transform: uppercase;
+      }
+
+      button:hover {
+        background: #fff;
+        box-shadow: 0 0 10px #fff;
+      }
+
+      textarea {
+        width: 100%;
+        height: 300px;
+        background: #111;
+        color: #008f11;
+        border: 1px solid #333;
+        padding: 10px;
+        font-family: "Courier New", monospace;
+        font-size: 0.9rem;
+        resize: vertical;
+        box-sizing: border-box;
+      }
+
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #000;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #00ff41;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="terminal">
+      <h1>System Breach: Code Viewer</h1>
+      <p>> Selecciona la URL para extraer los datos...</p>
+
+      <div class="control-panel">
+        <input type="text" id="urlTarget" placeholder="Detectando URL..." />
+        <button id="btnHack">Ejecutar Exploit (AJAX)</button>
+      </div>
+
+      <p>> Salida de consola:</p>
+      <textarea
+        id="outputConsole"
+        readonly
+        placeholder="// Esperando inyección de datos..."
+      ></textarea>
+    </div>
+
+    <script>
+      const inputUrl = document.getElementById("urlTarget");
+      const btnHack = document.getElementById("btnHack");
+      const output = document.getElementById("outputConsole");
+
+      window.onload = () => {
+        // window.location.href nos da la dirección actual
+        inputUrl.value = window.location.href;
+        console.log("Target lock: " + window.location.href);
+      };
+
+      btnHack.addEventListener("click", () => {
+        output.value = "Conectando al servidor... [Establish connection]";
+
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", inputUrl.value, true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            output.value = xhr.responseText;
+          } else {
+            output.value =
+              "ERROR CRÍTICO: " + xhr.status + " " + xhr.statusText;
+          }
+        };
+
+        xhr.onerror = function () {
+          output.value =
+            "ERROR. Asegúrate de usar localhost, no abras el archivo directo.";
+        };
+
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>
