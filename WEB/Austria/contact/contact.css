@@ -86,7 +86,7 @@ strong {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.888);
+  background-color: rgba(0, 0, 0, 1);
   color: white !important;
   transform: translateY(-100%);
   opacity: 0;
@@ -98,7 +98,7 @@ strong {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 998;
+  z-index: 99999;
 
   &.grow {
     transform: translateY(0);
@@ -653,7 +653,7 @@ header nav ul li:last-child {
   position: relative;
   cursor: pointer;
   margin: 0 auto;
-  z-index: 1000;
+  z-index: 99999999999;
 
   span {
     display: block;
