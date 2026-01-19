@@ -109,6 +109,10 @@ strong {
   .logo-m {
     margin-bottom: 3rem;
 
+    h2 {
+      font-size: 48px;
+    }
+
     img {
       width: 100px;
       height: auto;
@@ -511,6 +515,7 @@ h1 {
       h3 {
         padding-bottom: 3rem;
       }
+
       p {
         padding-bottom: 3rem;
       }
@@ -519,6 +524,7 @@ h1 {
     .left-content {
       padding-right: 5rem;
     }
+
     .right-content {
       padding-left: 5rem;
     }
@@ -526,11 +532,11 @@ h1 {
     .left-img,
     .right-img {
       width: 40%;
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        border-radius: 15px;
         display: block;
       }
     }
@@ -563,6 +569,7 @@ h1 {
           width: 30px;
           transition: filter 0.3s ease;
         }
+
         p {
           padding-bottom: 0;
           font-weight: 500;
@@ -572,6 +579,7 @@ h1 {
           background-color: var(--main-red);
           border-color: var(--main-red);
           color: white;
+
           .icon {
             filter: brightness(0) invert(1);
           }
@@ -598,6 +606,7 @@ h1 {
           background-color: #d9d9d9;
           border-radius: 50%;
           overflow: hidden;
+
           img {
             width: 100%;
             height: 100%;
@@ -608,10 +617,12 @@ h1 {
         .meta {
           display: flex;
           flex-direction: column;
+
           .user-name {
             color: var(--main-red);
             font-weight: 800;
           }
+
           .stars {
             color: #ffcc00;
             letter-spacing: 2px;
@@ -621,6 +632,7 @@ h1 {
           }
         }
       }
+
       .quote {
         padding-bottom: 0;
         color: #333;
@@ -760,6 +772,7 @@ h1 {
   p {
     padding-bottom: 2rem;
   }
+
   .hero-destinations {
     min-height: 40vh;
     padding: 0 1.5rem;
@@ -767,6 +780,7 @@ h1 {
     .header nav ul li a {
       display: none;
     }
+
     .burguer {
       display: block;
     }
@@ -777,101 +791,77 @@ h1 {
   }
 
   .destination1 {
-    padding: 2rem 1.5rem;
+    padding: 3rem 1.5rem;
+    display: flex;
     flex-direction: column;
     gap: 2rem;
 
     .left {
       width: 100%;
       padding-right: 0;
+      order: 1;
 
-      h3 {
-        padding-bottom: 2rem;
-      }
+      h3,
       p {
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
       }
     }
 
     .right {
       width: 100%;
+      order: 2;
+
       img {
+        width: 100%;
         height: 300px;
+        object-fit: cover;
         border-radius: 11px;
       }
     }
-  }
 
-  .destination2,
-  .destination3 {
-    padding: 2rem 1.5rem;
-  }
-
-  .destination-row {
-    flex-direction: column;
-    padding: 2rem 0;
-    gap: 2rem;
-
-    &.reverse {
-      flex-direction: column;
-    }
-
-    .left-content,
-    .right-content,
-    .left-img,
-    .right-img {
-      width: 100%;
-      padding: 0;
-    }
-
-    .left-img img,
-    .right-img img {
-      height: 300px;
-      margin-bottom: 1rem;
-      border-radius: 11px;
-    }
-  }
-
-  .cards {
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding-bottom: 2rem;
-
-    .card {
-      width: 100%;
-      justify-content: flex-start;
-      padding: 1rem;
-    }
-  }
-
-  .testimonial-box {
-    margin-top: 1rem;
-    padding: 1.5rem;
-
-    .user-row {
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
-      .avatar {
-        width: 60px;
-        height: 60px;
-      }
+      width: 100%;
+      padding-bottom: 2rem;
 
-      .meta .stars {
-        font-size: 28px;
+      .card {
+        width: 100%;
+        padding: 1rem;
+        justify-content: flex-start;
       }
     }
 
-    .quote {
-      font-size: 16px;
+    .testimonial-box {
+      margin-top: 1rem;
+      padding: 1.5rem;
+      width: 100%;
+
+      .user-row {
+        gap: 1rem;
+
+        .avatar {
+          width: 60px;
+          height: 60px;
+        }
+
+        .meta .stars {
+          font-size: 28px;
+        }
+      }
     }
   }
+
+
   .destination2 {
     padding: 3rem 1.5rem;
 
     .destination-row {
+      display: flex;
       flex-direction: column;
       padding: 2rem 0;
       gap: 3rem;
-
       align-items: center;
 
       &.reverse {
@@ -882,22 +872,23 @@ h1 {
       .right-content {
         width: 100%;
         padding: 0;
+        order: 1;
 
         h3,
         p {
           padding-bottom: 1.5rem;
         }
+
         .photographer-quote {
           font-size: 18px;
-          i {
-            padding-bottom: 1rem;
-          }
+          margin-bottom: 1rem;
         }
       }
 
       .left-img,
       .right-img {
         width: 100%;
+        order: 2;
 
         img {
           width: 100%;
@@ -905,18 +896,21 @@ h1 {
           object-fit: cover;
           border-radius: 11px;
           display: block;
+          margin-bottom: 1rem;
         }
       }
 
       .cards {
+        display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         padding-bottom: 2rem;
+        width: 100%;
 
         .card {
           width: 100%;
-          justify-content: flex-start;
           padding: 1rem;
+          justify-content: flex-start;
         }
       }
 
@@ -932,6 +926,7 @@ h1 {
             width: 60px;
             height: 60px;
           }
+
           .meta .stars {
             font-size: 28px;
           }
@@ -939,11 +934,13 @@ h1 {
       }
     }
   }
+
+
   .destination3 {
-    padding: 0 1.5rem;
-    padding-bottom: 4rem;
+    padding: 0 1.5rem 4rem 1.5rem;
 
     .destination-row {
+      display: flex;
       flex-direction: column;
       padding: 2rem 0;
       gap: 3rem;
@@ -953,44 +950,45 @@ h1 {
       .right-content {
         width: 100%;
         padding: 0;
+        order: 1;
 
-        h3 {
-          padding-bottom: 1.5rem;
-        }
-
+        h3,
         p {
           padding-bottom: 1.5rem;
         }
+
         .photographer-quote {
           font-size: 18px;
-          i {
-            padding-bottom: 1rem;
-          }
+          margin-bottom: 1rem;
         }
       }
 
       .left-img,
       .right-img {
         width: 100%;
+        order: 2;
 
         img {
           width: 100%;
           height: 300px;
           object-fit: cover;
           border-radius: 11px;
+          display: block;
           margin-bottom: 1rem;
         }
       }
 
       .cards {
+        display: flex;
         flex-wrap: wrap;
         gap: 1rem;
         padding-bottom: 2rem;
+        width: 100%;
 
         .card {
           width: 100%;
-          justify-content: flex-start;
           padding: 1rem;
+          justify-content: flex-start;
         }
       }
 
@@ -1014,74 +1012,8 @@ h1 {
       }
     }
   }
-  .main-footer {
-    padding: 3rem 1.5rem;
 
-    .footer-container {
-      flex-direction: column;
-      gap: 3rem;
-      align-items: flex-start;
-
-      .footer-brand {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-        width: 100%;
-
-        .logo-shield img {
-          width: 80px;
-        }
-
-        h2 {
-          font-size: 24px;
-        }
-      }
-
-      .footer-column {
-        width: 100%;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        padding-bottom: 2rem;
-
-        &:last-child {
-          border: none;
-        }
-
-        h3 {
-          font-size: 24px;
-          margin-bottom: 1.5rem;
-        }
-
-        ul li a {
-          font-size: 18px;
-          padding: 5px 0;
-          display: block;
-        }
-      }
-
-      .footer-subscribe {
-        width: 100%;
-        padding-top: 1rem;
-
-        h3 {
-          font-size: 24px;
-        }
-        p {
-          font-size: 16px;
-          margin-bottom: 2rem;
-        }
-
-        form {
-          width: 100%;
-          input,
-          button {
-            max-width: 100%;
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-/* ---------------------------- BURGUER ------------------------------------ */
+  /* ---------------------------- BURGUER ------------------------------------ */
 
   header nav ul li:last-child {
     display: flex !important;
@@ -1141,10 +1073,12 @@ h1 {
     &:nth-child(2) {
       top: 0;
     }
+
     &:nth-child(3),
     &:nth-child(4) {
       top: 9px;
     }
+
     &:nth-child(5),
     &:nth-child(6) {
       top: 18px;
@@ -1153,10 +1087,12 @@ h1 {
 
   &.open {
     span {
+
       &:nth-child(1),
       &:nth-child(6) {
         transform: rotate(45deg);
       }
+
       &:nth-child(2),
       &:nth-child(5) {
         transform: rotate(-45deg);
@@ -1166,15 +1102,18 @@ h1 {
         left: 3px;
         top: 5px;
       }
+
       &:nth-child(2) {
         top: 5px;
         right: 7px;
         left: 50%;
       }
+
       &:nth-child(5) {
         left: 3px;
         top: 16px;
       }
+
       &:nth-child(6) {
         top: 16px;
         left: 50%;
@@ -1194,7 +1133,7 @@ h1 {
 }
 
 .progress-wrap {
-  background-color:white;
+  background-color: white;
   position: fixed;
   right: 30px;
   bottom: 30px;
@@ -1218,7 +1157,8 @@ h1 {
 
   .progress-circle path {
     fill: none;
-    stroke: var(--main-red); /* Uso tu variable de color */
+    stroke: var(--main-red);
+    /* Uso tu variable de color */
     stroke-width: 4;
     box-sizing: border-box;
     transition: all 200ms linear;
