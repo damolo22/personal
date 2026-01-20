@@ -1,0 +1,20 @@
+1.- ¿Diferencia entre JS normal y AJAX?
+
+JS normal solo puede trabajar con lo que ya está en tu navegador (DOM). Si quieres datos nuevos, tienes que recargar.
+
+Con AJAX te puedes comunicar con el servidor. Puedes pedir datos nuevos o enviar info sin recargar la página.
+
+
+2.- ¿Qué papel juega el servidor en la última parte?
+
+Es el que conoce todas las soluciones. El cliente (navegador) no sabe qué ciudades existen, solo pregunta. El servidor consulta su lista (su base de datos o array) y responde sí o no.
+
+
+3.- ¿Por qué no se recarga la página?
+
+Porque estamos usando comunicación asíncrona (XMLHttpRequest). El navegador envía la petición en segundo plano (background) y sigue funcionando. Cuando llega la respuesta, JS la atrapa y actualiza solo el de HTML necesario.
+
+
+4.- ¿Dónde se produce la comunicación asíncrona?
+
+Ocurre en el intervalo de tiempo entre que ejecutas xhr.send() y se dispara el evento xhr.onload.
