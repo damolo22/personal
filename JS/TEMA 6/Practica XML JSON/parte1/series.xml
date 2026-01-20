@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Series>
+    <Serie>
+        <Titulo>The Sopranos</Titulo>
+        <Cadena>HBO</Cadena>
+        <Director>David Chase</Director>
+        <Anio>1999</Anio>
+        <Terminada>sí</Terminada>
+    </Serie>
+    <Serie>
+        <Titulo>Dexter</Titulo>
+        <Cadena>Showtime</Cadena>
+        <Director>James Manos Jr.</Director>
+        <Anio>2006</Anio>
+        <Terminada>sí</Terminada>
+    </Serie>
+    <Serie>
+        <Titulo>Better Call Saul</Titulo>
+        <Cadena>AMC</Cadena>
+        <Director>Vince Gilligan</Director>
+        <Anio>2015</Anio>
+        <Terminada>sí</Terminada>
+    </Serie>
+    <Serie>
+        <Titulo>The Simpsons</Titulo>
+        <Cadena>FOX</Cadena>
+        <Director>Matt Groening</Director>
+        <Anio>1989</Anio>
+        <Terminada>no</Terminada>
+    </Serie>
+    <Serie>
+        <Titulo>South Park</Titulo>
+        <Cadena>Comedy Central</Cadena>
+        <Director>Trey Parker</Director>
+        <Anio>1997</Anio>
+        <Terminada>no</Terminada>
+    </Serie>
+</Series>

@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Series Legendarias</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>El Hall of Fame de Series</h1>
+      <p>Desde Nuevo Mexico hasta Springfield.</p>
+
+      <button id="btnCargar">Cargar Series</button>
+      <br /><br />
+
+      <table id="tablaSeries">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Cadena</th>
+            <th>Director / Creador</th>
+            <th>Estreno</th>
+            <th>¿Terminada?</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+    </div>
+
+    <script>
+      document.getElementById("btnCargar").addEventListener("click", () => {
+        const xhr = new XMLHttpRequest();
+        // Pedimos el XML
+        xhr.open("GET", "series.xml", true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const xmlDoc = xhr.responseXML;
+            const series = xmlDoc.getElementsByTagName("Serie");
+            const tbody = document.getElementById("cuerpoTabla");
+
+            tbody.innerHTML = "";
+
+            for (let i = 0; i < series.length; i++) {
+              const serie = series[i];
+
+              const titulo =
+                serie.getElementsByTagName("Titulo")[0].textContent;
+              const cadena =
+                serie.getElementsByTagName("Cadena")[0].textContent;
+              const director =
+                serie.getElementsByTagName("Director")[0].textContent;
+              const anio = parseInt(
+                serie.getElementsByTagName("Anio")[0].textContent,
+              );
+              const terminada = serie
+                .getElementsByTagName("Terminada")[0]
+                .textContent.toLowerCase();
+
+              let claseAnio = "verde";
+
+              if (anio < 2000) {
+                // South Park (97), Simpsons (89), Sopranos (99)
+                claseAnio = "rojo";
+              } else if (anio >= 2001 && anio <= 2010) {
+                // Dexter (06)
+                claseAnio = "amarillo";
+              }
+              // Better Call Saul (15)
+
+              let icono =
+                terminada === "sí" || terminada === "si"
+                  ? '<img src="check.png" class="icono-estado" alt="Finalizada">'
+                  : '<img src="cross.png" class="icono-estado" alt="En emisión">';
+
+              const fila = `
+                            <tr>
+                                <td><b>${titulo}</b></td>
+                                <td>${cadena}</td>
+                                <td><i>${director}</i></td>
+                                <td class="${claseAnio}">${anio}</td>
+                                <td>${icono}</td>
+                            </tr>
+                        `;
+              tbody.innerHTML += fila;
+            }
+          }
+        };
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>

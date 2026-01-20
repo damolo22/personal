@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Series JSON</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Series JSON Edition</h1>
+      <br />
+      <button id="btnCargar">Cargar JSON</button>
+      <br /><br />
+
+      <table id="tablaSeries">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Cadena</th>
+            <th>Director</th>
+            <th>Estreno</th>
+            <th>Estado</th>
+          </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+      </table>
+    </div>
+
+    <script>
+      document.getElementById("btnCargar").addEventListener("click", () => {
+        const xhr = new XMLHttpRequest();
+        xhr.open("GET", "series.json", true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const misSeries = JSON.parse(xhr.responseText);
+
+            const tbody = document.getElementById("cuerpoTabla");
+            tbody.innerHTML = "";
+
+            misSeries.forEach((serie) => {
+              let claseAnio = "verde";
+              if (serie.anio < 2000) claseAnio = "rojo";
+              else if (serie.anio <= 2010) claseAnio = "amarillo";
+
+              let icono = serie.terminada
+                ? '<img src="check.png" class="icono-estado" alt="Fin">'
+                : '<img src="cross.png" class="icono-estado" alt="On Air">';
+
+              const fila = `
+                            <tr>
+                                <td><b>${serie.titulo}</b></td>
+                                <td>${serie.cadena}</td>
+                                <td><i>${serie.director}</i></td>
+                                <td class="${claseAnio}">${serie.anio}</td>
+                                <td>${icono}</td>
+                            </tr>
+                        `;
+              tbody.innerHTML += fila;
+            });
+          }
+        };
+        xhr.send();
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+[
+    {
+        "titulo": "The Sopranos",
+        "cadena": "HBO",
+        "director": "David Chase",
+        "anio": 1999,
+        "terminada": true
+    },
+    {
+        "titulo": "Dexter",
+        "cadena": "Showtime",
+        "director": "James Manos Jr.",
+        "anio": 2006,
+        "terminada": true
+    },
+    {
+        "titulo": "Better Call Saul",
+        "cadena": "AMC",
+        "director": "Vince Gilligan",
+        "anio": 2015,
+        "terminada": true
+    },
+    {
+        "titulo": "The Simpsons",
+        "cadena": "FOX",
+        "director": "Matt Groening",
+        "anio": 1989,
+        "terminada": false
+    },
+    {
+        "titulo": "South Park",
+        "cadena": "Comedy Central",
+        "director": "Trey Parker",
+        "anio": 1997,
+        "terminada": false
+    }
+]

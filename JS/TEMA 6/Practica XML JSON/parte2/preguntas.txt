@@ -1,0 +1,9 @@
+¿Qué formato es más sencillo?
+
+El formato más sencillo es JSON. Su sintaxis es mucho más limpia y minimalista que la de XML al 
+eliminar la redundancia de las etiquetas de apertura y cierre, lo que lo hace más fácil de leer para los humanos.
+
+
+¿Cuál usarías hoy en una web real? ¿Por qué?
+Hoy en día utilizaría JSON en cualquier desarrollo web porque se ha convertido en el estándar para la comunicación entre cliente y servidor (APIs). 
+Al ser un formato más ligero pesa menos bytes, lo que mejora el rendimiento y la velocidad de carga de la web.
