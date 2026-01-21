@@ -1,157 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>VIP Locator 🌍</title>
     <style>
-        /* ESTILO BLACK MARKET / CASINO */
-        body {
-            background-color: #050505;
-            color: #d4af37; /* Oro viejo */
-            font-family: 'Verdana', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            background-image: linear-gradient(to bottom, #111, #000);
-        }
+      body {
+        background-color: #050505;
+        color: #d4af37;
+        font-family: "Verdana", sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: linear-gradient(to bottom, #111, #000);
+      }
 
-        .panel {
-            background: rgba(20, 20, 20, 0.95);
-            padding: 40px;
-            border: 2px solid #333;
-            border-top: 5px solid #d4af37;
-            border-radius: 10px;
-            text-align: center;
-            width: 350px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
-        }
+      .panel {
+        background: rgba(20, 20, 20, 0.95);
+        padding: 40px;
+        border: 2px solid #333;
+        border-top: 5px solid #d4af37;
+        border-radius: 10px;
+        text-align: center;
+        width: 350px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+      }
 
-        h2 { text-transform: uppercase; letter-spacing: 2px; margin-bottom: 5px; color: #fff; }
-        p { color: #666; font-size: 0.8rem; margin-bottom: 25px; }
+      h2 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin-bottom: 5px;
+        color: #fff;
+      }
+      p {
+        color: #666;
+        font-size: 0.8rem;
+        margin-bottom: 25px;
+      }
 
-        input {
-            width: 80%;
-            padding: 15px;
-            background: #000;
-            border: 1px solid #444;
-            color: white;
-            text-align: center;
-            font-size: 1rem;
-            border-radius: 5px;
-            outline: none;
-            transition: border 0.3s;
-        }
+      input {
+        width: 80%;
+        padding: 15px;
+        background: #000;
+        border: 1px solid #444;
+        color: white;
+        text-align: center;
+        font-size: 1rem;
+        border-radius: 5px;
+        outline: none;
+        transition: border 0.3s;
+      }
 
-        input:focus { border-color: #d4af37; }
+      input:focus {
+        border-color: #d4af37;
+      }
 
-        button {
-            margin-top: 15px;
-            padding: 12px 30px;
-            background: #d4af37;
-            color: #000;
-            border: none;
-            font-weight: 900;
-            text-transform: uppercase;
-            cursor: pointer;
-            border-radius: 3px;
-            letter-spacing: 1px;
-            transition: all 0.2s;
-        }
+      button {
+        margin-top: 15px;
+        padding: 12px 30px;
+        background: #d4af37;
+        color: #000;
+        border: none;
+        font-weight: 900;
+        text-transform: uppercase;
+        cursor: pointer;
+        border-radius: 3px;
+        letter-spacing: 1px;
+        transition: all 0.2s;
+      }
 
-        button:hover { background: #fff; transform: translateY(-2px); }
+      button:hover {
+        background: #fff;
+        transform: translateY(-2px);
+      }
 
-        /* El área de resultados */
-        #resultado {
-            margin-top: 30px;
-            padding: 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            display: none; /* Oculto hasta que haya respuesta */
-        }
+      #resultado {
+        margin-top: 30px;
+        padding: 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        display: none;
+      }
 
-        /* Clases dinámicas */
-        .safe-house {
-            background-color: rgba(39, 174, 96, 0.2);
-            color: #2ecc71;
-            border: 1px solid #2ecc71;
-        }
+      .safe-house {
+        background-color: rgba(39, 174, 96, 0.2);
+        color: #2ecc71;
+        border: 1px solid #2ecc71;
+      }
 
-        .no-go-zone {
-            background-color: rgba(192, 57, 43, 0.2);
-            color: #e74c3c;
-            border: 1px solid #e74c3c;
-        }
+      .no-go-zone {
+        background-color: rgba(192, 57, 43, 0.2);
+        color: #e74c3c;
+        border: 1px solid #e74c3c;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     <div class="panel">
-        <h2>🌐 Sede Finder</h2>
-        <p>Busca territorios controlados por La Casa</p>
+      <h2>Sede Finder</h2>
+      <p>Busca territorios controlados por La Casa</p>
 
-        <form id="searchForm">
-            <input type="text" id="cityInput" placeholder="Ej: Las Vegas..." autocomplete="off">
-            <br>
-            <button type="submit">Consultar Base de Datos</button>
-        </form>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Ej: Las Vegas..."
+          autocomplete="off"
+        />
+        <br />
+        <button type="submit">Consultar Base de Datos</button>
+      </form>
 
-        <div id="resultado"></div>
+      <div id="resultado"></div>
     </div>
 
     <script>
-        // --- AJAX LOGIC ---
-        
-        document.getElementById('searchForm').addEventListener('submit', function(e) {
-            e.preventDefault(); // 1. Evitamos recarga (MANDATORIO)
+      document
+        .getElementById("searchForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
 
-            const city = document.getElementById('cityInput').value.trim();
-            const resultBox = document.getElementById('resultado');
+          const city = document.getElementById("cityInput").value.trim();
+          const resultBox = document.getElementById("resultado");
 
-            if (!city) {
-                alert("Introduce una ciudad, socio.");
-                return;
+          if (!city) {
+            alert("Introduce una ciudad, socio.");
+            return;
+          }
+
+          resultBox.style.display = "block";
+          resultBox.className = "";
+          resultBox.style.color = "#888";
+
+          const xhr = new XMLHttpRequest();
+
+          xhr.open(
+            "GET",
+            "comprobar.php?ciudad=" + encodeURIComponent(city),
+            true,
+          );
+
+          xhr.onload = function () {
+            if (xhr.status === 200) {
+              const serverResponse = xhr.responseText.trim();
+
+              if (serverResponse === "autorizado") {
+                resultBox.innerHTML = `CONFIRMADO.<br>Tenemos negocios en <strong>${city}</strong>.`;
+                resultBox.className = "safe-house";
+              } else {
+                resultBox.innerHTML = `DENEGADO.<br>No operamos en <strong>${city}</strong>.`;
+                resultBox.className = "no-go-zone";
+              }
+            } else {
+              resultBox.innerHTML = "❌ Error del servidor!!!!!!.";
             }
+          };
 
-            // UI: Feedback visual de "Cargando..."
-            resultBox.style.display = 'block';
-            resultBox.className = ''; // Limpiamos colores anteriores
-            resultBox.style.color = '#888';
-            resultBox.innerHTML = '🛰️ Conectando con satélite...';
-
-            // 2. Preparamos AJAX
-            const xhr = new XMLHttpRequest();
-            
-            // IMPORTANTE: Asegúrate de que 'comprobar.php' está en la misma carpeta
-            // Usamos encodeURIComponent para que ciudades con espacios (Nueva York) no rompan la URL
-            xhr.open('GET', 'comprobar.php?ciudad=' + encodeURIComponent(city), true);
-
-            xhr.onload = function() {
-                if (xhr.status === 200) {
-                    // 3. Respuesta del servidor
-                    const serverResponse = xhr.responseText.trim(); // .trim() quita espacios extra por si acaso
-
-                    if (serverResponse === "autorizado") {
-                        // CIUDAD ENCONTRADA (Verde)
-                        resultBox.innerHTML = `✅ CONFIRMADO.<br>Tenemos negocios en <strong>${city}</strong>.`;
-                        resultBox.className = 'safe-house';
-                    } else {
-                        // CIUDAD NO ENCONTRADA (Rojo)
-                        resultBox.innerHTML = `⛔ DENEGADO.<br>No operamos en <strong>${city}</strong>.`;
-                        resultBox.className = 'no-go-zone';
-                    }
-                } else {
-                    resultBox.innerHTML = "❌ Error del servidor (500/404).";
-                }
-            };
-
-            xhr.onerror = function() {
-                resultBox.innerHTML = "⚠️ Error de red. ¿Tienes XAMPP encendido?";
-            };
-
-            xhr.send(); // Enviamos la señal
+          xhr.send();
         });
     </script>
-</body>
+  </body>
 </html>
