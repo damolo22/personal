@@ -19,16 +19,29 @@
           <nav>
             <strong>
               <ul>
-                <li><a href="../#home">HOME</a></li>
                 <li>
-                  <a href="destinations.html">DESTINATION</a>
+                  <a href="../#home" data-replace="HOME">
+                    <span>HOME</span>
+                  </a>
                 </li>
-                <li><a href="../routes/routes.html">ROUTES</a></li>
-                <li><a href="../contact/contact.html">CONTACT</a></li>
+                <li>
+                  <a href="destinations.html" data-replace="DESTINATIONS">
+                    <span>DESTINATION</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="../routes/routes.html" data-replace="ROUTES">
+                    <span>ROUTES</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="../contact/contact.html" data-replace="CONTACT">
+                    <span>CONTACT</span>
+                  </a>
+                </li>
                 <li>
                   <div class="burguer" id="nav-icon">
-                    <span></span><span></span><span></span> <span></span
-                    ><span></span><span></span>
+                    <span></span><span></span><span></span>
                   </div>
                 </li>
               </ul>
@@ -73,20 +86,18 @@
             <strong>Vienna</strong> is a city where history and modernity live
             in perfect harmony. As the former heart of the
             <strong>Habsburg Empire</strong>, its streets are lined with
-            magnificent baroque palaces and imperial gardens that tell stories
-            of a golden age. But don't let the history fool you; Vienna is also
-            a vibrant hub of contemporary art, world-class gastronomy, and a
-            legendary coffee house culture that invites you to slow down and
-            savor the moment.
+            magnificent baroque palaces and imperial gardens.gardens that tell
+            stories of a golden age. But don't let the history fool you;
+            <strong>Vienna</strong>
+            is also a vibrant hub of contemporary art, world-class gastronomy,
+            and a legendary coffee house culture that invites you to slow down
+            and savor the moment.
           </p>
 
           <p>
             Stroll through the <strong>MuseumQuartier</strong>, visit the iconic
             St. Stephen's Cathedral, or lose yourself in the grandeur of
-            <strong>Schönbrunn Palace</strong>.Whether you are attending a gala
-            at the State Opera or exploring the trendy bars along the Danube
-            Canal, Vienna offers an elegant yet pulsing energy that captures the
-            soul of every traveler.
+            <strong>Schönbrunn Palace</strong>.
           </p>
 
           <div class="cards">
@@ -104,21 +115,39 @@
             </div>
           </div>
 
-          <div class="testimonial-box">
-            <div class="user-row">
-              <div class="avatar">
-                <img src="../assets/img/joanini.jpg" alt="" />
+          <div class="testimonial-carousel">
+            <div class="testimonial-slide active">
+              <div class="user-row">
+                <div class="avatar">
+                  <img src="../assets/img/joanini.jpg" alt="" />
+                </div>
+                <div class="meta">
+                  <span class="user-name">Joan Ni.</span>
+                  <div class="stars">★★★★★</div>
+                </div>
               </div>
-              <div class="meta">
-                <span class="user-name">Joan Ni.</span>
-                <div class="stars">★★★★★</div>
-              </div>
+              <p class="quote">
+                An unforgettable journey where imperial grandeur meets alpine
+                serenity. The curated routes and local secrets allowed us to
+                experience the heart of Austria far beyond the typical tourist
+                spots, creating memories that will resonate for a lifetime.
+                Seamless, elegant, and truly inspiring.
+              </p>
             </div>
-            <p class="quote">
-              An unforgettable journey where imperial grandeur meets alpine
-              serenity. The curated routes allowed us to experience the heart of
-              Austria far beyond the typical tourist spots.
-            </p>
+
+            <div class="carousel-controls">
+              <button class="nav-btn prev">
+                <img src="../assets/img/arrow-left.svg" alt="" />
+              </button>
+              <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+              </div>
+              <button class="nav-btn next">
+                <img src="../assets/img/arrow-right.svg" alt="" />
+              </button>
+            </div>
           </div>
         </div>
 
@@ -152,19 +181,33 @@
               Elias M., Travel Photographer
             </p>
 
-            <div class="testimonial-box">
-              <div class="user-row">
-                <div class="avatar"><img src="../assets/img/dude1.png" /></div>
-                <div class="meta">
-                  <span class="user-name">Thomas B.</span>
-                  <div class="stars">★★★☆☆</div>
+            <div class="testimonial-carousel">
+              <div class="testimonial-slide active">
+                <div class="user-row">
+                  <div class="avatar">
+                    <img src="../assets/img/dude1.png" />
+                  </div>
+                  <div class="meta">
+                    <span class="user-name">Thomas B.</span>
+                    <div class="stars">★★★☆☆</div>
+                  </div>
                 </div>
+                <p class="quote">
+                  The destinations are breathtaking and the itineraries are very
+                  well structured. However, I found some of the ‘hidden’ spots
+                  in Hallstatt a bit crowded during midday.
+                </p>
               </div>
-              <p class="quote">
-                The destinations are breathtaking and the itineraries are very
-                well structured. However, I found some of the ‘hidden’ spots in
-                Hallstatt a bit crowded during midday.
-              </p>
+
+              <div class="carousel-controls">
+                <button class="nav-btn prev">←</button>
+                <div class="dots">
+                  <span class="dot active"></span>
+                  <span class="dot"></span>
+                  <span class="dot"></span>
+                </div>
+                <button class="nav-btn next">→</button>
+              </div>
             </div>
           </div>
         </div>
@@ -201,21 +244,6 @@
                 <img src="../assets/img/mont.svg" class="icon" />
                 <p>Skywalk roads</p>
               </div>
-            </div>
-
-            <div class="testimonial-box">
-              <div class="user-row">
-                <div class="avatar"><img src="../assets/img/sybau.webp" /></div>
-                <div class="meta">
-                  <span class="user-name">Clara S.</span>
-                  <div class="stars">★★★★★</div>
-                </div>
-              </div>
-              <p class="quote">
-                The attention to detail in the Salzburg guide is insane. It felt
-                like having a local friend guiding me the whole time. For me is
-                a must when visiting.
-              </p>
             </div>
           </div>
 
@@ -350,7 +378,7 @@
     </div>
   </footer>
   <script src="../assets/burguer/burguer.js"></script>
-   <script src="../assets/arrow.js"></script>
+  <script src="../assets/arrow.js"></script>
   <div class="progress-wrap" id="scrollProgress">
     <svg
       class="progress-circle"
