@@ -157,31 +157,34 @@ header nav ul li:last-child {
   display: flex;
   flex-direction: column;
 
-   .header {
+  .header {
     font-family: "Inter";
     font-weight: bold;
     font-size: 24px;
     width: 100%;
-    
-    padding-top: 2rem; 
+
+    padding-top: 2rem;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
 
     & > a {
       padding: 0;
       display: block;
-      
+
       .logo {
         width: 4rem;
         height: 4rem;
-        img { width: 100%; height: auto; }
+        img {
+          width: 100%;
+          height: auto;
+        }
       }
     }
 
     nav {
       ul {
-        padding: 0; 
+        padding: 0;
         margin: 0;
         list-style-type: none;
         display: flex;
@@ -222,8 +225,12 @@ header nav ul li:last-child {
             transition: transform 0.3s cubic-bezier(0.7, 0, 0.3, 1);
           }
 
-          &:hover span { transform: translateX(105%); }
-          &:hover::before { transform: translateX(0); }
+          &:hover span {
+            transform: translateX(105%);
+          }
+          &:hover::before {
+            transform: translateX(0);
+          }
         }
       }
     }
@@ -280,7 +287,7 @@ header nav ul li:last-child {
         align-items: center;
         padding-bottom: 2rem;
 
-        img{
+        img {
           width: 40px;
         }
 
@@ -347,8 +354,7 @@ header nav ul li:last-child {
         align-items: center;
         padding-bottom: 2rem;
 
-        
-        img{
+        img {
           width: 40px;
         }
 
@@ -749,9 +755,8 @@ header nav ul li:last-child {
         .info {
           gap: 1rem;
           padding-bottom: 1rem;
-          align-items: center;
-
           display: flex;
+          align-items: center;
 
           img {
             width: 40px;
@@ -955,7 +960,7 @@ header nav ul li:last-child {
   #nav-icon {
     display: block;
     width: 30px;
-    height: 24px; 
+    height: 24px;
     position: relative;
     cursor: pointer;
     z-index: 999999999999;
@@ -973,9 +978,15 @@ header nav ul li:last-child {
       opacity: 1;
     }
 
-    span:nth-child(1) { top: 0px; }
-    span:nth-child(2) { top: 10px; }
-    span:nth-child(3) { top: 20px; }
+    span:nth-child(1) {
+      top: 0px;
+    }
+    span:nth-child(2) {
+      top: 10px;
+    }
+    span:nth-child(3) {
+      top: 20px;
+    }
   }
 
   #nav-icon.open span:nth-child(1) {
