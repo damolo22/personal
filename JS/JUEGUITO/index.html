@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Neon Runner</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+   <div class="game-container">
+       <div class="score-board">
+           Puntos: <span id="score">0</span> <br>
+           <small style="font-size: 0.8em; color: #aaa;">Récord: <span id="best-score">0</span></small>
+       </div>
+
+
+       <div class="road">
+           <div id="player" class="car"></div>
+           </div>
+      
+       <div id="game-over" class="hidden">
+           <h1>GAME OVER! 💥</h1>
+           <p>Puntuación Final: <span id="final-score">0</span></p>
+           <button onclick="location.reload()">Reintentar 🔄</button>
+       </div>
+   </div>
+
+
+   <script src="script.js"></script>
+</body>
+</html>

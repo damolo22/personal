@@ -1,0 +1,122 @@
+body {
+   background-color: #050505;
+   color: white;
+   font-family: 'Courier New', monospace;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100vh;
+   margin: 0;
+   overflow: hidden;
+   touch-action: none;
+}
+
+
+.game-container {
+   position: relative;
+   width: 300px;
+   height: 500px;
+   background: linear-gradient(180deg, #111, #222);
+   border: 4px solid #00ffcc;
+   box-shadow: 0 0 20px #00ffcc;
+   border-radius: 10px;
+   overflow: hidden;
+}
+
+
+
+
+@keyframes roadAnimation {
+   from { background-position: 0 0; }
+   to { background-position: 0 50px; }
+}
+
+
+.road {
+   width: 100%;
+   height: 100%;
+   position: relative;
+
+
+   background-image: linear-gradient(90deg,
+       transparent 32%, #333 33%, #333 34%, transparent 35%,
+       transparent 65%, #333 66%, #333 67%, transparent 68%);
+   background-size: 100% 50px;
+   animation: roadAnimation 0.3s linear infinite;
+}
+
+
+.score-board {
+   position: absolute;
+   top: 15px;
+   left: 15px;
+   font-size: 1.2rem;
+   font-weight: bold;
+   color: #00ffcc;
+   z-index: 10;
+   text-shadow: 0 0 5px #00ffcc;
+   background: rgba(0, 0, 0, 0.5);
+   padding: 5px 10px;
+   border-radius: 5px;
+}
+
+
+/* EL JUGADOR */
+.car {
+   width: 40px;
+   height: 70px;
+   background-color: #ff0055;
+   position: absolute;
+   bottom: 20px;
+   left: 130px;
+   border-radius: 5px;
+   box-shadow: 0 0 15px #ff0055;
+   transition: left 0.1s ease;
+   z-index: 5;
+}
+
+
+.enemy {
+   width: 40px;
+   height: 70px;
+   background-color: #f1c40f;
+   position: absolute;
+   border-radius: 5px;
+   box-shadow: 0 0 10px #f1c40f;
+   z-index: 4;
+}
+
+
+.hidden { display: none !important; }
+
+
+#game-over {
+   position: absolute;
+   top: 0; left: 0; width: 100%; height: 100%;
+   background: rgba(0,0,0,0.9);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   z-index: 20;
+}
+
+
+#game-over h1 { margin-top: 0; color: #ff0055; text-shadow: 0 0 10px #ff0055; }
+
+
+button {
+   padding: 10px 20px;
+   background: #00ffcc;
+   border: none;
+   font-weight: bold;
+   cursor: pointer;
+   margin-top: 20px;
+   border-radius: 5px;
+   font-family: inherit;
+   font-size: 1rem;
+   box-shadow: 0 0 10px #00ffcc;
+}
+
+
+button:hover { background: #fff; }
