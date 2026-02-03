@@ -32,6 +32,7 @@ document.addEventListener('keydown', (e) => {
    } else if (e.key === 'ArrowRight' && playerPosition < 2) {
        playerPosition++;
    }
+   // Actualizamos la posicion
    updatePlayerPosition();
 });
 
@@ -90,14 +91,14 @@ function updateGame() {
        enemy.style.top = (top + speed) + 'px';
 
 
-       // 1. Si sale de la pantalla (pasa de 500px)
+       // El enememigo se borra al salir de la pantalla
        if (top > 520) {
            enemy.remove();
            score++;
            scoreElement.innerText = score;
           
-           // Aumentar velocidad cada 10 puntos
-           if (score % 10 === 0) speed += 0.5;
+           // Aumentar velocidad cada 5 puntos
+           if (score % 5 === 0) speed += 2.5;
        }
 
 
