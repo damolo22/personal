@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch API:</title>
+    <style>
+      body {
+        font-family: "Segoe UI", sans-serif;
+        background-color: #1a1a1a;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding-top: 50px;
+      }
+
+      h1 {
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        border-bottom: 2px solid #6c5ce7;
+        padding-bottom: 10px;
+      }
+
+      .buttons-container {
+        display: flex;
+        gap: 20px;
+        margin-bottom: 30px;
+      }
+
+      button {
+        padding: 15px 30px;
+        font-size: 1.2rem;
+        border: none;
+        border-radius: 50px;
+        cursor: pointer;
+        font-weight: bold;
+        transition:
+          transform 0.2s,
+          box-shadow 0.2s;
+      }
+
+      #btn-dog {
+        background: linear-gradient(45deg, #ff9f43, #ff6b6b);
+        color: white;
+        box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+      }
+
+      #btn-cat {
+        background: linear-gradient(45deg, #48dbfb, #2e86de);
+        color: white;
+        box-shadow: 0 5px 15px rgba(46, 134, 222, 0.4);
+      }
+
+      button:active {
+        transform: scale(0.95);
+      }
+      button:hover {
+        transform: translateY(-3px);
+      }
+
+      .image-card {
+        background: #2d2d2d;
+        padding: 15px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        width: 90%;
+        max-width: 500px;
+        min-height: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      img {
+        max-width: 100%;
+        max-height: 400px;
+        border-radius: 10px;
+        display: none;
+        object-fit: cover;
+      }
+
+      .placeholder {
+        color: #777;
+        font-style: italic;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Random Pet Generator</h1>
+
+    <div class="buttons-container">
+      <button id="btn-dog">Random Dog</button>
+      <button id="btn-cat">Random Cat</button>
+    </div>
+
+    <div class="image-card">
+      <span class="placeholder" id="txt-placeholder"
+        >Pulsa un botón para ver la magia</span
+      >
+      <img id="pet-img" src="" alt="Mascota aleatoria" />
+    </div>
+
+    <script>
+      const imgElement = document.getElementById("pet-img");
+      const textElement = document.getElementById("txt-placeholder");
+
+      // Función para cargar perros
+      async function loadDog() {
+        try {
+          // 1. Hacemos la petición
+          const response = await fetch(
+            "https://dog.ceo/api/breeds/image/random",
+          );
+
+          // 2. Convertimos la respuesta a JSON
+          const data = await response.json();
+
+          // 3. Usamos el dato (La API de perros devuelve: { message: "url...", status: "success" })
+          mostrarImagen(data.message);
+        } catch (error) {
+          console.error("Error fetching dog:", error);
+          alert("El perro se escapó (Error de red)");
+        }
+      }
+
+      // Función para cargar gatos
+      async function loadCat() {
+        try {
+          const response = await fetch(
+            "https://api.thecatapi.com/v1/images/search",
+          );
+          const data = await response.json();
+
+          mostrarImagen(data[0].url);
+        } catch (error) {
+          console.error("Error fetching cat:", error);
+          alert("El gato está durmiendo (Error de red)");
+        }
+      }
+
+      // Función auxiliar para pintar la imagen
+      function mostrarImagen(url) {
+        textElement.style.display = "none";
+        imgElement.src = url;
+        imgElement.style.display = "block";
+      }
+
+      // Event Listeners
+      document.getElementById("btn-dog").addEventListener("click", loadDog);
+      document.getElementById("btn-cat").addEventListener("click", loadCat);
+    </script>
+  </body>
+</html>

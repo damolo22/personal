@@ -1,0 +1,31 @@
+1.- ¿Qué ventajas aporta jQuery frente a JavaScript puro?
+La principal ventaja es la sencillez y rapidez de desarrollo . Acciones complejas como animaciones, 
+peticiones AJAX o recorrer el DOM se hacen en una sola línea. Además, jQuery gestiona automáticamente 
+la compatibilidad entre navegadores asegurando que el código funcione igual en Chrome.
+
+
+2.- ¿Qué tipos de selectores has utilizado?
+De etiqueta: $('img'), $('table').
+
+De clase: $('.imagen-interactiva').
+
+De ID: $('#btn-rotar').
+
+De posición/filtro: .eq(0) (para seleccionar un elemento concreto por su índice), :first, :last, :even, :odd.
+
+De atributo: data-hover (accediendo a él mediante .data()).
+
+
+3.- ¿Qué diferencias encuentras entre modificar estilos y clases?
+- Modificar estilos: Aplica estilos en línea directamente en la etiqueta HTML (style="..."). 
+Tiene una prioridad muy alta y sirve para cambios puntuales o dinámicos.
+
+- Modificar clases: No define los estilos, solo etiqueta el elemento. 
+Los estilos reales están separados en el archivo CSS. Es la forma correcta de trabajar, ya que permite reutilizar 
+código y mantiene separado el diseño de la lógica.
+
+
+4.- ¿Qué ejercicio te ha parecido más completo y por qué?
+El ejercicio de la Parte 4 es el más completo porque integra todo que he aprendido y usado anteriormente.
+Sleccionamos elementos y cambiamos atributos, introducimos interactividad real  (eventos de ratón), animaciones 
+visuales y gestión de variables para la  rotación de imágenes. Esto el que más se acerca al desarrollo de una aplicación web real.
