@@ -1,0 +1,41 @@
+- ¿Qué juego has elegido para la práctica?
+
+He elegido desarrollar un juego de estilo "Endless Runner" vertical llamado "Neon Runner". 
+Es un juego de esquivar obstáculos en tres carriles
+
+
+-  ¿Vas a programar el juego desde cero? Si no es así, indica el enlace donde está el
+código (tutorial, vídeo, curso, etc.)
+
+Sí, el juego está programado totalmente desde cero. No he utilizado plantillas descargadas 
+ni tutoriales paso a paso de un juego completo, sino que he aplicado la lógica de manipulación 
+del DOM y eventos aprendida durante el curso.
+
+
+- ¿Cuáles son las reglas del juego? ¿Cuáles son los controles (teclas del juego)?
+
+El objetivo es sobrevivir el máximo tiempo posible esquivando los obstáculos amarillos que 
+bajan por la pantalla.
+
+Cada obstáculo esquivado suma 1 punto. Si el jugador choca con un obstáculo, el 
+juego termina. La velocidad aumenta progresivamente según sube la puntuación.
+
+Controles:
+
+Flecha Izquierda (Mover el coche al carril izquierdo)
+
+Flecha Derecha (Mover el coche al carril derecho)
+
+
+- ¿Qué librerías, fuentes, o herramientas externas usa el juego?
+
+No se han utilizado librerías externas (ni jQuery, ni Phaser, etc.). Está desarrollado 
+en Vanilla JavaScript puro para optimizar el rendimiento y demostrar el dominio 
+del lenguaje base.
+
+- ¿Tiene errores el código o funciona correctamente? Comenta con capturas los
+problemas que hacen que el juego no funcione.
+
+El código funciona correctamente. Se ha implementado un sistema de requestAnimationFrame 
+para que el movimiento sea fluido en cualquier navegador moderno. La detección de colisiones 
+utiliza getBoundingClientRect() para asegurar precisión milimétrica.
